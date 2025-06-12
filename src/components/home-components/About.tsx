@@ -74,21 +74,21 @@ export default function About() {
   );
 }
 
-function AboutCard() {
-  return (
-    <Card className="from-vibezly-card to-vibezly-dark border-vibezly-border/50 hover:border-vibezly-purple/50 bg-linear-[135deg] from-0% to-100% transition-all duration-300">
-      <CardContent className="p-6 text-center">
-        <div className="drop-shadow-glow from-vibezly-purple via-vibezly-cyan to-vibezly-green mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-linear-[135deg]">
-          <span className="text-2xl">🤖</span>
-        </div>
-        <h3 className="text-vibezly-purple mb-3 text-xl font-semibold">
-          AI-Driven Insights
-        </h3>
-        <p className="text-neutral-400">
-          Advanced AI analyzes chat patterns, sentiment, and engagement to
-          provide personalized community experiences.
-        </p>
-      </CardContent>
-    </Card>
-  );
-}
+// function AboutCard() {
+//   return (
+//     <Card className="from-vibezly-card to-vibezly-dark border-vibezly-border/50 hover:border-vibezly-purple/50 bg-linear-[135deg] from-0% to-100% transition-all duration-300">
+//       <CardContent className="p-6 text-center">
+//         <div className="drop-shadow-glow from-vibezly-purple via-vibezly-cyan to-vibezly-green mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-linear-[135deg]">
+//           <span className="text-2xl">🤖</span>
+//         </div>
+//         <h3 className="text-vibezly-purple mb-3 text-xl font-semibold">
+//           AI-Driven Insights
+//         </h3>
+//         <p className="text-neutral-400">
+//           Advanced AI analyzes chat patterns, sentiment, and engagement to
+//           provide personalized community experiences.
+//         </p>
+//       </CardContent>
+//     </Card>
+//   );
+// }

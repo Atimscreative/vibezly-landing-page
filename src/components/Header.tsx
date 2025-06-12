@@ -38,12 +38,10 @@ function LinkItem({ url, label }: { url: string; label: string }) {
     <NavLink
       to={url}
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      className={({ isActive }) =>
-        cn(
-          "hover:text-vibezly-purple text-white",
-          // isActive && "text-vibezly-green",
-        )
-      }
+      className={cn(
+        "hover:text-vibezly-purple text-white",
+        // isActive && "text-vibezly-green",
+      )}
     >
       {label}
     </NavLink>
