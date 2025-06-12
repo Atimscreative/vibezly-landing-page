@@ -44,16 +44,50 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-  --color-vibezly-purple: oklch(0.6654 0.221009 304.0348);
-  --color-vibezly-cyan: oklch(0.7559 0.153289 231.5031);
-  --color-vibezly-green: oklch(0.8871 0.2061 151.52);
-  --color-vibezly-dark: oklch(0.1845 0.0162 264.06);
-  --color-vibezly-card: oklch(0.2255 0.0231 263.94);
+
+  /* COLORS */
+
+  /* --color-vibezly-purple2: oklch(0.6654 0.221009 304.0348);
+  --color-vibezly-cyan2: oklch(0.7559 0.153289 231.5031);
+  --color-vibezly-green2: oklch(0.8871 0.2061 151.52); */
+
+  --color-vibezly-purple: var(--vibezly-purple);
+  --color-vibezly-cyan: var(--vibezly-cyan);
+  --color-vibezly-green: var(--vibezly-green);
+  --color-vibezly-card: var(--vibezly-card);
+  --color-vibezly-dark: var(--vibezly-dark);
+  --color-vibezly-border: var(--vibezly-border);
+
+  /* GLOWS */
+  --drop-shadow-glow: 0 0 20px var(--vibezly-purple);
+  --drop-shadow-glow-cyan: 0 0 20px var(--vibezly-cyan);
+  --drop-shadow-glow-green: 0 0 20px var(--vibezly-green);
+  /* --color-vibezly-body: oklch(0.146 0.0357 259.23); */
 
   /* FONTS */
-
   --font-orbitron: "Orbitron", sans-serif;
   --font-inter: "Inter", sans-serif;
+
+
+  /* ANIMATIONS */
+  --animate-scale-in: scale-in 0.4s ease-out;
+
+
+  /* KEYFRAMES */
+
+  @keyframes scale-in: {
+    0%: {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+
+    100%: {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+
 }
 
 :root {
@@ -91,11 +125,19 @@
   --sidebar-ring: oklch(0.708 0 0);
 
   /* Vibezly brand colors */
-  --vibezly-purple: oklch(0.6654 0.221009 304.0348);
+  /* --vibezly-purple: oklch(0.6654 0.221009 304.0348);
   --vibezly-cyan: oklch(0.7559 0.153289 231.5031);
   --vibezly-green: oklch(0.8871 0.2061 151.52);
   --vibezly-dark: oklch(0.1845 0.0162 264.06);
+  --vibezly-card: oklch(0.2255 0.0231 263.94); */
+
+  --vibezly-purple: oklch(0.525 0.2929 292.3);
+  --vibezly-cyan: oklch(0.7972 0.1465 221.31);
+  --vibezly-green: oklch(0.8791 0.2544 143.32);
   --vibezly-card: oklch(0.2255 0.0231 263.94);
+  --vibezly-dark: oklch(0.1845 0.0162 264.06);
+  --vibezly-border: oklch(0.28 0.0369 259.97);
+
 }
 
 .dark {
@@ -130,6 +172,8 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+
+
 }
 
 @layer base {
@@ -143,7 +187,7 @@
   }
 
   body {
-    @apply font-inter;
+    @apply font-inter bg-vibezly-dark;
   }
 
   h1,
@@ -162,22 +206,85 @@
   }
 
   .bg-vibezly-gradient {
-    background: linear-gradient(135deg, hsl(var(--vibezly-purple)) 0%, hsl(var(--vibezly-cyan)) 50%, hsl(var(--vibezly-green)) 100%);
+    background: linear-gradient(135deg, oklch(var(--vibezly-purple)) 0%, oklch(var(--vibezly-cyan)) 50%, oklch(var(--vibezly-green)) 100%);
   }
 
   .bg-vibezly-card {
-    background: linear-gradient(135deg, hsl(var(--vibezly-card)) 0%, hsl(var(--vibezly-dark)) 100%);
+    background: linear-gradient(135deg, oklch(var(--vibezly-card)) 0%, oklch(var(--vibezly-dark)) 100%);
   }
 
   .glow {
-    filter: drop-shadow(0 0 20px hsl(var(--vibezly-purple) / 0.5));
+    filter: drop-shadow(0 0 20px oklch(var(--vibezly-purple) / 0.5));
   }
 
   .glow-cyan {
-    filter: drop-shadow(0 0 20px hsl(var(--vibezly-cyan) / 0.5));
+    filter: drop-shadow(0 0 20px oklch(var(--vibezly-cyan) / 0.5));
   }
 
   .glow-green {
-    filter: drop-shadow(0 0 20px hsl(var(--vibezly-green) / 0.5));
+    filter: drop-shadow(0 0 20px oklch(var(--vibezly-green) / 0.5));
+  }
+}
+
+
+@layer components {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-bounce-slow {
+    animation: bounce 2s infinite;
+  }
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes ripple {
+    0% {
+      transform: scale(0);
+      opacity: 1;
+    }
+
+    100% {
+      transform: scale(4);
+      opacity: 0;
+    }
+  }
+
+  .animate-ripple {
+    animation: ripple 2s infinite;
+  }
+
+  .bg-moving-gradient {
+    background: linear-gradient(-45deg, hsl(var(--vibezly-purple)), hsl(var(--vibezly-cyan)), hsl(var(--vibezly-green)), hsl(var(--vibezly-purple)));
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
   }
 }

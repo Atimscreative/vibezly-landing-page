@@ -1,37 +1,30 @@
+import { NavLink } from "react-router";
 import { Button } from "./ui/button";
 import Logo from "@/assets/logo2.svg";
+import { cn } from "@/lib/utils";
 
 export default function Header() {
   return (
     <div>
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+      <nav className="bg-vibezly-body fixed top-0 right-0 left-0 z-50 border-b border-neutral-50/10 backdrop-blur-md">
+        <div className="container mx-auto flex items-center justify-between px-4 py-4">
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-vibezly-gradient rounded-lg flex items-center justify-center">
+            <div className="bg-vibezly-gradient flex h-8 w-8 items-center justify-center rounded-lg">
               <img src={Logo} alt="Vibezly Logo" />
             </div>
-            <span className="font-orbitron font-bold text-xl text-gradient">
+            <span className="font-orbitron text-gradient text-xl font-bold">
               Vibezly
             </span>
           </div>
-          <div className="hidden md:flex space-x-6">
-            <button className="hover:text-primary transition-colors">
-              About
-            </button>
-            <button className="hover:text-primary transition-colors">
-              Utilities
-            </button>
-            <button className="hover:text-primary transition-colors">
-              Tokenomics
-            </button>
-            <button className="hover:text-primary transition-colors">
-              Team
-            </button>
-            <button className="hover:text-primary transition-colors">
-              Roadmap
-            </button>
+          <div className="hidden gap-10 md:flex">
+            {navMenu.map((menu) => (
+              <LinkItem
+                url={`#${menu?.label?.toLowerCase()}`}
+                label={menu.label}
+              />
+            ))}
           </div>
-          <Button className="bg-vibezly-dark text-white hover:opacity-90 transition-opacity">
+          <Button className="from-vibezly-purple to-vibezly-cyan bg-gradient-to-r bg-cover text-white transition-opacity hover:opacity-90">
             Get Started
           </Button>
         </div>
@@ -39,3 +32,38 @@ export default function Header() {
     </div>
   );
 }
+
+function LinkItem({ url, label }: { url: string; label: string }) {
+  return (
+    <NavLink
+      to={url}
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      className={({ isActive }) =>
+        cn(
+          "hover:text-vibezly-purple text-white",
+          // isActive && "text-vibezly-green",
+        )
+      }
+    >
+      {label}
+    </NavLink>
+  );
+}
+
+const navMenu = [
+  {
+    label: "About",
+  },
+  {
+    label: "Utilities",
+  },
+  {
+    label: "Tokenomics",
+  },
+  {
+    label: "Team",
+  },
+  {
+    label: "Roadmap",
+  },
+];
