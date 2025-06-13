@@ -1,10 +1,9 @@
 import About from "@/components/home-components/About";
 import Socials from "@/components/home-components/Socials";
 // import Hero from "@/components/home-components/Hero";
-// import Partnership from "@/components/home-components/Partnership";
+import Partnership from "@/components/home-components/Partnership";
 // import Roadmap from "@/components/home-components/Roadmap";
-// import Socials from "@/components/home-components/Socials";
-// import Team from "@/components/home-components/Team";
+import Team from "@/components/home-components/Team";
 // import Tokenomics from "@/components/home-components/Tokenomics";
 // import Utilities from "@/components/home-components/Utilities";
 
@@ -15,8 +14,8 @@ export default function Homepage() {
       <About />
       {/* <Utilities /> */}
       {/* <Tokenomics /> */}
-      {/* <Team /> */}
-      {/* <Partnership /> */}
+      <Team />
+      <Partnership />
       {/* <Roadmap/> */}
       <Socials />
     </>
