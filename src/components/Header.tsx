@@ -12,7 +12,7 @@ export default function Header() {
             <div className="bg-vibezly-gradient flex h-8 w-8 items-center justify-center rounded-lg">
               <img src={Logo} alt="Vibezly Logo" />
             </div>
-            <span className="font-orbitron text-gradient text-xl font-bold">
+            <span className="font-orbitron text-white text-xl font-bold">
               Vibezly
             </span>
           </div>

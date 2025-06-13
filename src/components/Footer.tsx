@@ -1,7 +1,6 @@
 import { ArrowDown } from "lucide-react";
 import { Link } from "react-router";
 import Logo from "@/assets/logo2.svg";
-import { title } from "process";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -16,7 +15,7 @@ export default function Footer() {
             <div>
               <div className="mb-4 flex items-center space-x-2">
                 <img src={Logo} alt="Vibezly Logo" className="size-[40px]" />
-                <span className="font-orbitron text-gradient text-xl font-bold">
+                <span className="font-orbitron text-xl font-bold text-white">
                   Vibezly
                 </span>
               </div>
