@@ -1,6 +1,7 @@
 import { ArrowDown } from "lucide-react";
 import { Button } from "../ui/button";
 import { AnimatedGradientText } from "../magicui/animated-gradient-text";
+import { Particles } from "../magicui/particles";
 
 export default function Hero() {
   return (
@@ -9,7 +10,9 @@ export default function Hero() {
         id="hero"
         className="relative flex min-h-screen items-center justify-center"
       >
-        <div className="bg-vibezly-dark absolute inset-0"></div>
+        <div className="bg-vibezly-dark absolute inset-0">
+          <Particles />
+        </div>
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="animate-fade-in">
             <h1 className="font-orbitron mb-6 text-4xl leading-[120%] font-bold text-white md:text-6xl lg:text-7xl">
@@ -42,7 +45,7 @@ export default function Hero() {
           </div>
 
           {/* Floating Elements */}
-          <div className="animate-float absolute top-20 left-10">
+          {/* <div className="animate-float absolute top-20 left-10">
             <div className="bg-vibezly-purple/20 glow flex h-16 w-16 items-center justify-center rounded-full">
               <span className="text-2xl">🚀</span>
             </div>
@@ -62,7 +65,7 @@ export default function Hero() {
             <div className="bg-vibezly-green/20 glow-green flex h-14 w-14 items-center justify-center rounded-full">
               <span className="text-xl">💎</span>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </>
