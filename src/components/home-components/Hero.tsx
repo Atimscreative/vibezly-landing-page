@@ -1,38 +1,40 @@
 import { ArrowDown } from "lucide-react";
 import { Button } from "../ui/button";
+import { AnimatedGradientText } from "../magicui/animated-gradient-text";
 
 export default function Hero() {
   return (
     <>
       <section
         id="hero"
-        className="relative min-h-screen flex items-center justify-center bg-moving-gradient"
+        className="relative flex min-h-screen items-center justify-center"
       >
-        <div className="absolute inset-0 bg-background/50"></div>
+        <div className="bg-vibezly-dark absolute inset-0"></div>
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="animate-fade-in">
-            <h1 className="font-orbitron font-bold text-4xl md:text-6xl lg:text-7xl mb-6 text-white">
+            <h1 className="font-orbitron mb-6 text-4xl leading-[120%] font-bold text-white md:text-6xl lg:text-7xl">
               Revolutionizing Crypto
-              <span className="block text-gradient animate-pulse-slow">
+              <br />
+              <AnimatedGradientText colorFrom="#7b00ff" colorTo="#00d1ff">
                 Communities
-              </span>
+              </AnimatedGradientText>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
+            <p className="mx-auto mb-8 max-w-3xl text-xl text-gray-200 md:text-2xl">
               AI-powered Telegram bot with decentralized governance, gamified
               rewards, and community-driven insights. Powered by VBZ token.
             </p>
-            <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
               <Button
                 size="lg"
                 // onClick={() => scrollToSection("about")}
-                className="bg-white/10 backdrop-blur-md hover:bg-white/20 border border-white/20 text-white"
+                className="border border-white/20 bg-white/10 text-white backdrop-blur-md hover:bg-white/20"
               >
                 Learn More
                 <ArrowDown className="ml-2 h-4 w-4" />
               </Button>
               <Button
                 size="lg"
-                className="bg-vibezly-gradient hover:opacity-90 transition-opacity"
+                className="bg-vibezly-gradient transition-opacity hover:opacity-90"
               >
                 Get Started
               </Button>
@@ -40,24 +42,24 @@ export default function Hero() {
           </div>
 
           {/* Floating Elements */}
-          <div className="absolute top-20 left-10 animate-float">
-            <div className="w-16 h-16 bg-vibezly-purple/20 rounded-full flex items-center justify-center glow">
+          <div className="animate-float absolute top-20 left-10">
+            <div className="bg-vibezly-purple/20 glow flex h-16 w-16 items-center justify-center rounded-full">
               <span className="text-2xl">🚀</span>
             </div>
           </div>
           <div
-            className="absolute top-40 right-20 animate-float"
+            className="animate-float absolute top-40 right-20"
             style={{ animationDelay: "1s" }}
           >
-            <div className="w-12 h-12 bg-vibezly-cyan/20 rounded-full flex items-center justify-center glow-cyan">
+            <div className="bg-vibezly-cyan/20 glow-cyan flex h-12 w-12 items-center justify-center rounded-full">
               <span className="text-xl">⚡</span>
             </div>
           </div>
           <div
-            className="absolute bottom-40 left-20 animate-float"
+            className="animate-float absolute bottom-40 left-20"
             style={{ animationDelay: "2s" }}
           >
-            <div className="w-14 h-14 bg-vibezly-green/20 rounded-full flex items-center justify-center glow-green">
+            <div className="bg-vibezly-green/20 glow-green flex h-14 w-14 items-center justify-center rounded-full">
               <span className="text-xl">💎</span>
             </div>
           </div>

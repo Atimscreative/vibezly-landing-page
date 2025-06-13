@@ -1,70 +1,70 @@
 import { roadmapItems } from "@/utils";
 import { Card } from "../ui/card";
-import { Badge } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { Badge } from "../ui/badge";
 
 export default function Roadmap() {
   return (
     <>
       {/* Roadmap Section */}
-      <section id="roadmap" className="py-20 bg-vibezly-dark/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="font-orbitron font-bold text-4xl md:text-5xl mb-6 text-gradient">
+      <section id="roadmap" className="bg-vibezly-dark/50 py-20">
+        <div className="mx-auto max-w-7xl px-4">
+          <div className="mb-16 text-center">
+            <h2 className="font-orbitron text-gradient mb-6 text-4xl font-bold md:text-5xl">
               Development Roadmap
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-muted-foreground mx-auto max-w-3xl text-xl">
               Our journey to revolutionize crypto community engagement
             </p>
           </div>
 
           <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-vibezly-gradient"></div>
+            <div className="from-vibezly-purple via-vibezly-cyan absolute left-1/2 -z-10 h-full w-1 -translate-x-1/2 transform bg-linear-90"></div>
             <div className="space-y-12">
               {roadmapItems.map((item, index) => (
                 <div
                   key={item.phase}
-                  className={`flex items-center ${
+                  className={`flex w-full items-center ${
                     index % 2 === 0 ? "flex-row" : "flex-row-reverse"
                   } animate-scale-in`}
                   style={{ animationDelay: `${index * 0.2}s` }}
                 >
                   <div
-                    className={`w-5/12 ${
-                      index % 2 === 0 ? "text-right pr-8" : "text-left pl-8"
+                    className={`w-full md:w-5/12 ${
+                      index % 2 === 0 ? "pr-8 text-right" : "pl-8 text-left"
                     }`}
                   >
-                    <Card className="bg-vibezly-card border-border/50 hover:border-primary/50 transition-all duration-300 p-6">
+                    <Card className="from-vibezly-card to-vibezly-dark border-vibezly-border/50 hover:border-primary/50 items-end bg-linear-[135deg] p-6 transition-all duration-300">
                       <Badge
-                        className={`mb-3 ${
+                        className={cn(
+                          `mb-3 border-0 text-white`,
                           item.status === "completed"
-                            ? "bg-vibezly-green"
+                            ? "bg-vibezly-green text-vibezly-dark"
                             : item.status === "current"
-                            ? "bg-vibezly-gradient"
-                            : "bg-gray-600"
-                        } text-white`}
+                              ? "bg-vibezly-cyan text-vibezly-dark"
+                              : "bg-vibezly-purple",
+                        )}
                       >
                         {item.phase}
                       </Badge>
-                      <h3 className="font-orbitron font-semibold text-xl mb-3">
+                      <h3 className="font-orbitron mb-0 text-xl font-semibold text-white">
                         {item.title}
                       </h3>
-                      <p className="text-muted-foreground">
-                        {item.description}
-                      </p>
+                      <p className="">{item.description}</p>
                     </Card>
                   </div>
-                  <div className="w-2/12 flex justify-center">
+                  <div className="hidden w-2/12 justify-center md:flex">
                     <div
-                      className={`w-6 h-6 rounded-full border-4 ${
+                      className={`h-6 w-6 rounded-full border-4 ${
                         item.status === "completed"
                           ? "bg-vibezly-green border-vibezly-green"
                           : item.status === "current"
-                          ? "bg-vibezly-purple border-vibezly-purple animate-pulse-slow"
-                          : "bg-gray-600 border-gray-600"
+                            ? "bg-vibezly-purple border-vibezly-purple animate-pulse-slow"
+                            : "border-gray-600 bg-gray-600"
                       }`}
                     ></div>
                   </div>
-                  <div className="w-5/12"></div>
+                  {/* <div className="w-5/12"></div> */}
                 </div>
               ))}
             </div>
