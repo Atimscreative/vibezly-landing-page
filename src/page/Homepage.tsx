@@ -5,14 +5,14 @@ import Partnership from "@/components/home-components/Partnership";
 // import Roadmap from "@/components/home-components/Roadmap";
 import Team from "@/components/home-components/Team";
 // import Tokenomics from "@/components/home-components/Tokenomics";
-// import Utilities from "@/components/home-components/Utilities";
+import Utilities from "@/components/home-components/Utilities";
 
 export default function Homepage() {
   return (
     <>
       {/* <Hero /> */}
       <About />
-      {/* <Utilities /> */}
+      <Utilities />
       {/* <Tokenomics /> */}
       <Team />
       <Partnership />

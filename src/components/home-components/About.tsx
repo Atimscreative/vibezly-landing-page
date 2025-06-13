@@ -16,7 +16,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <Card className="from-vibezly-card to-vibezly-dark border-vibezly-border/50 hover:border-vibezly-purple/50 bg-linear-[135deg] from-0% to-100% transition-all duration-300">
               <CardContent className="p-6 text-center">
                 <div className="drop-shadow-glow/50 from-vibezly-purple via-vibezly-cyan to-vibezly-green mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-linear-[135deg]">

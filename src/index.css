@@ -51,27 +51,24 @@
   --color-vibezly-cyan2: oklch(0.7559 0.153289 231.5031);
   --color-vibezly-green2: oklch(0.8871 0.2061 151.52); */
 
-  --color-vibezly-purple: var(--vibezly-purple);
-  --color-vibezly-cyan: var(--vibezly-cyan);
-  --color-vibezly-green: var(--vibezly-green);
-  --color-vibezly-card: var(--vibezly-card);
-  --color-vibezly-dark: var(--vibezly-dark);
-  --color-vibezly-border: var(--vibezly-border);
+  --color-vibezly-purple: oklch(0.525 0.2929 292.3);
+  --color-vibezly-cyan: oklch(0.7972 0.1465 221.31);
+  --color-vibezly-green: oklch(0.8791 0.2544 143.32);
+  --color-vibezly-card: oklch(0.2255 0.0231 263.94);
+  --color-vibezly-dark: oklch(0.1845 0.0162 264.06);
+  --color-vibezly-border: oklch(0.28 0.0369 259.97);
 
   /* GLOWS */
   --drop-shadow-glow: 0 0 20px var(--vibezly-purple);
   --drop-shadow-glow-cyan: 0 0 20px var(--vibezly-cyan);
   --drop-shadow-glow-green: 0 0 20px var(--vibezly-green);
-  /* --color-vibezly-body: oklch(0.146 0.0357 259.23); */
 
   /* FONTS */
   --font-orbitron: "Orbitron", sans-serif;
   --font-inter: "Inter", sans-serif;
 
-
   /* ANIMATIONS */
   --animate-scale-in: scale-in 0.4s ease-out;
-
 
   /* KEYFRAMES */
 
@@ -87,7 +84,21 @@
     }
   }
 
+  --animate-shine: shine var(--duration) infinite linear;
 
+  @keyframes shine {
+    0% {
+      background-position: 0% 0%;
+    }
+
+    50% {
+      background-position: 100% 100%;
+    }
+
+    to {
+      background-position: 0% 0%;
+    }
+  }
 }
 
 :root {
@@ -125,12 +136,6 @@
   --sidebar-ring: oklch(0.708 0 0);
 
   /* Vibezly brand colors */
-  /* --vibezly-purple: oklch(0.6654 0.221009 304.0348);
-  --vibezly-cyan: oklch(0.7559 0.153289 231.5031);
-  --vibezly-green: oklch(0.8871 0.2061 151.52);
-  --vibezly-dark: oklch(0.1845 0.0162 264.06);
-  --vibezly-card: oklch(0.2255 0.0231 263.94); */
-
   --vibezly-purple: oklch(0.525 0.2929 292.3);
   --vibezly-cyan: oklch(0.7972 0.1465 221.31);
   --vibezly-green: oklch(0.8791 0.2544 143.32);
@@ -172,7 +177,6 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
-
 
 }
 
@@ -231,7 +235,6 @@
     filter: drop-shadow(0 0 20px oklch(var(--vibezly-green) / 0.5));
   }
 }
-
 
 @layer components {
   .animate-float {

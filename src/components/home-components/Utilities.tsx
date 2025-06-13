@@ -1,111 +1,86 @@
+import { cn } from "@/lib/utils";
 import { Card } from "../ui/card";
-
 
 export default function Utilities() {
   return (
     <>
       {/* Utilities Section */}
-      <section id="utilities" className="py-20 bg-vibezly-dark/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="font-orbitron font-bold text-4xl md:text-5xl mb-6 text-gradient">
+      <section id="utilities" className="bg-vibezly-dark py-20">
+        <div className="mx-auto max-w-7xl px-4">
+          <div className="mb-16 text-center">
+            <h2 className="from-vibezly-purple via-vibezly-cyan to-vibezly-green mb-6 bg-gradient-to-r bg-clip-text text-4xl font-bold text-transparent md:text-5xl">
               Core Utilities
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="mx-auto max-w-3xl text-xl">
               Powerful features designed to enhance your crypto community
               experience
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div className="group cursor-pointer">
-                <Card className="bg-vibezly-card border-border/50 hover:border-primary/50 transition-all duration-300 p-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-vibezly-gradient rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <span className="text-xl">🧠</span>
-                    </div>
-                    <div>
-                      <h3 className="font-orbitron font-semibold text-xl mb-2 text-primary">
-                        AI Chat Moderation
-                      </h3>
-                      <p className="text-muted-foreground">
-                        Intelligent spam detection, sentiment analysis, and
-                        automated moderation to keep your community healthy and
-                        engaged.
-                      </p>
-                    </div>
-                  </div>
-                </Card>
-              </div>
-
-              <div className="group cursor-pointer">
-                <Card className="bg-vibezly-card border-border/50 hover:border-accent/50 transition-all duration-300 p-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-vibezly-gradient rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <span className="text-xl">📊</span>
-                    </div>
-                    <div>
-                      <h3 className="font-orbitron font-semibold text-xl mb-2 text-accent">
-                        Member Rankings
-                      </h3>
-                      <p className="text-muted-foreground">
-                        Dynamic leaderboards based on activity, contribution
-                        quality, and community engagement metrics.
-                      </p>
-                    </div>
-                  </div>
-                </Card>
-              </div>
-
-              <div className="group cursor-pointer">
-                <Card className="bg-vibezly-card border-border/50 hover:border-vibezly-green/50 transition-all duration-300 p-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-vibezly-gradient rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <span className="text-xl">🏆</span>
-                    </div>
-                    <div>
-                      <h3 className="font-orbitron font-semibold text-xl mb-2 text-vibezly-green">
-                        Token Rewards
-                      </h3>
-                      <p className="text-muted-foreground">
-                        Earn VBZ tokens for quality contributions, helping
-                        newcomers, and maintaining positive community vibes.
-                      </p>
-                    </div>
-                  </div>
-                </Card>
-              </div>
-            </div>
-
-            <div className="relative">
-              <div className="bg-vibezly-gradient rounded-2xl p-8 text-center animate-pulse-slow">
-                <h3 className="font-orbitron font-bold text-2xl text-white mb-4">
-                  Live Community Stats
-                </h3>
-                <div className="grid grid-cols-2 gap-4 text-white">
-                  <div>
-                    <div className="text-3xl font-bold">15.2K</div>
-                    <div className="text-sm opacity-80">Active Members</div>
-                  </div>
-                  <div>
-                    <div className="text-3xl font-bold">98%</div>
-                    <div className="text-sm opacity-80">Satisfaction Rate</div>
-                  </div>
-                  <div>
-                    <div className="text-3xl font-bold">2.4M</div>
-                    <div className="text-sm opacity-80">VBZ Distributed</div>
-                  </div>
-                  <div>
-                    <div className="text-3xl font-bold">450+</div>
-                    <div className="text-sm opacity-80">Communities</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="mx-auto grid max-w-4xl items-center gap-6 lg:grid-cols-2">
+            {utilities.map((data, index) => (
+              <Utility key={index} data={data} />
+            ))}
           </div>
         </div>
       </section>
     </>
   );
 }
+
+function Utility({ data }: any) {
+  return (
+    <div className="group cursor-pointer lg:last:col-span-2">
+      <Card
+        className={cn(
+          "from-vibezly-card to-vibezly-dark border-vibezly-border/50 hover:border-primary/50 bg-linear-[135deg] p-6 transition-all duration-300",
+          data.containerClassName,
+        )}
+      >
+        <div className="flex flex-col items-start space-x-4 sm:flex-row">
+          <div className="bg-vibezly-gradient flex h-12 w-12 items-center justify-center rounded-lg transition-transform duration-300 group-hover:scale-110">
+            <span className="text-xl">{data.icon}</span>
+          </div>
+          <div>
+            <h3
+              className={cn(
+                "font-orbitron mb-2 text-xl font-semibold",
+                data.titleClassName,
+              )}
+            >
+              {data.title}
+            </h3>
+            <p className="text-balance">{data.content}</p>
+          </div>
+        </div>
+      </Card>
+    </div>
+  );
+}
+
+const utilities = [
+  {
+    icon: "🧠",
+    title: "AI Chat Moderation",
+    content:
+      "Intelligent spam detection, sentiment analysis, and automated              moderation to keep your community healthy and engaged.",
+    titleClassName: "text-vibezly-purple",
+    containerClassName: "hover:border-vibezly-purple",
+  },
+  {
+    icon: "📊",
+    title: "Member Rankings",
+    content:
+      "Dynamic leaderboards based on activity, contribution                         quality, and community engagement metrics.",
+    titleClassName: "text-vibezly-cyan",
+    containerClassName: "hover:border-vibezly-cyan",
+  },
+  {
+    icon: "🏆",
+    title: "Token Rewards",
+    content:
+      "Earn VBZ tokens for quality contributions, helping                         newcomers, and maintaining positive community vibes.",
+    titleClassName: "text-vibezly-green",
+    containerClassName: "hover:border-vibezly-green",
+  },
+];
