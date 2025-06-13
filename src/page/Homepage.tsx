@@ -1,4 +1,5 @@
 import About from "@/components/home-components/About";
+import Socials from "@/components/home-components/Socials";
 // import Hero from "@/components/home-components/Hero";
 // import Partnership from "@/components/home-components/Partnership";
 // import Roadmap from "@/components/home-components/Roadmap";
@@ -17,7 +18,7 @@ export default function Homepage() {
       {/* <Team /> */}
       {/* <Partnership /> */}
       {/* <Roadmap/> */}
-      {/* <Socials /> */}
+      <Socials />
     </>
   );
 }

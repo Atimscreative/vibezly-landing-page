@@ -187,7 +187,13 @@
   }
 
   body {
-    @apply font-inter bg-vibezly-dark;
+    @apply font-inter bg-vibezly-dark text-neutral-400 leading-[150%];
+  }
+
+  p,
+  a,
+  span {
+    @apply text-neutral-400;
   }
 
   h1,

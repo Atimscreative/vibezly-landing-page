@@ -4,12 +4,12 @@ export default function About() {
   return (
     <>
       <section id="about" className="bg-vibezly-dark py-20">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-4">
           <div className="animate-fade-in mb-16 text-center">
             <h2 className="from-vibezly-purple via-vibezly-cyan to-vibezly-green mb-6 bg-gradient-to-r bg-clip-text text-4xl font-bold text-transparent md:text-5xl">
               About Vibezly
             </h2>
-            <p className="text-muted-foreground mx-auto max-w-3xl text-xl">
+            <p className="mx-auto max-w-3xl text-xl">
               We're building the future of crypto community engagement through
               AI-powered automation, decentralized governance, and gamified
               reward systems.
@@ -43,7 +43,7 @@ export default function About() {
                 <h3 className="text-vibezly-cyan mb-3 text-xl font-semibold">
                   Decentralized Governance
                 </h3>
-                <p className="text-muted-foreground">
+                <p className="">
                   Community-driven decision making through transparent voting
                   mechanisms and proposal systems.
                 </p>
@@ -61,7 +61,7 @@ export default function About() {
                 <h3 className="text-vibezly-green mb-3 text-xl font-semibold">
                   Gamified Rewards
                 </h3>
-                <p className="text-muted-foreground">
+                <p className="">
                   Earn XP, climb leaderboards, and receive VBZ tokens for active
                   community participation.
                 </p>
