@@ -7,12 +7,12 @@ export default function Header() {
   return (
     <div>
       <nav className="bg-vibezly-body fixed top-0 right-0 left-0 z-50 border-b border-neutral-50/10 backdrop-blur-md">
-        <div className="container mx-auto flex items-center justify-between px-4 py-4">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
           <div className="flex items-center space-x-2">
             <div className="bg-vibezly-gradient flex h-8 w-8 items-center justify-center rounded-lg">
               <img src={Logo} alt="Vibezly Logo" />
             </div>
-            <span className="font-orbitron text-white text-xl font-bold">
+            <span className="font-orbitron text-xl font-bold text-white">
               Vibezly
             </span>
           </div>

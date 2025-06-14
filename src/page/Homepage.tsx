@@ -4,7 +4,7 @@ import Hero from "@/components/home-components/Hero";
 import Partnership from "@/components/home-components/Partnership";
 import Roadmap from "@/components/home-components/Roadmap";
 import Team from "@/components/home-components/Team";
-// import Tokenomics from "@/components/home-components/Tokenomics";
+import Tokenomics from "@/components/home-components/Tokenomics";
 import Utilities from "@/components/home-components/Utilities";
 
 export default function Homepage() {
@@ -13,7 +13,7 @@ export default function Homepage() {
       <Hero />
       <About />
       <Utilities />
-      {/* <Tokenomics /> */}
+      <Tokenomics />
       <Team />
       <Partnership />
       <Roadmap />
