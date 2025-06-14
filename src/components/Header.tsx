@@ -1,4 +1,4 @@
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 import { Button } from "./ui/button";
 import Logo from "@/assets/logo2.svg";
 import { cn } from "@/lib/utils";
@@ -8,18 +8,18 @@ export default function Header() {
     <div>
       <nav className="bg-vibezly-body fixed top-0 right-0 left-0 z-50 border-b border-neutral-50/10 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
-          <div className="flex items-center space-x-2">
-            <div className="bg-vibezly-gradient flex h-8 w-8 items-center justify-center rounded-lg">
+          <Link to="/" className="flex items-center space-x-2">
+            <span className="bg-vibezly-gradient flex h-8 w-8 items-center justify-center rounded-lg">
               <img src={Logo} alt="Vibezly Logo" />
-            </div>
+            </span>
             <span className="font-orbitron text-xl font-bold text-white">
               Vibezly
             </span>
-          </div>
+          </Link>
           <div className="hidden gap-10 md:flex">
             {navMenu.map((menu) => (
               <LinkItem
-                url={`#${menu?.label?.toLowerCase()}`}
+                url={menu.url || `/#${menu?.label?.toLowerCase()}`}
                 label={menu.label}
               />
             ))}
@@ -35,14 +35,7 @@ export default function Header() {
 
 function LinkItem({ url, label }: { url: string; label: string }) {
   return (
-    <NavLink
-      to={url}
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      className={cn(
-        "hover:text-vibezly-purple text-white",
-        // isActive && "text-vibezly-green",
-      )}
-    >
+    <NavLink to={url} className={cn("hover:text-vibezly-purple text-white")}>
       {label}
     </NavLink>
   );
@@ -54,6 +47,10 @@ const navMenu = [
   },
   {
     label: "Utilities",
+  },
+  {
+    label: "AI Personas",
+    url: "/personas",
   },
   {
     label: "Tokenomics",
