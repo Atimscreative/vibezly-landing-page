@@ -16,6 +16,45 @@ import Diamond from "@/assets/diamond.png";
 import Karan from "@/assets/karan.png";
 import { ShineBorder } from "@/components/magicui/shine-border";
 
+const colorClassMap = {
+  red: {
+    text: "text-red-400",
+    description: "text-red-300/80",
+    heading: "text-red-300",
+    bgFrom: "from-red-500/10",
+    bgTo: "to-red-600/5",
+    border: "border-red-500",
+    bgSoft: "bg-red-500/10",
+  },
+  yellow: {
+    text: "text-yellow-400",
+    description: "text-yellow-300/80",
+    heading: "text-yellow-300",
+    bgFrom: "from-yellow-500/10",
+    bgTo: "to-yellow-600/5",
+    border: "border-yellow-500",
+    bgSoft: "bg-yellow-500/10",
+  },
+  pink: {
+    text: "text-pink-400",
+    description: "text-pink-300/80",
+    heading: "text-pink-300",
+    bgFrom: "from-pink-500/10",
+    bgTo: "to-pink-600/5",
+    border: "border-pink-500",
+    bgSoft: "bg-pink-500/10",
+  },
+  blue: {
+    text: "text-blue-400",
+    description: "text-blue-300/80",
+    heading: "text-blue-300",
+    bgFrom: "from-blue-500/10",
+    bgTo: "to-blue-600/5",
+    border: "border-blue-500",
+    bgSoft: "bg-blue-500/10",
+  },
+};
+
 export default function AIPersonas() {
   console.log(Bg);
   return (
@@ -138,7 +177,11 @@ export default function AIPersonas() {
             {/* Bento Grid Layout */}
             <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 md:grid-cols-2">
               {thePersonas.map((persona, i) => (
-                <Persona key={i} data={persona} color={persona.color as PersonaColor} />
+                <Persona
+                  key={i}
+                  data={persona}
+                  color={persona.color as PersonaColor}
+                />
               ))}
 
               {/* Usage Strategy - Wide card */}
@@ -235,14 +278,18 @@ function Persona({ color, data }: { color: PersonaColor; data: any }) {
   return (
     <Card
       className={cn(
-        `relative bg-gradient-to-br from-${color}-500/10 to-${color}-600/5 border-0 transition-all duration-300`,
+        "relative border-0 bg-gradient-to-br transition-all duration-300",
+        colorClassMap[color].bgFrom,
+        colorClassMap[color].bgTo,
       )}
     >
       <ShineBorder duration={15} shineColor={personaColors[color]} />
       <figure
         className={cn(
           "ml-6 size-24 rounded-full sm:absolute sm:top-6 sm:right-6",
-          `bg-gradient-to-br from-${color}-500/10 to-${color}-600/5`,
+          `bg-gradient-to-br`,
+          colorClassMap[color].bgFrom,
+          colorClassMap[color].bgTo,
         )}
       >
         <img
@@ -254,33 +301,47 @@ function Persona({ color, data }: { color: PersonaColor; data: any }) {
         />
       </figure>
       <CardHeader>
-        <CardTitle className={`text-${color}-400 font-orbitron text-xl`}>
+        <CardTitle
+          className={cn(colorClassMap[color].text, "font-orbitron text-xl")}
+        >
           {name}
         </CardTitle>
-        <CardDescription className={`text-${color}-300/80 font-orbitron`}>
+        <CardDescription
+          className={cn(colorClassMap[color].description, "font-orbitron")}
+        >
           {alias}
         </CardDescription>
       </CardHeader>
       <CardContent>
         <div className="space-y-4">
           <div>
-            <h4 className={`text-${color}-300 mb-2 font-semibold`}>Tone:</h4>
+            <h4
+              className={cn(colorClassMap[color].heading, "mb-2 font-semibold")}
+            >
+              Tone:
+            </h4>
             <p className="text-sm">{tone}</p>
           </div>
           <div>
-            <h4 className={`text-${color}-300 mb-2 font-semibold`}>
+            <h4
+              className={cn(colorClassMap[color].heading, "mb-2 font-semibold")}
+            >
               Behavior:
             </h4>
             <p className="text-sm">{behavior}</p>
           </div>
           <div>
-            <h4 className={`text-${color}-300 mb-2 font-semibold`}>
+            <h4
+              className={cn(colorClassMap[color].heading, "mb-2 font-semibold")}
+            >
               Personalty:
             </h4>
             <p className="text-sm">{personalty}</p>
           </div>
           <div>
-            <h4 className={`text-${color}-300 mb-2 font-semibold`}>
+            <h4
+              className={cn(colorClassMap[color].heading, "mb-2 font-semibold")}
+            >
               Best For:
             </h4>
             <ul className="list-disc space-y-1 pl-5 text-sm">
@@ -293,12 +354,9 @@ function Persona({ color, data }: { color: PersonaColor; data: any }) {
           </div>
           <div
             className={cn(
-              `rounded border-l-4 p-3`,
-              color === "yellow"
-                ? "border-yellow-500 bg-yellow-500/10"
-                : color === "pink"
-                  ? "border-pink-500 bg-pink-500/10"
-                  : `border-${color}-500 bg-${color}-500/10`,
+              "rounded border-l-4 p-3",
+              colorClassMap[color].border,
+              colorClassMap[color].bgSoft,
             )}
           >
             <p className="text-sm font-medium">{whenToUse}</p>
