@@ -3,7 +3,6 @@ import { Button } from "../ui/button";
 import { toast } from "sonner";
 import { Card } from "../ui/card";
 import { CircleCheck } from "lucide-react";
-import { Progress } from "../ui/progress";
 import TokenomicsChart from "../TokenomicsCard";
 
 export default function Tokenomics() {
