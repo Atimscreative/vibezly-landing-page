@@ -1,9 +1,22 @@
-import { Link, NavLink } from "react-router";
+import { Link, NavLink, useLocation } from "react-router";
 import { Button } from "./ui/button";
 import Logo from "@/assets/logo2.svg";
 import { cn } from "@/lib/utils";
+import { useEffect } from "react";
 
 export default function Header() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        // Optional: add smooth behavior
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
+
   return (
     <div>
       <nav className="bg-vibezly-body fixed top-0 right-0 left-0 z-50 border-b border-neutral-50/10 backdrop-blur-md">
@@ -18,10 +31,7 @@ export default function Header() {
           </Link>
           <div className="hidden gap-10 md:flex">
             {navMenu.map((menu) => (
-              <LinkItem
-                url={menu.url || `/#${menu?.label?.toLowerCase()}`}
-                label={menu.label}
-              />
+              <LinkItem url={menu.url} label={menu.label} />
             ))}
           </div>
           <Button className="from-vibezly-purple to-vibezly-cyan bg-gradient-to-r bg-cover text-white transition-opacity hover:opacity-90">
@@ -34,8 +44,23 @@ export default function Header() {
 }
 
 function LinkItem({ url, label }: { url: string; label: string }) {
+  const isAnchorLink = url.startsWith("#");
+
+  if (isAnchorLink) {
+    return (
+      <a
+        href={url}
+        className={cn("hover:text-vibezly-purple text-white uppercase")}
+      >
+        {label}
+      </a>
+    );
+  }
   return (
-    <NavLink to={url} className={cn("hover:text-vibezly-purple text-white")}>
+    <NavLink
+      to={url}
+      className={cn("hover:text-vibezly-purple text-white uppercase")}
+    >
       {label}
     </NavLink>
   );
@@ -44,9 +69,11 @@ function LinkItem({ url, label }: { url: string; label: string }) {
 const navMenu = [
   {
     label: "About",
+    url: "/about",
   },
   {
     label: "Utilities",
+    url: "/utilities",
   },
   {
     label: "AI Personas",
@@ -54,11 +81,14 @@ const navMenu = [
   },
   {
     label: "Tokenomics",
+    url: "/#tokenomics",
   },
   {
     label: "Team",
+    url: "/#team",
   },
   {
     label: "Roadmap",
+    url: "/#roadmap",
   },
 ];

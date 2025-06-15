@@ -1,11 +1,21 @@
 import { ArrowDown } from "lucide-react";
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 import Logo from "@/assets/logo2.svg";
+import { cn } from "@/lib/utils";
+import { useEffect } from "react";
 
 export default function Footer() {
-  const scrollToTop = () => {
-    document.body.scrollTop = 0;
-  };
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        // Optional: add smooth behavior
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
 
   return (
     <>
@@ -40,12 +50,12 @@ export default function Footer() {
       </footer>
 
       {/* Scroll to Top Button */}
-      <button
-        onClick={scrollToTop}
+      <Link
+        to="#hero"
         className="from-vibezly-purple via-vibezly-cyan to-vibezly-green glow fixed right-8 bottom-8 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-linear-[135deg] from-0% via-50% to-100% transition-all duration-300 hover:scale-110"
       >
         <ArrowDown className="h-6 w-6 rotate-180 transform text-white" />
-      </button>
+      </Link>
     </>
   );
 }
@@ -54,16 +64,31 @@ function FooterLinks({ data }: any) {
   return (
     <div>
       <h3 className="mb-4 font-semibold text-white">{data.title}</h3>
-      <div className="space-y-2 text-sm">
-        {data.links.map((link: any) => (
-          <Link
-            to="#"
-            key={link.label}
-            className="hover:text-vibezly-purple block transition-colors"
-          >
-            {link.label}
-          </Link>
-        ))}
+      <div className="inline-flex flex-col space-y-2 text-sm">
+        {data.links.map((link: any) => {
+          const isAnchorLink = link.url.startsWith("/#");
+
+          if (isAnchorLink) {
+            return (
+              <a
+                href={link.url}
+                className={cn("hover:text-vibezly-purple text-white")}
+              >
+                {link.label}
+              </a>
+            );
+          }
+
+          return (
+            <Link
+              to="#"
+              key={link.label}
+              className="hover:text-vibezly-purple transition-colors"
+            >
+              {link.label}
+            </Link>
+          );
+        })}
       </div>
     </div>
   );
@@ -75,8 +100,8 @@ const footerMenus = [
     links: [
       { label: "About", url: "/about" },
       { label: "Utilities", url: "/utilities" },
-      { label: "Tokenomics", url: "/tokenomics" },
-      { label: "Team", url: "/team" },
+      { label: "AI Personas", url: "/personas" },
+      { label: "Tokenomics", url: "/#tokenomics" },
     ],
   },
   {
