@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Bot, MessageSquare, Trophy } from "lucide-react";
+import { Bot, MessageSquare, Trophy } from "lucide-react";
 import { useNavigate } from "react-router";
 import { cn } from "@/lib/utils";
 import { colorClassMap, personaColors } from "@/utils/helper";
