@@ -24,7 +24,7 @@ export default function Tokenomics() {
     <>
       {/* Tokenomics Section */}
       <section id="tokenomics" className="py-20">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-7xl px-4">
           <div className="mb-16 text-center">
             <h2 className="font-orbitron text-gradient mb-6 text-4xl font-bold md:text-5xl">
               VBZ Tokenomics
@@ -35,54 +35,59 @@ export default function Tokenomics() {
           </div>
 
           <div className="grid gap-12 lg:grid-cols-2">
-            <Card className="bg-vibezly-card border-vibezly-border/50 p-8">
-              {/* <h3 className="font-orbitron text-vibezly-purple mb-6 text-2xl font-semibold">
-                Token Distribution
-              </h3> */}
-              <TokenomicsChart />
-            </Card>
+            <TokenomicsChart />
 
-            <Card className="bg-vibezly-card border-border/50 p-8">
+            <Card className="from-vibezly-card to-vibezly-dark border-vibezly-border/50 bg-linear-180 p-8">
               <h3 className="font-orbitron text-accent mb-6 text-2xl font-semibold">
                 Token Utility
               </h3>
               <div className="space-y-6">
                 <div className="flex items-center space-x-3">
                   <CircleCheck className="text-vibezly-green h-6 w-6" />
-                  <span>Governance Voting Rights</span>
+                  <span className="font-orbitron">
+                    Governance Voting Rights
+                  </span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <CircleCheck className="text-vibezly-green h-6 w-6" />
-                  <span>Premium Feature Access</span>
+                  <span className="font-orbitron">Premium Feature Access</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <CircleCheck className="text-vibezly-green h-6 w-6" />
-                  <span>Staking Rewards</span>
+                  <span className="font-orbitron">Staking Rewards</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <CircleCheck className="text-vibezly-green h-6 w-6" />
-                  <span>Community Rewards</span>
+                  <span className="font-orbitron">Community Rewards</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <CircleCheck className="text-vibezly-green h-6 w-6" />
-                  <span>NFT Marketplace Currency</span>
+                  <span className="font-orbitron">
+                    NFT Marketplace Currency
+                  </span>
                 </div>
 
-                <div className="border-border border-t pt-6">
+                <div className="border-vibezly-border border-t pt-6">
                   <div className="grid grid-cols-2 gap-4 text-center">
                     <div>
-                      <div className="text-primary text-2xl font-bold">1B</div>
-                      <div className="text-sm">Total Supply</div>
+                      <div className="text-vibezly-cyan font-orbitron text-2xl font-bold">
+                        1B
+                      </div>
+                      <span className="font-orbitron text-sm">
+                        Total Supply
+                      </span>
                     </div>
                     <div>
-                      <div className="text-accent text-2xl font-bold">650M</div>
-                      <div className="text-sm">Circulating</div>
+                      <div className="text-vibezly-cyan font-orbitron text-2xl font-bold">
+                        650M
+                      </div>
+                      <span className="font-orbitron text-sm">Circulating</span>
                     </div>
                   </div>
 
                   <Button
                     onClick={copyContractAddress}
-                    className="bg-vibezly-gradient mt-4 w-full transition-opacity hover:opacity-90"
+                    className="bg-vibezly-cyan mt-4 w-full transition-opacity hover:opacity-90"
                   >
                     {copiedContract ? "Copied!" : "Copy Contract Address"}
                   </Button>

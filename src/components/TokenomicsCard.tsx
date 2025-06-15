@@ -57,8 +57,10 @@ export default function TokenomicsChart() {
   return (
     <Card className="flex flex-col border-0 bg-transparent p-0">
       <CardHeader className="items-center pb-0">
-        <CardTitle className="font-orbitron text-white">Total Supply</CardTitle>
-        <CardDescription className="font-orbitron text-vibezly-purple text-3xl font-bold">
+        <CardTitle className="font-orbitron text-center text-white">
+          Total Supply
+        </CardTitle>
+        <CardDescription className="font-orbitron text-vibezly-cyan text-center text-3xl font-bold">
           100,000 VBZ
         </CardDescription>
       </CardHeader>
