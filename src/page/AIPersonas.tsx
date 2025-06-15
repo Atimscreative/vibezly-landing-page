@@ -10,50 +10,13 @@ import { Separator } from "@/components/ui/separator";
 import Bg from "@/assets/particles.gif";
 import { AnimatedGradientText } from "@/components/magicui/animated-gradient-text";
 import { cn } from "@/lib/utils";
-import Dick from "@/assets/dick.png";
-import Sam from "@/assets/sam.png";
-import Diamond from "@/assets/diamond.png";
-import Karan from "@/assets/karan.png";
 import { ShineBorder } from "@/components/magicui/shine-border";
-
-const colorClassMap = {
-  red: {
-    text: "text-red-400",
-    description: "text-red-300/80",
-    heading: "text-red-300",
-    bgFrom: "from-red-500/10",
-    bgTo: "to-red-600/5",
-    border: "border-red-500",
-    bgSoft: "bg-red-500/10",
-  },
-  yellow: {
-    text: "text-yellow-400",
-    description: "text-yellow-300/80",
-    heading: "text-yellow-300",
-    bgFrom: "from-yellow-500/10",
-    bgTo: "to-yellow-600/5",
-    border: "border-yellow-500",
-    bgSoft: "bg-yellow-500/10",
-  },
-  pink: {
-    text: "text-pink-400",
-    description: "text-pink-300/80",
-    heading: "text-pink-300",
-    bgFrom: "from-pink-500/10",
-    bgTo: "to-pink-600/5",
-    border: "border-pink-500",
-    bgSoft: "bg-pink-500/10",
-  },
-  blue: {
-    text: "text-blue-400",
-    description: "text-blue-300/80",
-    heading: "text-blue-300",
-    bgFrom: "from-blue-500/10",
-    bgTo: "to-blue-600/5",
-    border: "border-blue-500",
-    bgSoft: "bg-blue-500/10",
-  },
-};
+import {
+  colorClassMap,
+  personaColors,
+  type PersonaColor,
+} from "@/utils/helper";
+import { thePersonas } from "@/utils";
 
 export default function AIPersonas() {
   console.log(Bg);
@@ -61,7 +24,10 @@ export default function AIPersonas() {
     <>
       <>
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-[linear-gradient(to_right,#0f131aee,#0f131acc),url('/src/assets/particles.gif')] bg-cover bg-no-repeat py-20 pt-36">
+        <section
+          id="hero"
+          className="relative overflow-hidden bg-[linear-gradient(to_right,#0f131aee,#0f131acc),url('/src/assets/particles.gif')] bg-cover bg-no-repeat py-20 pt-36"
+        >
           <div className="mx-auto max-w-7xl px-4 text-center">
             <div className="mx-auto max-w-4xl">
               <h1 className="font-orbitron mb-6 text-5xl leading-[130%] font-bold text-white">
@@ -255,15 +221,6 @@ export default function AIPersonas() {
   );
 }
 
-const personaColors = {
-  red: ["#fca5a5", "#f87171", "#ef4444"], // red
-  yellow: ["#fde68a", "#facc15", "#eab308"], // yellow
-  pink: ["#f9a8d4", "#f472b6", "#ec4899"], // pink
-  blue: ["#93c5fd", "#60a5fa", "#3b82f6"], // blue
-};
-
-type PersonaColor = keyof typeof personaColors;
-
 function Persona({ color, data }: { color: PersonaColor; data: any }) {
   const {
     name,
@@ -367,77 +324,3 @@ function Persona({ color, data }: { color: PersonaColor; data: any }) {
   );
 }
 
-const thePersonas = [
-  {
-    name: "Dick Johnson",
-    alias: "The Roast Master",
-    tone: "Sharp, witty, unapologetically savage",
-    behavior:
-      "Dick Johnson is the default no-nonsense enforcer. He calls out lazy lurkers, drops nuclear roasts, and shows no mercy. Think Gordon Ramsay meets Crypto Twitter.",
-    personalty:
-      "Edgy, fearless, and proudly offensive, he doesn't hold back. Perfect for communities that thrive on banter and thick skin.",
-    bestFor: [
-      "Reviving dead chats",
-      "Killing FUD",
-      "Keeping users on their toes",
-    ],
-    whenToUse:
-      "Dick is the sparkplug every degen chat needs when things get too tame. No slacking. No mercy. Just vibes and verbal bar fights.",
-    color: "red",
-    avatar: Dick,
-  },
-  {
-    name: "Sunny Sam",
-    alias: "The Good Vibes Chadette",
-    tone: "Warm, positive, and supportive",
-    personalty:
-      "She's like sunshine in a sideways market—kind, consistent, and always down to say “WAGMI.” A great onboarding tool for new members.",
-    behavior:
-      "Sunny Sam spreads good vibes and encouragement. She celebrates contributions, motivates the group, and makes everyone feel seen and appreciated.",
-    bestFor: [
-      "Uplifting the mood",
-      "Welcoming newcomers",
-      "Encouraging participation",
-    ],
-    whenToUse:
-      "Sunny Sam keeps morale high and toxicity low—your go-to when community love is needed more than memes.",
-    color: "yellow",
-    avatar: Sam,
-  },
-  {
-    name: "Karen Beetch",
-    alias: "The Drama Queen",
-    tone: "Sassy, dramatic, and unapologetically rude",
-    personalty:
-      "She's bold, dramatic, and chaotic-good. Karen Beetch thrives on attention and keeping the chat spicy.",
-    behavior:
-      "Karen Beetch doesn't just join the chat—she storms in. She throws shade, starts chaos, and roasts with flair. She's not nice. She's that bitch.",
-    bestFor: [
-      "Stirring up boring chats",
-      "Meme battles and banter",
-      "Starting drama (for fun)",
-    ],
-    whenToUse:
-      "When your group's a little too quiet or needs a laugh, Karen keeps it rude, wild, and dangerously fun.",
-    color: "pink",
-    avatar: Karan,
-  },
-  {
-    name: "Diamond Balls Bob",
-    alias: "The Hype Whale",
-    tone: "Confident, bullish, motivational",
-    personalty:
-      "Think: the wealthiest guy in the chat who still hypes everyone else up. Bob's always bullish, never bearish.",
-    behavior:
-      "Bob talks like every candle is green and every dip is a discount. He's the community's hype beast.",
-    bestFor: [
-      "Twitter raids",
-      "Rallying the troops",
-      "Generating market momentum",
-    ],
-    whenToUse:
-      "When it's time to raid or rally, Bob brings the thunder. His vibes are pure green candles and rocket fuel.",
-    color: "blue",
-    avatar: Diamond,
-  },
-];
