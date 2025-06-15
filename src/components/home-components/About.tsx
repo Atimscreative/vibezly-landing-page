@@ -1,23 +1,44 @@
+import { fadeVariants, transitionVariants } from "@/utils/motionVariants";
 import { Card, CardContent } from "../ui/card";
+import { motion } from "motion/react";
 
 export default function About() {
+  const MotionCard = motion(Card);
   return (
     <>
       <section id="about" className="bg-vibezly-dark py-20">
-        <div className="mx-auto max-w-7xl px-4">
+        <motion.div
+          variants={fadeVariants.staggeredContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="mx-auto max-w-7xl px-4"
+        >
           <div className="animate-fade-in mb-16 text-center">
-            <h2 className="from-vibezly-purple via-vibezly-cyan to-vibezly-green mb-6 bg-gradient-to-r bg-clip-text text-4xl font-bold text-transparent md:text-5xl">
+            <motion.h2
+              variants={fadeVariants.fadeUp}
+              transition={transitionVariants.fast}
+              className="from-vibezly-purple via-vibezly-cyan to-vibezly-green mb-6 bg-gradient-to-r bg-clip-text text-4xl font-bold text-transparent md:text-5xl"
+            >
               About Vibezly
-            </h2>
-            <p className="mx-auto max-w-3xl text-xl">
+            </motion.h2>
+            <motion.p
+              variants={fadeVariants.fadeUp}
+              transition={transitionVariants.fast}
+              className="mx-auto max-w-3xl text-xl"
+            >
               We're building the future of crypto community engagement through
               AI-powered automation, decentralized governance, and gamified
               reward systems.
-            </p>
+            </motion.p>
           </div>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <Card className="from-vibezly-card to-vibezly-dark border-vibezly-border/50 hover:border-vibezly-purple/50 bg-linear-[135deg] from-0% to-100% transition-all duration-300">
+            <MotionCard
+              variants={fadeVariants.fadeUp}
+              transition={transitionVariants.fast}
+              className="from-vibezly-card to-vibezly-dark border-vibezly-border/50 hover:border-vibezly-purple/50 bg-linear-[135deg] from-0% to-100% transition-all duration-300"
+            >
               <CardContent className="p-6 text-center">
                 <div className="drop-shadow-glow/50 from-vibezly-purple via-vibezly-cyan to-vibezly-green mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-linear-[135deg]">
                   <span className="text-2xl">🤖</span>
@@ -30,9 +51,11 @@ export default function About() {
                   to provide personalized community experiences.
                 </p>
               </CardContent>
-            </Card>
+            </MotionCard>
 
-            <Card
+            <MotionCard
+              variants={fadeVariants.fadeUp}
+              transition={transitionVariants.fast}
               className="from-vibezly-card to-vibezly-dark border-vibezly-border/50 hover:border-vibezly-cyan/50 bg-linear-[135deg] from-0% to-100% transition-all duration-300"
               style={{ animationDelay: "0.2s" }}
             >
@@ -48,9 +71,11 @@ export default function About() {
                   mechanisms and proposal systems.
                 </p>
               </CardContent>
-            </Card>
+            </MotionCard>
 
-            <Card
+            <MotionCard
+              variants={fadeVariants.fadeUp}
+              transition={transitionVariants.fast}
               className="from-vibezly-card to-vibezly-dark border-vibezly-border/50 hover:border-vibezly-green/50 bg-linear-[135deg] from-0% to-100% transition-all duration-300"
               style={{ animationDelay: "0.4s" }}
             >
@@ -66,9 +91,9 @@ export default function About() {
                   community participation.
                 </p>
               </CardContent>
-            </Card>
+            </MotionCard>
           </div>
-        </div>
+        </motion.div>
       </section>
     </>
   );

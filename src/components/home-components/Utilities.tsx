@@ -1,20 +1,36 @@
 import { cn } from "@/lib/utils";
 import { Card } from "../ui/card";
+import { fadeVariants, transitionVariants } from "@/utils/motionVariants";
+import { motion } from "motion/react";
+
+const MotionCard = motion(Card);
 
 export default function Utilities() {
   return (
     <>
       {/* Utilities Section */}
       <section id="utilities" className="bg-vibezly-dark py-20">
-        <div className="mx-auto max-w-7xl px-4">
+        <motion.div
+          variants={fadeVariants.staggeredContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="mx-auto max-w-7xl px-4"
+        >
           <div className="mb-16 text-center">
-            <h2 className="from-vibezly-purple via-vibezly-cyan to-vibezly-green mb-6 bg-gradient-to-r bg-clip-text text-4xl font-bold text-transparent md:text-5xl">
+            <motion.h2
+              variants={fadeVariants.fadeUp}
+              className="from-vibezly-purple via-vibezly-cyan to-vibezly-green mb-6 bg-gradient-to-r bg-clip-text text-4xl font-bold text-transparent md:text-5xl"
+            >
               Core Utilities
-            </h2>
-            <p className="mx-auto max-w-3xl text-xl">
+            </motion.h2>
+            <motion.p
+              transition={transitionVariants.fast}
+              className="mx-auto max-w-3xl text-xl"
+            >
               Powerful features designed to enhance your crypto community
               experience
-            </p>
+            </motion.p>
           </div>
 
           <div className="mx-auto grid max-w-4xl items-center gap-6 lg:grid-cols-2">
@@ -22,7 +38,7 @@ export default function Utilities() {
               <Utility key={index} data={data} />
             ))}
           </div>
-        </div>
+        </motion.div>
       </section>
     </>
   );
@@ -31,7 +47,9 @@ export default function Utilities() {
 function Utility({ data }: any) {
   return (
     <div className="group cursor-pointer lg:last:col-span-2">
-      <Card
+      <MotionCard
+        variants={fadeVariants.fadeUp}
+        transition={transitionVariants.fast}
         className={cn(
           "from-vibezly-card to-vibezly-dark border-vibezly-border/50 hover:border-primary/50 bg-linear-[135deg] p-6 transition-all duration-300",
           data.containerClassName,
@@ -53,7 +71,7 @@ function Utility({ data }: any) {
             <p className="text-balance">{data.content}</p>
           </div>
         </div>
-      </Card>
+      </MotionCard>
     </div>
   );
 }
