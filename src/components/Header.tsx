@@ -3,6 +3,11 @@ import { Button } from "./ui/button";
 import Logo from "@/assets/logo2.svg";
 import { cn } from "@/lib/utils";
 import { useEffect } from "react";
+import { motion } from "motion/react";
+import { fadeVariants } from "@/utils/motionVariants";
+
+const MotionLogo = motion(Link);
+const MotionNavLink = motion(LinkItem);
 
 export default function Header() {
   const location = useLocation();
@@ -21,19 +26,35 @@ export default function Header() {
     <div>
       <nav className="bg-vibezly-body fixed top-0 right-0 left-0 z-50 border-b border-neutral-50/10 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
-          <Link to="/" className="flex items-center space-x-2">
+          <MotionLogo
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            to="/"
+            className="flex items-center space-x-2"
+          >
             <span className="bg-vibezly-gradient flex h-8 w-8 items-center justify-center rounded-lg">
               <img src={Logo} alt="Vibezly Logo" />
             </span>
             <span className="font-orbitron text-xl font-bold text-white">
               Vibezly
             </span>
-          </Link>
-          <div className="hidden gap-10 md:flex">
-            {navMenu.map((menu) => (
-              <LinkItem url={menu.url} label={menu.label} />
+          </MotionLogo>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            variants={fadeVariants.staggeredContainer}
+            className="hidden gap-10 md:flex"
+          >
+            {navMenu.map((menu, i) => (
+              <MotionNavLink
+                variants={fadeVariants.fadeDown}
+                url={menu.url}
+                key={i}
+                label={menu.label}
+              />
             ))}
-          </div>
+          </motion.div>
           <Button className="from-vibezly-purple to-vibezly-cyan bg-gradient-to-r bg-cover text-white transition-opacity hover:opacity-90">
             Get Started
           </Button>

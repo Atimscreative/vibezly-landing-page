@@ -33,8 +33,7 @@ export const fadeVariants = {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.4,
-        delayChildren: 0.3,
+        staggerChildren: 0.5,
       },
     },
   },

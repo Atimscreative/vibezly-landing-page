@@ -2,7 +2,7 @@ import { ArrowDown } from "lucide-react";
 import { Button } from "../ui/button";
 import { AnimatedGradientText } from "../magicui/animated-gradient-text";
 import { Particles } from "../magicui/particles";
-import { motion } from "motion/react";
+import { motion, stagger } from "motion/react";
 import { fadeVariants, transitionVariants } from "@/utils/motionVariants";
 
 export default function Hero() {
@@ -18,16 +18,13 @@ export default function Hero() {
           <Particles className="h-full w-full" />
         </div>
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <motion.div
-            variants={fadeVariants.staggeredContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className=""
-          >
+          <div>
             <motion.h1
               variants={fadeVariants.fadeDown}
-              transition={transitionVariants.fast}
+              initial="hidden"
+              whileInView="visible"
+              transition={{ duration: 1, ease: "easeIn" }}
+              // transition={transitionVariants.default}
               className="font-orbitron mb-6 text-4xl leading-[120%] font-bold text-white md:text-6xl lg:text-7xl"
             >
               Revolutionizing Crypto
@@ -37,8 +34,9 @@ export default function Hero() {
               </AnimatedGradientText>
             </motion.h1>
             <motion.p
-              variants={fadeVariants.fadeUp}
-              transition={transitionVariants.fast}
+              initial={{ opacity: 0, y: -30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
               className="mx-auto mb-8 max-w-3xl text-xl text-gray-200 md:text-2xl"
             >
               AI-powered Telegram bot with decentralized governance, gamified
@@ -47,7 +45,7 @@ export default function Hero() {
             <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
               <MotionButton
                 variants={fadeVariants.fadeUp}
-                transition={transitionVariants.fast}
+                // transition={transitionVariants.default}
                 size="lg"
                 // onClick={() => scrollToSection("about")}
                 className="h-auto border border-white/20 bg-white/10 py-3 text-white backdrop-blur-md hover:bg-white/20"
@@ -57,14 +55,14 @@ export default function Hero() {
               </MotionButton>
               <MotionButton
                 variants={fadeVariants.fadeUp}
-                transition={transitionVariants.fast}
+                // transition={transitionVariants.default}
                 size="lg"
                 className="bg-vibezly-gradient h-auto py-3 transition-opacity hover:opacity-90"
               >
                 Get Started
               </MotionButton>
             </div>
-          </motion.div>
+          </div>
 
           {/* Floating Elements */}
           {/* <div className="animate-float absolute top-20 left-10">

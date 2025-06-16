@@ -7,24 +7,22 @@ export default function About() {
   return (
     <>
       <section id="about" className="bg-vibezly-dark py-20">
-        <motion.div
-          variants={fadeVariants.staggeredContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="mx-auto max-w-7xl px-4"
-        >
+        <div className="mx-auto max-w-7xl px-4">
           <div className="animate-fade-in mb-16 text-center">
             <motion.h2
+              initial="hidden"
+              whileInView="visible"
               variants={fadeVariants.fadeUp}
-              transition={transitionVariants.fast}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
               className="from-vibezly-purple via-vibezly-cyan to-vibezly-green mb-6 bg-gradient-to-r bg-clip-text text-4xl font-bold text-transparent md:text-5xl"
             >
               About Vibezly
             </motion.h2>
             <motion.p
+              initial="hidden"
+              whileInView="visible"
               variants={fadeVariants.fadeUp}
-              transition={transitionVariants.fast}
+              transition={{ duration: 0.8, ease: "easeInOut", delay: 0.3 }}
               className="mx-auto max-w-3xl text-xl"
             >
               We're building the future of crypto community engagement through
@@ -33,10 +31,12 @@ export default function About() {
             </motion.p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <motion.div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <MotionCard
+              initial="hidden"
+              whileInView="visible"
               variants={fadeVariants.fadeUp}
-              transition={transitionVariants.fast}
+              transition={{ duration: 1, ease: "easeIn", delay: 0 }}
               className="from-vibezly-card to-vibezly-dark border-vibezly-border/50 hover:border-vibezly-purple/50 bg-linear-[135deg] from-0% to-100% transition-all duration-300"
             >
               <CardContent className="p-6 text-center">
@@ -54,8 +54,10 @@ export default function About() {
             </MotionCard>
 
             <MotionCard
+              initial="hidden"
+              whileInView="visible"
               variants={fadeVariants.fadeUp}
-              transition={transitionVariants.fast}
+              transition={{ duration: 0.8, ease: "easeIn", delay: 0.7 }}
               className="from-vibezly-card to-vibezly-dark border-vibezly-border/50 hover:border-vibezly-cyan/50 bg-linear-[135deg] from-0% to-100% transition-all duration-300"
               style={{ animationDelay: "0.2s" }}
             >
@@ -74,8 +76,10 @@ export default function About() {
             </MotionCard>
 
             <MotionCard
+              initial="hidden"
+              whileInView="visible"
               variants={fadeVariants.fadeUp}
-              transition={transitionVariants.fast}
+              transition={{ duration: 0.8, ease: "easeIn", delay: 0.9 }}
               className="from-vibezly-card to-vibezly-dark border-vibezly-border/50 hover:border-vibezly-green/50 bg-linear-[135deg] from-0% to-100% transition-all duration-300"
               style={{ animationDelay: "0.4s" }}
             >
@@ -92,8 +96,8 @@ export default function About() {
                 </p>
               </CardContent>
             </MotionCard>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </section>
     </>
   );
