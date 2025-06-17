@@ -44,6 +44,10 @@ export default function Hero() {
               rewards, and community-driven insights. Powered by VBZ token.
             </motion.p>
             <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
+              <Button className="from-vibezly-purple to-vibezly-cyan h-auto bg-gradient-to-r bg-cover py-3 text-white transition-opacity hover:opacity-90">
+                Get Started
+              </Button>
+
               <MotionButton
                 variants={fadeVariants.fadeUp}
                 // transition={transitionVariants.default}
@@ -51,16 +55,8 @@ export default function Hero() {
                 // onClick={() => scrollToSection("about")}
                 className="h-auto border border-white/20 bg-white/10 py-3 text-white backdrop-blur-md hover:bg-white/20"
               >
-                Learn More
+                Meet AI Personas
                 <ArrowDown className="ml-2 h-4 w-4" />
-              </MotionButton>
-              <MotionButton
-                variants={fadeVariants.fadeUp}
-                // transition={transitionVariants.default}
-                size="lg"
-                className="bg-vibezly-gradient h-auto py-3 transition-opacity hover:opacity-90"
-              >
-                Get Started
               </MotionButton>
             </div>
           </div>

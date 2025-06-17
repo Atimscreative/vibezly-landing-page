@@ -9,10 +9,17 @@ export default function Team() {
       <section id="team" className="bg-vibezly-dark/50 py-20">
         <div className="mx-auto max-w-7xl px-4">
           <div className="mb-16 text-center">
-            <h2 className="from-vibezly-purple via-vibezly-cyan to-vibezly-green mb-6 bg-gradient-to-r bg-clip-text text-4xl font-bold text-transparent md:text-5xl">
+            <h2
+              data-aos="fade-up"
+              className="from-vibezly-purple via-vibezly-cyan to-vibezly-green mb-6 bg-gradient-to-r bg-clip-text text-4xl font-bold text-transparent md:text-5xl"
+            >
               Meet Our Team
             </h2>
-            <p className="mx-auto max-w-3xl text-xl">
+            <p
+              data-aos="fade-up"
+              data-aos-delay="50"
+              className="mx-auto max-w-3xl text-xl"
+            >
               Experienced builders from top tech companies and crypto projects
             </p>
           </div>
@@ -20,6 +27,8 @@ export default function Team() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {teamMembers.map((member, index) => (
               <Card
+                data-aos="fade-up"
+                data-aos-delay={(index + 1) * 100}
                 key={member.name}
                 className="from-vibezly-card to-vibezly-dark border-vibezly-border/50 hover:border-vibezly-purple/50 group animate-scale-in relative overflow-hidden bg-linear-0 transition-all duration-300"
                 style={{ animationDelay: `${index * 0.1}s` }}

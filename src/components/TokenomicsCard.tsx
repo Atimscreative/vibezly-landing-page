@@ -56,7 +56,11 @@ const chartConfig = {
 export default function TokenomicsChart() {
   return (
     <Card className="flex flex-col border-0 bg-transparent p-0">
-      <CardHeader className="items-center pb-0">
+      <CardHeader
+        data-aos="fade"
+        data-aos-delay="200"
+        className="items-center pb-0"
+      >
         <CardTitle className="font-orbitron text-center text-white">
           Total Supply
         </CardTitle>

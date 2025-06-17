@@ -26,10 +26,17 @@ export default function Tokenomics() {
       <section id="tokenomics" className="py-20">
         <div className="mx-auto max-w-7xl px-4">
           <div className="mb-16 text-center">
-            <h2 className="font-orbitron text-gradient mb-6 text-4xl font-bold md:text-5xl">
+            <h2
+              data-aos="fade-up"
+              className="font-orbitron text-gradient mb-6 text-4xl font-bold md:text-5xl"
+            >
               VBZ Tokenomics
             </h2>
-            <p className="mx-auto max-w-3xl text-xl">
+            <p
+              data-aos="fade-up"
+              data-aos-delay="100"
+              className="mx-auto max-w-3xl text-xl"
+            >
               Our utility token powers the entire Vibezly ecosystem
             </p>
           </div>
@@ -37,7 +44,11 @@ export default function Tokenomics() {
           <div className="grid gap-12 lg:grid-cols-2">
             <TokenomicsChart />
 
-            <Card className="from-vibezly-card to-vibezly-dark border-vibezly-border/50 bg-linear-180 p-8">
+            <Card
+              data-aos="fade-left"
+              data-aos-delay="300"
+              className="from-vibezly-card to-vibezly-dark border-vibezly-border/50 bg-linear-180 p-8"
+            >
               <h3 className="font-orbitron text-accent mb-6 text-2xl font-semibold">
                 Token Utility
               </h3>
@@ -87,7 +98,7 @@ export default function Tokenomics() {
 
                   <Button
                     onClick={copyContractAddress}
-                    className="bg-vibezly-cyan mt-4 w-full transition-opacity hover:opacity-90"
+                    className="bg-vibezly-cyan text-vibezly-dark mt-4 h-auto w-full py-3 transition-opacity hover:bg-cyan-400 hover:opacity-90"
                   >
                     {copiedContract ? "Copied!" : "Copy Contract Address"}
                   </Button>
