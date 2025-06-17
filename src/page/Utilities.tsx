@@ -24,6 +24,9 @@ import {
   Clock,
   Settings,
 } from "lucide-react";
+import UtilitiesHero from "@/components/utilities-components/HeroUtilities";
+import AIDrivenEngagement from "@/components/utilities-components/AIDrivenEngagement";
+import DecentralizedGovernance from "@/components/utilities-components/DecentralizedGovernance";
 
 const Utilities = () => {
   const [sentimentScore, setSentimentScore] = useState(0);
@@ -132,321 +135,19 @@ const Utilities = () => {
   ];
 
   return (
-    <div className="bg-background text-foreground min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-moving-gradient relative overflow-hidden px-4 py-20">
-        <div className="relative z-10 container mx-auto text-center">
-          <div className="mx-auto max-w-4xl">
-            <h1 className="font-orbitron animate-fade-in mb-6 text-5xl font-bold text-white md:text-7xl">
-              Supercharge Your Telegram Community
-            </h1>
-            <p className="animate-fade-in mb-8 text-xl text-white/90 md:text-2xl">
-              AI tools, gamified rewards, and decentralized moderation — all in
-              one bot.
-            </p>
-            <div className="animate-fade-in flex flex-col justify-center gap-4 sm:flex-row">
-              <Button
-                size="lg"
-                className="bg-white font-semibold text-black hover:bg-white/90"
-              >
-                <Bot className="mr-2 h-5 w-5" />
-                Add Vibezly to Telegram
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-black"
-              >
-                <TrendingUp className="mr-2 h-5 w-5" />
-                View Dashboard
-              </Button>
-            </div>
-          </div>
-        </div>
-
-        {/* Floating Animation Elements */}
-        <div className="pointer-events-none absolute inset-0 overflow-hidden">
-          <div className="animate-float absolute top-20 left-10">
-            <MessageSquare className="h-8 w-8 text-white/20" />
-          </div>
-          <div
-            className="animate-float absolute top-32 right-20"
-            style={{ animationDelay: "1s" }}
-          >
-            <Star className="h-6 w-6 text-white/20" />
-          </div>
-          <div
-            className="animate-float absolute bottom-20 left-1/4"
-            style={{ animationDelay: "2s" }}
-          >
-            <Zap className="h-10 w-10 text-white/20" />
-          </div>
-        </div>
-      </section>
-
-      {/* AI-Driven Engagement Section */}
-      <section className="bg-background px-4 py-20">
-        <div className="container mx-auto">
-          <div className="mb-16 text-center">
-            <h2 className="font-orbitron text-gradient mb-6 text-4xl font-bold md:text-5xl">
-              🤖 AI That Understands Your Vibes
-            </h2>
-            <p className="text-muted-foreground mx-auto max-w-4xl text-xl">
-              Vibezly's AI tracks real conversations, filters spam, and scores
-              engagement based on quality, relevance, and sentiment. From NLP
-              message scoring to image recognition on memes, your group activity
-              is intelligently analyzed in real-time.
-            </p>
-          </div>
-
-          <div className="grid items-center gap-12 lg:grid-cols-2">
-            <div className="space-y-8">
-              <div className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-purple-500/20">
-                    <TrendingUp className="h-6 w-6 text-purple-400" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold">
-                      AI Sentiment Analysis
-                    </h3>
-                    <p className="text-muted-foreground">
-                      Real-time bullish/bearish/neutral detection
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-cyan-500/20">
-                    <Shield className="h-6 w-6 text-cyan-400" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold">
-                      Spam & Flood Detection
-                    </h3>
-                    <p className="text-muted-foreground">
-                      Advanced NLP protects your community
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-green-500/20">
-                    <Bot className="h-6 w-6 text-green-400" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold">
-                      Smart Persona Replies
-                    </h3>
-                    <p className="text-muted-foreground">
-                      Context-aware AI responses
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-yellow-500/20">
-                    <MessageSquare className="h-6 w-6 text-yellow-400" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold">
-                      Message & Tweet Tracking
-                    </h3>
-                    <p className="text-muted-foreground">
-                      Comprehensive activity monitoring
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-vibezly-card border-border rounded-2xl border p-8">
-              <h3 className="mb-6 text-xl font-semibold">
-                Live Sentiment Analysis
-              </h3>
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <span>Community Sentiment</span>
-                  <Badge
-                    className={
-                      sentimentScore > 60
-                        ? "bg-green-500"
-                        : sentimentScore > 40
-                          ? "bg-yellow-500"
-                          : "bg-red-500"
-                    }
-                  >
-                    {sentimentScore > 60
-                      ? "Bullish"
-                      : sentimentScore > 40
-                        ? "Neutral"
-                        : "Bearish"}
-                  </Badge>
-                </div>
-                <Progress value={sentimentScore} className="h-3" />
-                <div className="text-muted-foreground text-sm">
-                  Score: {sentimentScore}/100 (Real-time analysis)
-                </div>
-              </div>
-
-              <div className="mt-8 space-y-4">
-                <div className="bg-background/50 rounded-lg border-l-4 border-green-500 p-4">
-                  <div className="mb-2 flex items-center gap-2">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-green-500 text-xs font-bold">
-                      SS
-                    </div>
-                    <span className="font-semibold">Sunny Sam</span>
-                    <Badge variant="secondary">AI</Badge>
-                  </div>
-                  <p className="text-sm">
-                    Great vibes today! Love seeing everyone engaged 🌟
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Decentralized Governance Section */}
-      <section className="bg-secondary/30 px-4 py-20">
-        <div className="container mx-auto">
-          <div className="mb-16 text-center">
-            <h2 className="font-orbitron text-gradient mb-6 text-4xl font-bold md:text-5xl">
-              🗳️ Community-Controlled Moderation
-            </h2>
-            <p className="text-muted-foreground mx-auto max-w-4xl text-xl">
-              Let your community moderate itself. With the /report command and
-              an auto-mute threshold, users can flag bad behavior. All actions
-              are logged, and appeals are managed privately via DM.
-            </p>
-          </div>
-
-          <div className="grid items-center gap-12 lg:grid-cols-2">
-            <div className="bg-vibezly-card border-border rounded-2xl border p-8">
-              <h3 className="mb-6 text-xl font-semibold">Moderation Demo</h3>
-
-              <div className="space-y-4">
-                <div className="rounded-lg border border-red-500/20 bg-red-500/10 p-4">
-                  <div className="mb-2 flex items-center gap-2">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-red-500 text-xs font-bold">
-                      TX
-                    </div>
-                    <span className="font-semibold text-red-400">
-                      ToxicUser
-                    </span>
-                  </div>
-                  <p className="mb-3 text-sm">
-                    This project is a scam! Don't buy!
-                  </p>
-                  <Button size="sm" variant="destructive" className="text-xs">
-                    /report ToxicUser
-                  </Button>
-                </div>
-
-                <div className="rounded-lg border border-yellow-500/20 bg-yellow-500/10 p-4">
-                  <div className="flex items-center gap-2">
-                    <Shield className="h-5 w-5 text-yellow-400" />
-                    <span className="font-semibold">Vibezly Bot</span>
-                  </div>
-                  <p className="mt-2 text-sm">
-                    User reported! Current flags: 7/10
-                    <br />
-                    <span className="text-yellow-400">
-                      3 more reports needed for auto-mute
-                    </span>
-                  </p>
-                </div>
-
-                <div className="rounded-lg border border-green-500/20 bg-green-500/10 p-4">
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="h-5 w-5 text-green-400" />
-                    <span className="font-semibold">Auto-Moderation</span>
-                  </div>
-                  <p className="mt-2 text-sm">
-                    User auto-muted after 10 reports
-                    <br />
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      className="mt-2 text-xs"
-                    >
-                      Appeal via DM
-                    </Button>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="space-y-8">
-              <div className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-purple-500/20">
-                    <Users className="h-6 w-6 text-purple-400" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold">
-                      Community-Powered /report
-                    </h3>
-                    <p className="text-muted-foreground">
-                      Decentralized flagging system
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-red-500/20">
-                    <Shield className="h-6 w-6 text-red-400" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold">
-                      Auto-Mute Threshold
-                    </h3>
-                    <p className="text-muted-foreground">
-                      Automatic action after 10 reports
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-500/20">
-                    <MessageSquare className="h-6 w-6 text-blue-400" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold">DM-Based Appeals</h3>
-                    <p className="text-muted-foreground">
-                      Private appeal process
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-green-500/20">
-                    <CheckCircle className="h-6 w-6 text-green-400" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold">
-                      Transparency Audit Trail
-                    </h3>
-                    <p className="text-muted-foreground">
-                      All actions logged and traceable
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    <>
+      <UtilitiesHero />
+      <AIDrivenEngagement />
+      <DecentralizedGovernance />
 
       {/* Gamified Contests Section */}
-      <section className="bg-background px-4 py-20">
-        <div className="container mx-auto">
+      <section className="hidden px-4 py-20">
+        <div className="mx-auto max-w-7xl">
           <div className="mb-16 text-center">
             <h2 className="font-orbitron text-gradient mb-6 text-4xl font-bold md:text-5xl">
               🎮 Gamified Contests with Real Rewards
             </h2>
-            <p className="text-muted-foreground mx-auto max-w-4xl text-xl">
+            <p className="mx-auto max-w-4xl text-xl">
               Turn your community into an arena of vibes. Weekly or biweekly
               contests score users based on quality contributions, rewarding top
               performers with ETH, USDC, or VBZ.
@@ -461,9 +162,7 @@ const Utilities = () => {
                   <div key={index} className="space-y-2">
                     <div className="flex items-center justify-between">
                       <span className="font-medium">{item.category}</span>
-                      <span className="text-muted-foreground text-sm">
-                        {item.percentage}%
-                      </span>
+                      <span className="text-sm">{item.percentage}%</span>
                     </div>
                     <div className="bg-secondary h-3 overflow-hidden rounded-full">
                       <div
@@ -482,19 +181,19 @@ const Utilities = () => {
                     <code className="bg-secondary rounded px-2 py-1">
                       /dashboard
                     </code>
-                    <span className="text-muted-foreground">View stats</span>
+                    <span className="">View stats</span>
                   </div>
                   <div className="flex justify-between">
                     <code className="bg-secondary rounded px-2 py-1">
                       /leaderboard
                     </code>
-                    <span className="text-muted-foreground">See rankings</span>
+                    <span className="">See rankings</span>
                   </div>
                   <div className="flex justify-between">
                     <code className="bg-secondary rounded px-2 py-1">
                       /claim
                     </code>
-                    <span className="text-muted-foreground">Get rewards</span>
+                    <span className="">Get rewards</span>
                   </div>
                 </div>
               </div>
@@ -514,9 +213,7 @@ const Utilities = () => {
                       </div>
                       <div>
                         <div className="font-semibold">{user.name}</div>
-                        <div className="text-muted-foreground text-sm">
-                          {user.score} points
-                        </div>
+                        <div className="text-sm">{user.score} points</div>
                       </div>
                     </div>
                     <div className="flex items-center gap-2">
@@ -538,13 +235,11 @@ const Utilities = () => {
 
               <div className="border-border mt-6 border-t pt-6">
                 <div className="text-center">
-                  <p className="text-muted-foreground mb-3 text-sm">
-                    Weekly Contest Prize Pool
-                  </p>
+                  <p className="mb-3 text-sm">Weekly Contest Prize Pool</p>
                   <div className="text-gradient text-2xl font-bold">
                     $2,500 USDC
                   </div>
-                  <p className="text-muted-foreground mt-1 text-xs">
+                  <p className="mt-1 text-xs">
                     Distributed to top 10 contributors
                   </p>
                 </div>
@@ -555,13 +250,13 @@ const Utilities = () => {
       </section>
 
       {/* Core Features Grid */}
-      <section className="bg-secondary/30 px-4 py-20">
-        <div className="container mx-auto">
+      <section className="px-4 py-20">
+        <div className="mx-auto max-w-7xl">
           <div className="mb-16 text-center">
             <h2 className="font-orbitron text-gradient mb-6 text-4xl font-bold md:text-5xl">
-              🔧 Core Features — Built for Scale
+              Core Features — Built for Scale
             </h2>
-            <p className="text-muted-foreground text-xl">
+            <p className="text-xl">
               A complete toolset for engaged, high-signal communities.
             </p>
           </div>
@@ -570,16 +265,20 @@ const Utilities = () => {
             {coreFeatures.map((feature, index) => (
               <Card
                 key={index}
-                className="bg-vibezly-card border-border hover:border-primary/50 transition-colors"
+                className="from-vibezly-card to-vibezly-dark border-vibezly-border hover:border-vibezly-border/50 bg-linear-[135deg] transition-colors"
               >
                 <CardHeader>
                   <div className="flex items-center justify-between">
-                    <CardTitle className="text-lg">{feature.feature}</CardTitle>
+                    <CardTitle className="font-orbitron text-lg text-white">
+                      {feature.feature}
+                    </CardTitle>
                     <Badge className={`${feature.statusColor} text-white`}>
                       {feature.status}
                     </Badge>
                   </div>
-                  <CardDescription>{feature.description}</CardDescription>
+                  <CardDescription className="text-neutral-300">
+                    {feature.description}
+                  </CardDescription>
                 </CardHeader>
               </Card>
             ))}
@@ -588,8 +287,8 @@ const Utilities = () => {
       </section>
 
       {/* Live Command Showcase */}
-      <section className="bg-background px-4 py-20">
-        <div className="container mx-auto">
+      <section className="hidden px-4 py-20">
+        <div className="mx-auto max-w-7xl">
           <div className="mb-16 text-center">
             <h2 className="font-orbitron text-gradient mb-6 text-4xl font-bold md:text-5xl">
               💬 Commands That Keep the Vibes High
@@ -621,9 +320,7 @@ const Utilities = () => {
                           Try
                         </Button>
                       </div>
-                      <p className="text-muted-foreground mt-2 text-sm">
-                        {cmd.action}
-                      </p>
+                      <p className="mt-2 text-sm">{cmd.action}</p>
                     </div>
                   ))}
                 </div>
@@ -632,7 +329,7 @@ const Utilities = () => {
                   <h3 className="mb-4 text-lg font-semibold">Command Output</h3>
                   {activeCommand ? (
                     <div className="space-y-3">
-                      <div className="text-muted-foreground text-sm">
+                      <div className="text-sm">
                         Input:{" "}
                         <code className="bg-secondary rounded px-1 py-0.5">
                           {activeCommand}
@@ -654,7 +351,7 @@ const Utilities = () => {
                       </div>
                     </div>
                   ) : (
-                    <div className="text-muted-foreground py-8 text-center">
+                    <div className="py-8 text-center">
                       <Bot className="mx-auto mb-4 h-12 w-12 opacity-50" />
                       <p>Click a command to see the demo output</p>
                     </div>
@@ -667,13 +364,13 @@ const Utilities = () => {
       </section>
 
       {/* What's Coming Next */}
-      <section className="bg-secondary/30 px-4 py-20">
-        <div className="container mx-auto">
+      <section className="hidden px-4 py-20">
+        <div className="mx-auto max-w-7xl">
           <div className="mb-16 text-center">
             <h2 className="font-orbitron text-gradient mb-6 text-4xl font-bold md:text-5xl">
               🔮 Evolving Utilities
             </h2>
-            <p className="text-muted-foreground text-xl">
+            <p className="text-xl">
               Vibezly keeps building. Here's what's rolling out next:
             </p>
           </div>
@@ -723,8 +420,8 @@ const Utilities = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="bg-moving-gradient px-4 py-20">
-        <div className="container mx-auto text-center">
+      <section className="hidden px-4 py-20">
+        <div className="mx-auto max-w-7xl text-center">
           <div className="mx-auto max-w-4xl text-white">
             <h2 className="font-orbitron mb-6 text-4xl font-bold md:text-6xl">
               Ready to Engage Smarter?
@@ -761,7 +458,7 @@ const Utilities = () => {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 
