@@ -2,8 +2,9 @@ import { ArrowDown } from "lucide-react";
 import { Button } from "../ui/button";
 import { AnimatedGradientText } from "../magicui/animated-gradient-text";
 import { Particles } from "../magicui/particles";
-import { motion, stagger } from "motion/react";
-import { fadeVariants, transitionVariants } from "@/utils/motionVariants";
+import { motion } from "motion/react";
+import { fadeVariants } from "@/utils/motionVariants";
+import { TypingAnimation } from "../magicui/typing-animation";
 
 export default function Hero() {
   const MotionButton = motion(Button);

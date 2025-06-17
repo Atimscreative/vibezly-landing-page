@@ -1,4 +1,4 @@
-import { fadeVariants, transitionVariants } from "@/utils/motionVariants";
+import { fadeVariants } from "@/utils/motionVariants";
 import { Card, CardContent } from "../ui/card";
 import { motion } from "motion/react";
 

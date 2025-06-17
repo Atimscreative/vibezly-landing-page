@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -8,8 +9,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Progress } from "@/components/ui/progress";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Bot,
   Users,
@@ -31,7 +30,7 @@ import DecentralizedGovernance from "@/components/utilities-components/Decentral
 const Utilities = () => {
   const [sentimentScore, setSentimentScore] = useState(0);
   const [activeCommand, setActiveCommand] = useState("");
-  const [leaderboardData, setLeaderboardData] = useState([
+  const [leaderboardData] = useState([
     { name: "CryptoChad", score: 2840, trend: "up" },
     { name: "MoonWalker", score: 2650, trend: "up" },
     { name: "DiamondHands", score: 2420, trend: "down" },
@@ -420,7 +419,8 @@ const Utilities = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="hidden px-4 py-20">
+      <section className="bg-moving-gradient relative px-4 py-20">
+        <div className="from-vibezly-purple to-vibezly-cyan size-[140px] rounded-full bg-conic"></div>
         <div className="mx-auto max-w-7xl text-center">
           <div className="mx-auto max-w-4xl text-white">
             <h2 className="font-orbitron mb-6 text-4xl font-bold md:text-6xl">
