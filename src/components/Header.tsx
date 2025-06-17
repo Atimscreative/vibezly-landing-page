@@ -82,7 +82,7 @@ export default function Header() {
           </div>
         </nav>
       </header>
-      <MobileMenu {...{ setOpen, open }} />
+      <>{<MobileMenu {...{ setOpen, open }} />}</>
     </>
   );
 }

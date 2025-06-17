@@ -3,7 +3,7 @@ import { Card, CardContent } from "../ui/card";
 export default function About() {
   return (
     <>
-      <section id="about" className="bg-vibezly-dark py-20">
+      <section id="about" className="bg-vibezly-dark overflow-hidden py-20">
         <div className="mx-auto max-w-7xl px-4">
           <div className="animate-fade-in mb-16 text-center">
             <h2

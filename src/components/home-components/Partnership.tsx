@@ -24,7 +24,7 @@ export default function Partnership() {
 
           <div className="relative">
             <Marquee>
-              <div className="grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-5">
+              <div className="flex gap-5">
                 {partnerships.map((partner, index) => (
                   <div
                     key={partner.name}
@@ -44,8 +44,8 @@ export default function Partnership() {
               </div>
             </Marquee>
 
-            <div className="from-vibezly-border/30 via-vibezly-border/30 pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r"></div>
-            <div className="from-vibezly-border/30 via-vibezly-border/30 pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l"></div>
+            <div className="from-[#121721] via-[#121721] pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r"></div>
+            <div className="from-[#121721] via-[#121721] pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l"></div>
           </div>
         </div>
       </section>

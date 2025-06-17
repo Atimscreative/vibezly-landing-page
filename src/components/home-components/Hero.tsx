@@ -8,7 +8,7 @@ export default function Hero() {
     <>
       <section
         id="hero"
-        className="relative flex min-h-screen items-center justify-center"
+        className="relative flex min-h-screen overflow-hidden items-center justify-center"
       >
         <div className="bg-vibezly-dark absolute inset-0 h-screen w-full">
           <Particles className="h-full w-full" />

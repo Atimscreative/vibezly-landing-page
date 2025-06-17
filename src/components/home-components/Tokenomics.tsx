@@ -23,7 +23,7 @@ export default function Tokenomics() {
   return (
     <>
       {/* Tokenomics Section */}
-      <section id="tokenomics" className="py-20">
+      <section id="tokenomics" className="overflow-hidden py-20">
         <div className="mx-auto max-w-7xl px-4">
           <div className="mb-16 text-center">
             <h2

@@ -21,6 +21,8 @@ export default function MobileMenu({
         <div className="inline-flex flex-col gap-6 p-6 md:pl-10">
           {navMenu.map((menu, i) => (
             <Link
+              data-aos="fade-down"
+              data-aos-delay={(i + 1) * 100}
               onClick={() => setOpen(false)}
               to={menu.url}
               key={i}
