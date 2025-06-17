@@ -1,5 +1,4 @@
 import { partnerships } from "@/utils";
-import { VelocityScroll } from "../magicui/scroll-based-velocity";
 import { Marquee } from "../magicui/marquee";
 
 export default function Partnership() {

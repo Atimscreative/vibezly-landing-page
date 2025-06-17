@@ -1,5 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -11,16 +10,11 @@ import {
 import { Badge } from "@/components/ui/badge";
 import {
   Bot,
-  Users,
   Zap,
   Award,
-  MessageSquare,
   TrendingUp,
-  Shield,
   Gamepad2,
   Star,
-  CheckCircle,
-  Clock,
   Settings,
 } from "lucide-react";
 import UtilitiesHero from "@/components/utilities-components/HeroUtilities";
@@ -28,7 +22,7 @@ import AIDrivenEngagement from "@/components/utilities-components/AIDrivenEngage
 import DecentralizedGovernance from "@/components/utilities-components/DecentralizedGovernance";
 
 const Utilities = () => {
-  const [sentimentScore, setSentimentScore] = useState(0);
+  const [, setSentimentScore] = useState(0);
   const [activeCommand, setActiveCommand] = useState("");
   const [leaderboardData] = useState([
     { name: "CryptoChad", score: 2840, trend: "up" },
