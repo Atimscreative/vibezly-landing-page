@@ -30,7 +30,10 @@ export default function AIPersonas() {
         >
           <div className="mx-auto max-w-7xl px-4 text-center">
             <div className="mx-auto max-w-4xl">
-              <h1 className="font-orbitron mb-6 text-5xl leading-[130%] font-bold text-white">
+              <h1
+                data-aos="fade-down"
+                className="font-orbitron mb-6 text-5xl leading-[130%] font-bold text-white"
+              >
                 Multiple{" "}
                 <AnimatedGradientText
                   // colorFrom="#7b00ff"
@@ -42,7 +45,11 @@ export default function AIPersonas() {
                 ,
                 <br /> One Vibezly Engine
               </h1>
-              <p className="mb-8 text-xl text-white/90">
+              <p
+                data-aos="fade-down"
+                data-aos-delay="100"
+                className="mb-8 text-xl text-white/90"
+              >
                 Tailor your community's energy with AI-powered personas built
                 for every mood. Whether it's hype, chaos, support, or savage
                 truth, Vibezly's got your back.
@@ -55,10 +62,13 @@ export default function AIPersonas() {
         <section className="bg-vibezly-dark hidden py-16 md:block">
           <div className="mx-auto max-w-7xl px-4">
             <div className="mx-auto mb-12 max-w-4xl text-center">
-              <h2 className="font-orbitron text-gradient mb-6 text-3xl font-bold">
+              <h2
+                data-aos="fade-down"
+                className="font-orbitron text-gradient mb-6 text-3xl font-bold"
+              >
                 Meet the Vibezly AI Personas
               </h2>
-              <p className="text-lg">
+              <p data-aos="fade-down" data-aos-delay="100" className="text-lg">
                 Unleash distinct voices to hype, roast, support, or stir your
                 community — one vibe at a time. Vibezly offers four distinct AI
                 personas designed to engage communities in different tones.
@@ -66,10 +76,14 @@ export default function AIPersonas() {
             </div>
 
             {/* Persona Overview Table */}
-            <div className="from-vibezly-card to-vibezly-dark border-vibezly-border/45 mb-16 overflow-hidden rounded-lg border bg-linear-180">
+            <div
+              data-aos="zoom-in"
+              data-aos-delay="100"
+              className="from-vibezly-card to-vibezly-dark border-vibezly-border/45 mb-16 overflow-hidden rounded-lg border bg-linear-180"
+            >
               <div className="p-6">
                 <h3 className="mb-4 text-xl font-bold text-white">
-                  🧠 Persona Overview
+                  Persona Overview
                 </h3>
                 <div className="overflow-x-auto">
                   <table className="w-full">
@@ -136,7 +150,10 @@ export default function AIPersonas() {
         {/* Personas Bento Grid */}
         <section className="bg-vibezly-border/20 py-16">
           <div className="mx-auto max-w-6xl px-4">
-            <h2 className="font-orbitron text-gradient mb-12 text-center text-3xl font-bold">
+            <h2
+              data-aos="fade-down"
+              className="font-orbitron text-gradient mb-12 text-center text-3xl font-bold"
+            >
               The Personas
             </h2>
 
@@ -146,70 +163,38 @@ export default function AIPersonas() {
                 <Persona
                   key={i}
                   data={persona}
+                  index={i}
                   color={persona.color as PersonaColor}
                 />
               ))}
-
-              {/* Usage Strategy - Wide card */}
-              <Card className="border-primary/20 hidden border bg-gradient-to-r from-purple-500/10 via-cyan-500/10 to-green-500/10 lg:col-span-4">
-                <CardHeader>
-                  <CardTitle className="text-gradient text-xl">
-                    🎛️ How to Use Them Together
-                  </CardTitle>
-                  <CardDescription>
-                    Dynamic strategy for community engagement
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid gap-6 md:grid-cols-3">
-                    <div className="text-center">
-                      <div className="mb-2 text-2xl">🔄</div>
-                      <h4 className="mb-2 font-semibold">Rotate by Mood</h4>
-                      <p className="text-sm">
-                        Switch based on mood shifts or market sentiment
-                      </p>
-                    </div>
-                    <div className="text-center">
-                      <div className="mb-2 text-2xl">🏁</div>
-                      <h4 className="mb-2 font-semibold">Campaign Stages</h4>
-                      <p className="text-sm">
-                        Assign personas to different campaign phases
-                      </p>
-                    </div>
-                    <div className="text-center">
-                      <div className="mb-2 text-2xl">🎯</div>
-                      <h4 className="mb-2 font-semibold">Strategic Combos</h4>
-                      <p className="text-sm">
-                        Use combinations for contests, raids, and onboarding
-                      </p>
-                    </div>
-                  </div>
-                  <Separator className="my-4" />
-                  <div className="text-center">
-                    <p className="text-gradient font-medium">
-                      Result: A living, breathing chat space that's never stale
-                      and always on-brand.
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-16">
-          <div className="container mx-auto px-4 text-center">
+        <section className="relative overflow-hidden py-16">
+          <div className="absolute top-0 left-1/2 h-[1px] w-1/2 -translate-x-1/2 bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+          <div className="from-vibezly-purple to-vibezly-cyan absolute -top-[202px] left-1/2 size-[279px] -translate-x-1/2 animate-spin rounded-full bg-linear-180 blur-[60px] duration-1000 ease-in"></div>
+          <div className="relative z-10 container mx-auto px-4 text-center">
             <div className="mx-auto max-w-2xl">
-              <h2 className="font-orbitron mb-4 text-3xl font-bold">
+              <h2
+                data-aos="fade-down"
+                className="font-orbitron mb-4 text-3xl font-bold"
+              >
                 🚀 Ready to Supercharge Your Community?
               </h2>
-              <p className="mb-8 text-lg">
+              <p
+                data-aos="fade-up"
+                data-aos-delay="100"
+                className="mb-8 text-lg"
+              >
                 Switch on Vibezly AI Personas and keep your chat lit 24/7.
               </p>
               <Button
+                data-aos="fade-up"
+                data-aos-delay="200"
                 size="lg"
-                className="bg-vibezly-gradient transition-transform"
+                className="from-vibezly-purple via-vibezly-cyan to-vibezly-green bg-linear-[135deg] transition-transform text-shadow-sm"
               >
                 Get Started With Vibezly
               </Button>
@@ -221,7 +206,15 @@ export default function AIPersonas() {
   );
 }
 
-function Persona({ color, data }: { color: PersonaColor; data: any }) {
+function Persona({
+  color,
+  data,
+  index,
+}: {
+  color: PersonaColor;
+  data: any;
+  index: number;
+}) {
   const {
     name,
     alias,
@@ -234,6 +227,8 @@ function Persona({ color, data }: { color: PersonaColor; data: any }) {
   } = data;
   return (
     <Card
+      data-aos="zoom-in"
+      data-aos-delay={(index + 1) * 100}
       className={cn(
         "relative border-0 bg-gradient-to-br transition-all duration-300",
         colorClassMap[color].bgFrom,
@@ -323,4 +318,3 @@ function Persona({ color, data }: { color: PersonaColor; data: any }) {
     </Card>
   );
 }
-
