@@ -6,7 +6,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
+// import { Separator } from "@/components/ui/separator";
 import Bg from "@/assets/particles.gif";
 import { AnimatedGradientText } from "@/components/magicui/animated-gradient-text";
 import { cn } from "@/lib/utils";
