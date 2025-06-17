@@ -11,13 +11,18 @@ export default function UtilitiesHero() {
       >
         {/* <div className="absolute inset-0"></div> */}
         <div className="relative z-10 mx-auto max-w-7xl px-4 text-center">
-          <h1 className="font-orbitron mb-6 text-4xl leading-[130%] font-bold text-white md:text-6xl">
+          <h1
+            data-aos="fade-down"
+            className="font-orbitron mb-6 text-4xl leading-[130%] font-bold text-white md:text-6xl"
+          >
             Supercharge Your
             <AnimatedGradientText colorFrom="#7b00ff" colorTo="#00d1ff">
               &nbsp;Telegram Community
             </AnimatedGradientText>
           </h1>
           <p
+            data-aos="fade-up"
+            data-aos-delay="100"
             className="mx-auto mb-4 text-xl text-gray-200 sm:max-w-7/12 md:text-2xl"
             style={{ animationDelay: "0.2s" }}
           >
@@ -25,13 +30,26 @@ export default function UtilitiesHero() {
             one bot.{" "}
           </p>
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
-            <Button size="lg" className="font-semibold">
+            <Button
+              data-aos="fade-up"
+              data-aos-delay="200"
+              size="lg"
+              className="from-vibezly-purple via-vibezly-cyan to-vibezly-green h-auto bg-linear-[135deg] py-3 transition-transform text-shadow-sm"
+            >
               <Bot className="mr-2 h-5 w-5" />
               Add Vibezly to Telegram
             </Button>
-            <Button size="lg" variant="outline" className="">
-              <TrendingUp className="mr-2 h-5 w-5" />
-              View Dashboard
+            <Button
+              size="lg"
+              data-aos="fade-up"
+              data-aos-delay={300}
+              className="from-vibezly-purple to-vibezly-cyan relative flex h-auto items-center justify-center bg-linear-[135deg] py-3 transition-opacity hover:opacity-90"
+            >
+              <div className="bg-vibezly-dark absolute top-1/2 left-1/2 h-[90%] w-[97.5%] -translate-1/2 rounded-sm"></div>
+              <span className="relative z-10 flex gap-2">
+                <TrendingUp className="mr-2 h-5 w-5" />
+                View Dashboard
+              </span>
             </Button>
           </div>
         </div>

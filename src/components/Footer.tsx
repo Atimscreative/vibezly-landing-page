@@ -54,6 +54,8 @@ export default function Footer() {
 
       {/* Scroll to Top Button */}
       <Link
+        data-aos="fade-up"
+        data-aos-delay="200"
         to="#hero"
         className="from-vibezly-purple via-vibezly-cyan to-vibezly-green glow fixed right-8 bottom-8 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-linear-[135deg] from-0% via-50% to-100% transition-all duration-300 hover:scale-110"
       >

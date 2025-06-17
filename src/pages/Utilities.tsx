@@ -12,7 +12,7 @@ import {
   Bot,
   Zap,
   Award,
-  TrendingUp,
+  // TrendingUp,
   Gamepad2,
   Star,
   Settings,
@@ -20,15 +20,18 @@ import {
 import UtilitiesHero from "@/components/utilities-components/HeroUtilities";
 import AIDrivenEngagement from "@/components/utilities-components/AIDrivenEngagement";
 import DecentralizedGovernance from "@/components/utilities-components/DecentralizedGovernance";
+import { cn } from "@/lib/utils";
+// import { colorClassMap } from "@/utils/helper";
+// import { personas } from "@/utils";
 
 const Utilities = () => {
   const [, setSentimentScore] = useState(0);
-  const [activeCommand, setActiveCommand] = useState("");
-  const [leaderboardData] = useState([
-    { name: "CryptoChad", score: 2840, trend: "up" },
-    { name: "MoonWalker", score: 2650, trend: "up" },
-    { name: "DiamondHands", score: 2420, trend: "down" },
-  ]);
+  // const [activeCommand, setActiveCommand] = useState("");
+  // const [leaderboardData] = useState([
+  //   { name: "CryptoChad", score: 2840, trend: "up" },
+  //   { name: "MoonWalker", score: 2650, trend: "up" },
+  //   { name: "DiamondHands", score: 2420, trend: "down" },
+  // ]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -37,33 +40,33 @@ const Utilities = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const commands = [
-    {
-      cmd: "/dashboard",
-      action: "Opens mini app with live stats and leaderboard",
-      demo: "📊 Dashboard loaded!",
-    },
-    {
-      cmd: "/report",
-      action: "Report toxic users (10 flags = auto-mute)",
-      demo: "⚠️ User reported! (3/10 flags)",
-    },
-    {
-      cmd: "/leaderboard",
-      action: "Displays current top contributors",
-      demo: "🏆 Top Contributors loaded!",
-    },
-    {
-      cmd: "/claim",
-      action: "DMs to claim contest rewards",
-      demo: "💰 Rewards sent to DM!",
-    },
-    {
-      cmd: "/vibe_check",
-      action: "Generates sentiment report",
-      demo: "📈 Community Sentiment: Bullish!",
-    },
-  ];
+  // const commands = [
+  //   {
+  //     cmd: "/dashboard",
+  //     action: "Opens mini app with live stats and leaderboard",
+  //     demo: "📊 Dashboard loaded!",
+  //   },
+  //   {
+  //     cmd: "/report",
+  //     action: "Report toxic users (10 flags = auto-mute)",
+  //     demo: "⚠️ User reported! (3/10 flags)",
+  //   },
+  //   {
+  //     cmd: "/leaderboard",
+  //     action: "Displays current top contributors",
+  //     demo: "🏆 Top Contributors loaded!",
+  //   },
+  //   {
+  //     cmd: "/claim",
+  //     action: "DMs to claim contest rewards",
+  //     demo: "💰 Rewards sent to DM!",
+  //   },
+  //   {
+  //     cmd: "/vibe_check",
+  //     action: "Generates sentiment report",
+  //     demo: "📈 Community Sentiment: Bullish!",
+  //   },
+  // ];
 
   const coreFeatures = [
     {
@@ -116,16 +119,16 @@ const Utilities = () => {
     },
   ];
 
-  const scoringBreakdown = [
-    { category: "Messages", percentage: 20, color: "bg-purple-500" },
-    { category: "Sentiment", percentage: 15, color: "bg-cyan-500" },
-    { category: "Conversations", percentage: 15, color: "bg-green-500" },
-    { category: "Replies", percentage: 12, color: "bg-yellow-500" },
-    { category: "Raids", percentage: 10, color: "bg-pink-500" },
-    { category: "Reactions", percentage: 10, color: "bg-orange-500" },
-    { category: "Competitor Engagement", percentage: 8, color: "bg-blue-500" },
-    { category: "Other", percentage: 10, color: "bg-gray-500" },
-  ];
+  // const scoringBreakdown = [
+  //   { category: "Messages", percentage: 20, color: "bg-purple-500" },
+  //   { category: "Sentiment", percentage: 15, color: "bg-cyan-500" },
+  //   { category: "Conversations", percentage: 15, color: "bg-green-500" },
+  //   { category: "Replies", percentage: 12, color: "bg-yellow-500" },
+  //   { category: "Raids", percentage: 10, color: "bg-pink-500" },
+  //   { category: "Reactions", percentage: 10, color: "bg-orange-500" },
+  //   { category: "Competitor Engagement", percentage: 8, color: "bg-blue-500" },
+  //   { category: "Other", percentage: 10, color: "bg-gray-500" },
+  // ];
 
   return (
     <>
@@ -134,7 +137,7 @@ const Utilities = () => {
       <DecentralizedGovernance />
 
       {/* Gamified Contests Section */}
-      <section className="hidden px-4 py-20">
+      {/* <section className="hidden px-4 py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-16 text-center">
             <h2 className="font-orbitron text-gradient mb-6 text-4xl font-bold md:text-5xl">
@@ -240,16 +243,19 @@ const Utilities = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Core Features Grid */}
       <section className="px-4 py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-16 text-center">
-            <h2 className="font-orbitron text-gradient mb-6 text-4xl font-bold md:text-5xl">
+            <h2
+              data-aos="fade-down"
+              className="font-orbitron text-gradient mb-6 text-4xl font-bold md:text-5xl"
+            >
               Core Features — Built for Scale
             </h2>
-            <p className="text-xl">
+            <p data-aos="fade-down" data-aos-delay="100" className="text-xl">
               A complete toolset for engaged, high-signal communities.
             </p>
           </div>
@@ -257,6 +263,8 @@ const Utilities = () => {
           <div className="grid gap-6 md:grid-cols-2">
             {coreFeatures.map((feature, index) => (
               <Card
+                data-aos="fade-up"
+                data-aos-delay={(index + 1) * 100}
                 key={index}
                 className="from-vibezly-card to-vibezly-dark border-vibezly-border hover:border-vibezly-border/50 bg-linear-[135deg] transition-colors"
               >
@@ -280,7 +288,7 @@ const Utilities = () => {
       </section>
 
       {/* Live Command Showcase */}
-      <section className="hidden px-4 py-20">
+      {/* <section className="hidden px-4 py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-16 text-center">
             <h2 className="font-orbitron text-gradient mb-6 text-4xl font-bold md:text-5xl">
@@ -354,21 +362,24 @@ const Utilities = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* What's Coming Next */}
-      <section className="hidden px-4 py-20">
+      <section className="px-4 py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-16 text-center">
-            <h2 className="font-orbitron text-gradient mb-6 text-4xl font-bold md:text-5xl">
-              🔮 Evolving Utilities
+            <h2
+              data-aos="fade-down"
+              className="font-orbitron text-gradient mb-6 text-4xl font-bold md:text-5xl"
+            >
+              Evolving Utilities
             </h2>
-            <p className="text-xl">
+            <p data-aos="fade-down" data-aos-delay="100" className="text-xl">
               Vibezly keeps building. Here's what's rolling out next:
             </p>
           </div>
 
-          <div className="mx-auto max-w-4xl">
+          <div className="mx-auto max-w-5xl">
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
               {[
                 {
@@ -393,15 +404,22 @@ const Utilities = () => {
                 },
               ].map((item, index) => (
                 <Card
+                  data-aos="fade-up"
+                  data-aos-delay={(index + 1) * 100}
                   key={index}
-                  className="bg-vibezly-card border-border text-center"
+                  className="from-vibezly-card to-vibezly-dark border-vibezly-border/50 bg-linear-[136deg] text-center"
                 >
                   <CardContent className="pt-6">
-                    <div className="bg-primary/20 mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full">
-                      <div className="text-primary">{item.icon}</div>
+                    <div className="bg-vibezly-purple/20 mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full">
+                      <div className={cn("text-vibezly-purple")}>
+                        {item.icon}
+                      </div>
                     </div>
                     <h3 className="mb-2 font-semibold">{item.title}</h3>
-                    <Badge variant="outline" className="text-xs">
+                    <Badge
+                      variant="outline"
+                      className="rounded-full border-neutral-300/20 bg-neutral-300/10 text-xs text-neutral-300 uppercase"
+                    >
                       {item.status}
                     </Badge>
                   </CardContent>
@@ -413,40 +431,48 @@ const Utilities = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="bg-moving-gradient relative px-4 py-20">
-        <div className="from-vibezly-purple to-vibezly-cyan size-[140px] rounded-full bg-conic"></div>
-        <div className="mx-auto max-w-7xl text-center">
+      <section className="relative overflow-hidden px-4 py-20">
+        <div className="absolute top-0 left-1/2 h-[1px] w-1/2 -translate-x-1/2 bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+        <div className="from-vibezly-purple to-vibezly-cyan absolute -top-[202px] left-1/2 size-[279px] -translate-x-1/2 animate-spin rounded-full bg-linear-180 blur-[60px] duration-1000 ease-in"></div>
+
+        <div className="relative z-10 mx-auto max-w-7xl text-center">
           <div className="mx-auto max-w-4xl text-white">
-            <h2 className="font-orbitron mb-6 text-4xl font-bold md:text-6xl">
+            <h2
+              data-aos="fade-down"
+              className="font-orbitron mb-4 text-4xl leading-[130%] font-bold md:text-6xl"
+            >
               Ready to Engage Smarter?
             </h2>
-            <p className="mb-8 text-xl opacity-90">
+            <p
+              data-aos="fade-up"
+              data-aos-delay="100"
+              className="mb-8 text-xl opacity-90"
+            >
               Plug Vibezly into your Telegram group and watch your community
               thrive.
             </p>
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <Button
+                data-aos="fade-right"
+                data-aos-delay={200}
                 size="lg"
-                className="bg-white font-semibold text-black hover:bg-white/90"
+                className="from-vibezly-purple to-vibezly-cyan h-auto bg-gradient-to-r bg-cover py-3 text-white transition-opacity text-shadow-sm hover:opacity-90"
               >
                 <Bot className="mr-2 h-5 w-5" />
                 Add Vibezly
               </Button>
+
               <Button
                 size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-black"
+                data-aos="fade-left"
+                data-aos-delay={300}
+                className="from-vibezly-purple to-vibezly-cyan relative flex h-auto items-center justify-center bg-linear-[135deg] py-3 transition-opacity hover:opacity-90"
               >
-                <TrendingUp className="mr-2 h-5 w-5" />
-                Explore Leaderboard
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-black"
-              >
-                <Gamepad2 className="mr-2 h-5 w-5" />
-                Join a Contest
+                <div className="bg-vibezly-dark absolute top-1/2 left-1/2 h-[90%] w-[97.5%] -translate-1/2 rounded-sm"></div>
+                <span className="relative z-10 inline-flex gap-2 text-white">
+                  <Gamepad2 className="mr-2 h-5 w-5" />
+                  Join a Contest
+                </span>
               </Button>
             </div>
           </div>

@@ -7,10 +7,17 @@ export default function KeyFeatures() {
       <section className="bg-vibezly-dark/50 py-20">
         <div className="mx-auto max-w-7xl px-4">
           <div className="mb-16 text-center">
-            <h2 className="font-orbitron text-gradient mb-6 text-4xl font-bold md:text-5xl">
+            <h2
+              data-aos="fade-down"
+              className="font-orbitron text-gradient mb-6 text-4xl font-bold md:text-5xl"
+            >
               Key Features & Benefits
             </h2>
-            <p className="mx-auto max-w-3xl text-xl">
+            <p
+              data-aos="fade-down"
+              data-aos-delay="100"
+              className="mx-auto max-w-3xl text-xl"
+            >
               Powerful tools designed to transform your crypto community
               experience
             </p>
@@ -19,6 +26,8 @@ export default function KeyFeatures() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {features.map((feature, index) => (
               <Card
+                data-aos={index % 2 === 0 ? "fade-down" : "fade-up"}
+                data-aos-delay={(index + 1) * 100}
                 key={index}
                 className="sm:odd:from-vibezly-card from-vibezly-card to-vibezly-dark/0 sm:odd:to-vibezly-dark/0 group animate-scale-in sm:even:from-vibezly-dark/0 sm:even:to-vibezly-card border-0 bg-transparent bg-linear-180 from-0% to-50% shadow-none transition-all duration-300"
                 style={{ animationDelay: `${index * 0.1}s` }}

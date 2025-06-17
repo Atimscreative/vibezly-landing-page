@@ -7,10 +7,17 @@ export default function DecentralizedGovernance() {
       <section className="bg-vibezly-border/10 px-4 py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-16 text-center">
-            <h2 className="font-orbitron text-gradient mb-6 text-4xl font-bold md:text-5xl">
+            <h2
+              data-aos="fade-up"
+              className="font-orbitron text-gradient mb-6 text-4xl font-bold md:text-5xl"
+            >
               Community-Controlled Moderation
             </h2>
-            <p className="mx-auto max-w-4xl text-xl">
+            <p
+              data-aos="fade-up"
+              data-aos-delay="100"
+              className="mx-auto max-w-4xl text-xl"
+            >
               Let your community moderate itself. With the /report command and
               an auto-mute threshold, users can flag bad behavior. All actions
               are logged, and appeals are managed privately via DM.
@@ -18,7 +25,11 @@ export default function DecentralizedGovernance() {
           </div>
 
           <div className="grid items-center gap-12 lg:grid-cols-2">
-            <div className="from-vibezly-card to-vibezly-dark border-vibezly-border/50 rounded-2xl border bg-linear-[135deg] p-8">
+            <div
+              data-aos="zoom-in-up"
+              data-aos-delay="200"
+              className="from-vibezly-card to-vibezly-dark border-vibezly-border/50 rounded-2xl border bg-linear-[135deg] p-8"
+            >
               <h3 className="mb-6 text-xl font-semibold text-white">
                 Moderation Demo
               </h3>
@@ -75,7 +86,11 @@ export default function DecentralizedGovernance() {
 
             <div className="space-y-8">
               <div className="space-y-6">
-                <div className="flex items-center gap-4">
+                <div
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                  className="flex items-center gap-4"
+                >
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-purple-500/20">
                     <Users className="h-6 w-6 text-purple-400" />
                   </div>
@@ -87,7 +102,11 @@ export default function DecentralizedGovernance() {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4">
+                <div
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                  className="flex items-center gap-4"
+                >
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-red-500/20">
                     <Shield className="h-6 w-6 text-red-400" />
                   </div>
@@ -99,7 +118,11 @@ export default function DecentralizedGovernance() {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4">
+                <div
+                  data-aos="fade-up"
+                  data-aos-delay="400"
+                  className="flex items-center gap-4"
+                >
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-500/20">
                     <MessageSquare className="h-6 w-6 text-blue-400" />
                   </div>
@@ -109,7 +132,11 @@ export default function DecentralizedGovernance() {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4">
+                <div
+                  data-aos="fade-up"
+                  data-aos-delay="500"
+                  className="flex items-center gap-4"
+                >
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-green-500/20">
                     <CheckCircle className="h-6 w-6 text-green-400" />
                   </div>

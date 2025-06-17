@@ -15,10 +15,17 @@ export default function PersonaShowcase() {
       <section className="bg-vibezly-dark/50 py-20">
         <div className="mx-auto max-w-5xl px-4">
           <div className="mb-16 text-center">
-            <h2 className="font-orbitron text-gradient mb-6 text-4xl font-bold md:text-5xl">
+            <h2
+              data-aos="fade-down"
+              className="font-orbitron text-gradient mb-6 text-4xl font-bold md:text-5xl"
+            >
               Meet the Vibez
             </h2>
-            <p className="mx-auto max-w-3xl text-xl">
+            <p
+              data-aos="fade-down"
+              data-aos-delay="100"
+              className="mx-auto max-w-3xl text-xl"
+            >
               Choose your community's personality with our unique AI personas
             </p>
           </div>
@@ -26,6 +33,8 @@ export default function PersonaShowcase() {
           <div className="mb-12 grid gap-6 md:grid-cols-2 lg:grid-cols-2">
             {personas.map((persona, index) => (
               <Card
+                data-aos="fade-up"
+                data-aos-delay={(index + 1) * 100}
                 key={persona.id}
                 className={cn(
                   "group animate-scale-in relative cursor-pointer border-0 bg-transparent bg-linear-180 p-6 text-center transition-all duration-300 min-[62rem]:grid min-[62rem]:grid-cols-[96px_1fr]",
@@ -81,6 +90,8 @@ export default function PersonaShowcase() {
 
           <div className="text-center">
             <Button
+              data-aos="fade-up"
+              data-aos-delay="500"
               onClick={() => navigate("/personas")}
               className="from-vibezly-purple to-vibezly-cyan h-auto bg-linear-60 py-3 transition-opacity text-shadow-md hover:opacity-90"
             >

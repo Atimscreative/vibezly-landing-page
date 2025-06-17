@@ -71,13 +71,20 @@ export default function Header() {
                   <Menu size={32} className="scale-150" />
                 )}
               </Button>
+
               <Button
+                size="lg"
                 data-aos="fade-left"
                 data-aos-delay={100}
-                className="from-vibezly-purple to-vibezly-cyan hidden bg-gradient-to-r bg-cover text-white transition-opacity hover:opacity-90 lg:inline-block"
+                className="from-vibezly-purple to-vibezly-cyan relative flex h-auto items-center justify-center bg-linear-[135deg] py-3 transition-opacity hover:opacity-90"
               >
-                Get Started
+                <div className="bg-vibezly-dark absolute top-1/2 left-1/2 h-[90%] w-[97.5%] -translate-1/2 rounded-sm"></div>
+                <span className="relative z-10">Try Vibezly Now</span>
               </Button>
+
+              {/* <Button className="from-vibezly-purple to-vibezly-cyan hidden bg-gradient-to-r bg-cover text-white transition-opacity hover:opacity-90 lg:inline-block">
+                Get Started
+              </Button> */}
             </>
           </div>
         </nav>

@@ -176,12 +176,12 @@ export default function AIPersonas() {
           <div className="absolute top-0 left-1/2 h-[1px] w-1/2 -translate-x-1/2 bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
           <div className="from-vibezly-purple to-vibezly-cyan absolute -top-[202px] left-1/2 size-[279px] -translate-x-1/2 animate-spin rounded-full bg-linear-180 blur-[60px] duration-1000 ease-in"></div>
           <div className="relative z-10 container mx-auto px-4 text-center">
-            <div className="mx-auto max-w-2xl">
+            <div className="mx-auto max-w-3xl">
               <h2
                 data-aos="fade-down"
-                className="font-orbitron mb-4 text-3xl font-bold"
+                className="font-orbitron mb-6 text-4xl leading-[130%] font-bold text-balance text-white md:text-5xl"
               >
-                🚀 Ready to Supercharge Your Community?
+                Ready to Supercharge Your Community?
               </h2>
               <p
                 data-aos="fade-up"

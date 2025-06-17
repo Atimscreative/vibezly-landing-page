@@ -43,6 +43,7 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
   startYOffset = 0,
   endXOffset = 0,
   endYOffset = 0,
+  ...props
 }) => {
   const id = useId();
   const [pathD, setPathD] = useState("");
@@ -125,6 +126,7 @@ export const AnimatedBeam: React.FC<AnimatedBeamProps> = ({
 
   return (
     <svg
+      {...props}
       fill="none"
       width={svgDimensions.width}
       height={svgDimensions.height}
