@@ -10,31 +10,47 @@ export default function Roadmap() {
       <section id="roadmap" className="bg-vibezly-dark/50 py-20">
         <div className="mx-auto max-w-7xl px-4">
           <div className="mb-16 text-center">
-            <h2 className="font-orbitron text-gradient mb-6 text-4xl font-bold md:text-5xl">
+            <h2
+              data-aos="fade-up"
+              data-aos-delay=""
+              className="font-orbitron text-gradient mb-6 text-4xl font-bold md:text-5xl"
+            >
               Development Roadmap
             </h2>
-            <p className="text-muted-foreground mx-auto max-w-3xl text-xl">
+            <p
+              data-aos="fade-up"
+              data-aos-delay="100"
+              className="mx-auto max-w-3xl text-xl"
+            >
               Our journey to revolutionize crypto community engagement
             </p>
           </div>
 
           <div className="relative">
-            <div className="from-vibezly-purple via-vibezly-cyan absolute left-1/2 -z-10 h-full w-1 -translate-x-1/2 transform bg-linear-90"></div>
+            <div
+              data-aos="fade"
+              data-aos-delay="300"
+              className="from-vibezly-purple via-vibezly-cyan absolute left-1/2 -z-10 h-full w-1 -translate-x-1/2 transform bg-linear-90"
+            ></div>
             <div className="space-y-12">
               {roadmapItems.map((item, index) => (
                 <div
                   key={item.phase}
-                  className={`flex w-full items-center ${
-                    index % 2 === 0 ? "flex-row" : "flex-row-reverse"
-                  } animate-scale-in`}
-                  style={{ animationDelay: `${index * 0.2}s` }}
+                  className={cn(
+                    `animate-scale-in flex w-full items-center`,
+                    index % 2 === 0 ? "flex-row" : "flex-row-reverse",
+                  )}
                 >
                   <div
                     className={`w-full md:w-5/12 ${
                       index % 2 === 0 ? "pr-8 text-right" : "pl-8 text-left"
                     }`}
                   >
-                    <Card className="from-vibezly-card to-vibezly-dark border-vibezly-border/50 hover:border-primary/50 items-end bg-linear-[135deg] p-6 transition-all duration-300">
+                    <Card
+                      data-aos="fade-up"
+                      data-aos-delay={(index + 1) * 200}
+                      className="from-vibezly-card to-vibezly-dark border-vibezly-border/50 hover:border-primary/50 items-end bg-linear-[135deg] p-6 transition-all duration-300"
+                    >
                       <Badge
                         className={cn(
                           `mb-3 border-0 text-white`,
@@ -55,16 +71,18 @@ export default function Roadmap() {
                   </div>
                   <div className="hidden w-2/12 justify-center md:flex">
                     <div
-                      className={`h-6 w-6 rounded-full border-4 ${
+                      data-aos="zoom-in"
+                      data-aos-delay={(index + 1) * 200}
+                      className={cn(
+                        `h-6 w-6 rounded-full border-4`,
                         item.status === "completed"
                           ? "bg-vibezly-green border-vibezly-green"
                           : item.status === "current"
-                            ? "bg-vibezly-purple border-vibezly-purple animate-pulse-slow"
-                            : "border-gray-600 bg-gray-600"
-                      }`}
+                            ? "bg-vibezly-cyan border-vibezly-cyan"
+                            : "border-vibezly-purple bg-vibezly-purple",
+                      )}
                     ></div>
                   </div>
-                  {/* <div className="w-5/12"></div> */}
                 </div>
               ))}
             </div>

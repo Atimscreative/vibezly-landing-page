@@ -8,9 +8,6 @@ import { fadeVariants } from "@/utils/motionVariants";
 import MobileMenu from "./MobileMenu";
 import { Menu, X } from "lucide-react";
 
-const MotionLogo = motion(Link);
-const MotionNavLink = motion(LinkItem);
-
 export default function Header() {
   const [open, setOpen] = useState(false);
   const location = useLocation();
@@ -38,10 +35,9 @@ export default function Header() {
       <header>
         <nav className="bg-vibezly-body fixed top-0 right-0 left-0 z-[999] border-b border-neutral-50/10 backdrop-blur-md">
           <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
-            <MotionLogo
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
+            <Link
+              data-aos="fade-right"
+              data-aos-delay={100}
               to="/"
               className="flex items-center space-x-2"
             >
@@ -51,7 +47,7 @@ export default function Header() {
               <span className="font-orbitron text-xl font-bold text-white">
                 Vibezly
               </span>
-            </MotionLogo>
+            </Link>
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -59,16 +55,13 @@ export default function Header() {
               className="hidden gap-10 lg:flex"
             >
               {navMenu.map((menu, i) => (
-                <MotionNavLink
-                  variants={fadeVariants.fadeDown}
-                  url={menu.url}
-                  key={i}
-                  label={menu.label}
-                />
+                <LinkItem url={menu.url} index={i} key={i} label={menu.label} />
               ))}
             </motion.div>
             <>
               <Button
+                data-aos="fade-left"
+                data-aos-delay={100}
                 onClick={() => setOpen((prev) => !prev)}
                 className="from-vibezly-purple to-vibezly-cyan bg-gradient-to-r bg-cover text-white transition-opacity hover:opacity-90 lg:hidden"
               >
@@ -78,7 +71,11 @@ export default function Header() {
                   <Menu size={32} className="scale-150" />
                 )}
               </Button>
-              <Button className="from-vibezly-purple to-vibezly-cyan hidden bg-gradient-to-r bg-cover text-white transition-opacity hover:opacity-90 lg:inline-block">
+              <Button
+                data-aos="fade-left"
+                data-aos-delay={100}
+                className="from-vibezly-purple to-vibezly-cyan hidden bg-gradient-to-r bg-cover text-white transition-opacity hover:opacity-90 lg:inline-block"
+              >
                 Get Started
               </Button>
             </>
@@ -90,18 +87,36 @@ export default function Header() {
   );
 }
 
-function LinkItem({ url, label }: { url: string; label: string }) {
+function LinkItem({
+  url,
+  label,
+  index,
+}: {
+  url: string;
+  label: string;
+  index: number;
+}) {
   const isAnchorLink = url.startsWith("#");
 
   if (isAnchorLink) {
     return (
-      <a href={url} className={cn("hover:text-vibezly-purple text-white")}>
+      <a
+        data-aos="fade-down"
+        data-aos-delay={(index + 1) * 100}
+        href={url}
+        className={cn("hover:text-vibezly-purple text-white")}
+      >
         {label}
       </a>
     );
   }
   return (
-    <NavLink to={url} className={cn("hover:text-vibezly-purple text-white")}>
+    <NavLink
+      data-aos="fade-down"
+      data-aos-delay={(index + 1) * 100}
+      to={url}
+      className={cn("hover:text-vibezly-purple text-white")}
+    >
       {label}
     </NavLink>
   );

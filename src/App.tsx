@@ -1,13 +1,18 @@
 import { BrowserRouter, Route, Routes } from "react-router";
-import Homepage from "./page/Homepage";
-import NotFound from "./page/NotFound";
+import NotFound from "./pages/NotFound";
 import AppLayout from "./components/AppLayout";
-import About from "./page/About";
-import Utilities from "./page/Utilities";
-import AIPersonas from "./page/AIPersonas";
-import { useEffect } from "react";
+// import Homepage from "./pages/Homepage";
+// import About from "./page/About";
+// import Utilities from "./page/Utilities";
+// import AIPersonas from "./page/AIPersonas";
+import { lazy, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+
+const Homepage = lazy(() => import("./pages/Homepage"));
+const AIPersonas = lazy(() => import("./pages/AIPersonas"));
+const Utilities = lazy(() => import("./pages/Utilities"));
+const About = lazy(() => import("./pages/About"));
 
 function App() {
   useEffect(() => {

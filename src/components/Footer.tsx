@@ -23,20 +23,23 @@ export default function Footer() {
         <div className="mx-auto max-w-7xl px-4">
           <div className="grid gap-8 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
             <div>
-              <div className="mb-4 flex items-center space-x-2">
+              <div
+                data-aos="fade-right"
+                className="mb-4 flex items-center space-x-2"
+              >
                 <img src={Logo} alt="Vibezly Logo" className="size-[40px]" />
                 <span className="font-orbitron text-xl font-bold text-white">
                   Vibezly
                 </span>
               </div>
-              <p className="text-sm">
+              <p data-aos="fade-right" data-aos-delay="50" className="text-sm">
                 Revolutionizing crypto communities with AI-powered engagement
                 and decentralized governance.
               </p>
             </div>
 
             {footerMenus.map((data, index) => (
-              <FooterLinks data={data} key={index} />
+              <FooterLinks data={data} key={index} index={index} />
             ))}
           </div>
 
@@ -60,10 +63,16 @@ export default function Footer() {
   );
 }
 
-function FooterLinks({ data }: any) {
+function FooterLinks({ data, index }: any) {
   return (
     <div>
-      <h3 className="mb-4 font-semibold text-white">{data.title}</h3>
+      <h3
+        data-aos="fade"
+        data-aos-delay={(index + 1) * 100}
+        className="mb-4 font-semibold text-white"
+      >
+        {data.title}
+      </h3>
       <div className="inline-flex flex-col space-y-2 text-sm">
         {data.links.map((link: any) => {
           const isAnchorLink = link.url.startsWith("/#");
@@ -71,8 +80,10 @@ function FooterLinks({ data }: any) {
           if (isAnchorLink) {
             return (
               <a
+                data-aos="fade"
+                data-aos-delay={(index + 1) * 100}
                 href={link.url}
-                className={cn("hover:text-vibezly-purple text-white")}
+                className={cn("hover:text-vibezly-purple text-neutral-300")}
               >
                 {link.label}
               </a>
@@ -81,6 +92,8 @@ function FooterLinks({ data }: any) {
 
           return (
             <Link
+              data-aos="fade"
+              data-aos-delay={(index + 1) * 100}
               to="#"
               key={link.label}
               className="hover:text-vibezly-purple transition-colors"
