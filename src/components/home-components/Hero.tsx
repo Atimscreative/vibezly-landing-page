@@ -4,6 +4,7 @@ import { TypeAnimation } from "react-type-animation";
 import Coin from "@/assets/Coim.png";
 import Rocket from "@/assets/Rocket2.png";
 import Rocket2 from "@/assets/Rocket.png";
+import { Link, useNavigate } from "react-router";
 
 // const phrases = [
 //   { text: "Revolutionizing Crypto Communities" },
@@ -13,6 +14,7 @@ import Rocket2 from "@/assets/Rocket.png";
 // ];
 
 export default function Hero() {
+  const navigate = useNavigate();
   return (
     <>
       <section
@@ -64,25 +66,26 @@ export default function Hero() {
               rewards, and community-driven insights. Powered by VBZ token.
             </p>
             <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
-              <Button
+              <Link
+                to="https://t.me/vibezly_bot"
                 data-aos="fade-up"
                 data-aos-delay="200"
-                className="from-vibezly-purple to-vibezly-cyan h-auto bg-gradient-to-r bg-cover py-3 text-white transition-opacity text-shadow-sm hover:opacity-90"
+                className="from-vibezly-purple to-vibezly-cyan h-auto rounded-md bg-gradient-to-r bg-cover px-6 py-3 text-white transition-opacity text-shadow-sm hover:opacity-90"
               >
                 Get Started
-              </Button>
+              </Link>
 
-              <Button
-                size="lg"
+              <Link
+                to="/personas"
                 data-aos="fade-left"
                 data-aos-delay={100}
-                className="from-vibezly-purple to-vibezly-cyan relative flex h-auto items-center justify-center bg-linear-[135deg] py-3 transition-opacity hover:opacity-90"
+                className="from-vibezly-purple to-vibezly-cyan relative flex h-auto items-center justify-center rounded-md bg-linear-[135deg] px-6 py-3 transition-opacity hover:opacity-90"
               >
                 <div className="bg-vibezly-dark absolute top-1/2 left-1/2 h-[90%] w-[97.5%] -translate-1/2 rounded-sm"></div>
                 <span className="relative z-10 flex items-center gap-2">
                   Meet AI Personas
                 </span>
-              </Button>
+              </Link>
             </div>
           </div>
 

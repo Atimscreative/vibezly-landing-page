@@ -1,6 +1,7 @@
 import { Bot, TrendingUp } from "lucide-react";
 import { AnimatedGradientText } from "../magicui/animated-gradient-text";
 import { Button } from "../ui/button";
+import { Link } from "react-router";
 
 export default function UtilitiesHero() {
   return (
@@ -30,15 +31,15 @@ export default function UtilitiesHero() {
             one bot.{" "}
           </p>
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
-            <Button
+            <Link
               data-aos="fade-up"
               data-aos-delay="200"
-              size="lg"
-              className="from-vibezly-purple via-vibezly-cyan to-vibezly-green h-auto bg-linear-[135deg] py-3 transition-transform text-shadow-sm"
+              to="https://t.me/vibezly_bot"
+              className="from-vibezly-purple to-vibezly-cyan inline-flex h-auto rounded-md bg-linear-[135deg] px-6 py-3 transition-transform text-shadow-sm"
             >
-              <Bot className="mr-2 h-5 w-5" />
+              {/* <Bot className="mr-2 h-5 w-5" /> */}
               Add Vibezly to Telegram
-            </Button>
+            </Link>
             <Button
               size="lg"
               data-aos="fade-up"

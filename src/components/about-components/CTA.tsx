@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { Button } from "../ui/button";
 
 export default function CTA() {
@@ -29,15 +30,15 @@ export default function CTA() {
             >
               Explore the Mini App
             </Button>
-            <Button
-              size="lg"
+            <Link
+              to="https://t.me/vibezly_bot"
               data-aos="fade-up"
               data-aos-delay="300"
-              className="from-vibezly-purple to-vibezly-cyan relative flex h-auto items-center justify-center bg-linear-[135deg] py-3 transition-opacity hover:opacity-90"
+              className="from-vibezly-purple to-vibezly-cyan relative flex h-auto items-center justify-center rounded-md bg-linear-[135deg] px-6 py-3 transition-opacity hover:opacity-90"
             >
               <div className="bg-vibezly-dark absolute top-1/2 left-1/2 h-[90%] w-[97.5%] -translate-1/2 rounded-sm"></div>
               <span className="relative z-10">Try Vibezly Now</span>
-            </Button>
+            </Link>
           </div>
         </div>
       </section>

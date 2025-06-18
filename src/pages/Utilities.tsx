@@ -21,6 +21,7 @@ import UtilitiesHero from "@/components/utilities-components/HeroUtilities";
 import AIDrivenEngagement from "@/components/utilities-components/AIDrivenEngagement";
 import DecentralizedGovernance from "@/components/utilities-components/DecentralizedGovernance";
 import { cn } from "@/lib/utils";
+import { Link } from "react-router";
 // import { colorClassMap } from "@/utils/helper";
 // import { personas } from "@/utils";
 
@@ -452,15 +453,16 @@ const Utilities = () => {
               thrive.
             </p>
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
-              <Button
+              <Link
                 data-aos="fade-right"
                 data-aos-delay={200}
-                size="lg"
-                className="from-vibezly-purple to-vibezly-cyan h-auto bg-gradient-to-r bg-cover py-3 text-white transition-opacity text-shadow-sm hover:opacity-90"
+                to="https://t.me/vibezly_bot"
+                target="_blank"
+                className="from-vibezly-purple to-vibezly-cyan flex h-auto rounded-md bg-gradient-to-r bg-cover px-6 py-3 text-white transition-opacity text-shadow-sm hover:opacity-90"
               >
                 <Bot className="mr-2 h-5 w-5" />
                 Add Vibezly
-              </Button>
+              </Link>
 
               <Button
                 size="lg"

@@ -22,7 +22,7 @@ export default function AppLayout() {
   }, [pathname, hash]);
   return (
     <>
-      <Toaster />
+      <Toaster theme="dark" richColors />
       <Header />
       <Outlet />
       <Footer />

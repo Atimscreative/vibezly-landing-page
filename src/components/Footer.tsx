@@ -97,7 +97,7 @@ function FooterLinks({ data, index }: any) {
             <Link
               data-aos="fade"
               data-aos-delay={(index + 1) * 100}
-              to="#"
+              to={link.url}
               key={link.label}
               className="hover:text-vibezly-purple transition-colors"
             >
@@ -123,7 +123,10 @@ const footerMenus = [
   {
     title: "Resources",
     links: [
-      { label: "Documentation", url: "/#docs" },
+      {
+        label: "Documentation",
+        url: "https://vibezly.gitbook.io/vibezly-docs/",
+      },
       { label: "API", url: "/#api" },
       { label: "Support", url: "/#support" },
       { label: "Blog", url: "/#blog" },

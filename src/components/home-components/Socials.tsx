@@ -31,7 +31,8 @@ export default function Socials() {
                 key={i}
                 data-aos="zoom-in"
                 data-aos-delay={(i + 1) * 200}
-                to="#"
+                to={data.link}
+                target="_blank"
                 className="group flex flex-col items-center"
               >
                 <div className="from-vibezly-purple via-vibezly-cyan to-vibezly-green drop-shadow-glow/50 hover:drop-shadow-glow-cyan/50 flex size-14 items-center justify-center rounded-full bg-linear-[135deg] from-0% via-85% to-100% transition-all duration-300 group-hover:scale-105 sm:h-16 sm:w-16">
@@ -72,17 +73,21 @@ const socialMediaList = [
   {
     icon: FaTelegram,
     label: "Telegram",
+    link: "https://t.me/vibezly",
   },
   {
     icon: FaXTwitter,
     label: "Twitter X",
+    link: "https://x.com/_vibezly",
   },
   {
     icon: FaDiscord,
     label: "Discord",
+    link: "#",
   },
   {
     icon: FaInstagramSquare,
     label: "Instagram",
+    link: "#",
   },
 ];
