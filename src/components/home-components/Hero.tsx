@@ -2,20 +2,29 @@ import { ArrowDown } from "lucide-react";
 import { Button } from "../ui/button";
 import { AnimatedGradientText } from "../magicui/animated-gradient-text";
 import { Particles } from "../magicui/particles";
+import { TypeAnimation } from "react-type-animation";
+import { TypewriterEffectSmooth } from "../magicui/typewriter-effect";
+
+const phrases = [
+  { text: "Revolutionizing Crypto Communities" },
+  { text: "Revolutionizing Crypto Ecosystems" },
+  { text: "Revolutionizing Crypto Networks" },
+  { text: "Revolutionizing Crypto Movements", className: "text-vibezly-cyan" },
+];
 
 export default function Hero() {
   return (
     <>
       <section
         id="hero"
-        className="relative flex min-h-screen overflow-hidden items-center justify-center"
+        className="relative flex min-h-screen items-center justify-center overflow-hidden"
       >
         <div className="bg-vibezly-dark absolute inset-0 h-screen w-full">
           <Particles className="h-full w-full" />
         </div>
-        <div className="relative z-10 container mx-auto px-4 text-center">
+        <div className="relative z-10 mx-auto max-w-4xl px-4 text-center">
           <div>
-            <h1
+            {/* <h1
               data-aos="fade-down"
               className="font-orbitron mb-6 text-4xl leading-[120%] font-bold text-white md:text-6xl lg:text-7xl"
             >
@@ -24,7 +33,27 @@ export default function Hero() {
               <AnimatedGradientText colorFrom="#7b00ff" colorTo="#00d1ff">
                 Communities
               </AnimatedGradientText>
-            </h1>
+            </h1> */}
+
+            <TypeAnimation
+              wrapper="h1"
+              sequence={[
+                // Same substring at the start will only be typed once, initially
+                "Revolutionizing Crypto Communities",
+                1000,
+                "Revolutionizing Crypto Ecosystems",
+                1000,
+                "Revolutionizing Crypto Networks",
+                1000,
+                "Revolutionizing Crypto Movements",
+                1000,
+              ]}
+              speed={50}
+              repeat={Infinity}
+              preRenderFirstString={true}
+              className="font-orbitron mb-6 text-4xl leading-[120%] font-bold text-white md:text-6xl lg:text-7xl"
+            />
+
             <p
               data-aos="fade-down"
               data-aos-delay="100"
@@ -37,19 +66,21 @@ export default function Hero() {
               <Button
                 data-aos="fade-up"
                 data-aos-delay="200"
-                className="from-vibezly-purple to-vibezly-cyan h-auto bg-gradient-to-r bg-cover py-3 text-white transition-opacity hover:opacity-90"
+                className="from-vibezly-purple to-vibezly-cyan h-auto bg-gradient-to-r bg-cover py-3 text-white transition-opacity text-shadow-sm hover:opacity-90"
               >
                 Get Started
               </Button>
 
               <Button
-                data-aos="fade-up"
-                data-aos-delay="300"
                 size="lg"
-                className="h-auto border border-white/20 bg-white/10 py-3 text-white backdrop-blur-md hover:bg-white/20"
+                data-aos="fade-left"
+                data-aos-delay={100}
+                className="from-vibezly-purple to-vibezly-cyan relative flex h-auto items-center justify-center bg-linear-[135deg] py-3 transition-opacity hover:opacity-90"
               >
-                Meet AI Personas
-                <ArrowDown className="ml-2 h-4 w-4" />
+                <div className="bg-vibezly-dark absolute top-1/2 left-1/2 h-[90%] w-[97.5%] -translate-1/2 rounded-sm"></div>
+                <span className="relative z-10 flex items-center gap-2">
+                  Meet AI Personas
+                </span>
               </Button>
             </div>
           </div>

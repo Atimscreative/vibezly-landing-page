@@ -39,7 +39,7 @@ export default function Footer() {
             </div>
 
             {footerMenus.map((data, index) => (
-              <FooterLinks data={data} key={index} index={index} />
+              <FooterLinks data={data} key={`${data.title}`} index={index} />
             ))}
           </div>
 
@@ -82,6 +82,7 @@ function FooterLinks({ data, index }: any) {
           if (isAnchorLink) {
             return (
               <a
+                key={link.label}
                 data-aos="fade"
                 data-aos-delay={(index + 1) * 100}
                 href={link.url}

@@ -76,7 +76,7 @@ export default function Header() {
                 size="lg"
                 data-aos="fade-left"
                 data-aos-delay={100}
-                className="from-vibezly-purple to-vibezly-cyan relative flex h-auto items-center justify-center bg-linear-[135deg] py-3 transition-opacity hover:opacity-90"
+                className="from-vibezly-purple to-vibezly-cyan relative hidden h-auto items-center justify-center bg-linear-[135deg] py-3 transition-opacity hover:opacity-90 lg:flex"
               >
                 <div className="bg-vibezly-dark absolute top-1/2 left-1/2 h-[90%] w-[97.5%] -translate-1/2 rounded-sm"></div>
                 <span className="relative z-10">Try Vibezly Now</span>
