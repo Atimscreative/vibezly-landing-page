@@ -2,6 +2,8 @@ import { Button } from "../ui/button";
 import { Particles } from "../magicui/particles";
 import { TypeAnimation } from "react-type-animation";
 import Coin from "@/assets/Coim.png";
+import Rocket from "@/assets/Rocket2.png";
+import Rocket2 from "@/assets/Rocket.png";
 
 // const phrases = [
 //   { text: "Revolutionizing Crypto Communities" },
@@ -50,7 +52,7 @@ export default function Hero() {
               speed={50}
               repeat={Infinity}
               preRenderFirstString={true}
-              className="font-orbitron mb-6 h-[130px] text-4xl leading-[120%] font-bold text-balance text-white sm:h-auto md:text-6xl lg:text-7xl"
+              className="font-orbitron mb-6 h-[130px] text-4xl leading-[120%] font-bold text-balance text-white min-[28.79rem]:h-[144px] sm:h-auto md:text-6xl lg:text-7xl"
             />
 
             <p
@@ -91,19 +93,19 @@ export default function Hero() {
             </div>
           </div>
           <div
-            className="animate-float absolute top-40 right-20"
+            className="animate-float absolute top-40 -right-20"
             style={{ animationDelay: "1s" }}
           >
             <div className="bg-vibezly-cyan/20 glow-cyan flex h-12 w-12 items-center justify-center rounded-full">
-              <span className="text-xl">⚡</span>
+              <img src={Rocket} />
             </div>
           </div>
           <div
-            className="animate-float absolute bottom-40 left-20"
+            className="animate-float absolute -bottom-40 left-20"
             style={{ animationDelay: "2s" }}
           >
-            <div className="bg-vibezly-green/20 glow-green flex h-14 w-14 items-center justify-center rounded-full">
-              <span className="text-xl">💎</span>
+            <div className="bg-vibezly-green/20 glow-green flex h-16 w-16 items-center justify-center rounded-full">
+              <img src={Rocket2} className="-rotate-[68deg]" />
             </div>
           </div>
         </div>
