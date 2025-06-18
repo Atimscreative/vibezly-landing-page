@@ -1,10 +1,9 @@
-import { Button } from "../ui/button";
 import { Particles } from "../magicui/particles";
 import { TypeAnimation } from "react-type-animation";
 import Coin from "@/assets/Coim.png";
 import Rocket from "@/assets/Rocket2.png";
 import Rocket2 from "@/assets/Rocket.png";
-import { Link, useNavigate } from "react-router";
+import { Link } from "react-router";
 
 // const phrases = [
 //   { text: "Revolutionizing Crypto Communities" },
@@ -14,7 +13,6 @@ import { Link, useNavigate } from "react-router";
 // ];
 
 export default function Hero() {
-  const navigate = useNavigate();
   return (
     <>
       <section

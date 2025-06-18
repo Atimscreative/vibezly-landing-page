@@ -1,4 +1,4 @@
-import { Bot, TrendingUp } from "lucide-react";
+import { TrendingUp } from "lucide-react";
 import { AnimatedGradientText } from "../magicui/animated-gradient-text";
 import { Button } from "../ui/button";
 import { Link } from "react-router";
