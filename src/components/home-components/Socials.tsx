@@ -28,6 +28,7 @@ export default function Socials() {
           <div className="mb-12 flex justify-evenly gap-4 sm:justify-center sm:gap-8">
             {socialMediaList.map((data, i) => (
               <Link
+                key={i}
                 data-aos="zoom-in"
                 data-aos-delay={(i + 1) * 200}
                 to="#"

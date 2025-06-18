@@ -37,7 +37,7 @@ export default function Team() {
                   duration={(index + 1) * 10}
                   shineColor={["#7b00ff", "#00d1ff", "#50ff54"]}
                 />
-                <div className="from-vibezly-purple to-vibezly-green via-vibezly-cyan mx-auto aspect-square size-1/2 overflow-hidden rounded-full bg-linear-180 p-2 transition-[background-image] duration-300 group-hover:bg-linear-90">
+                <div className="from-vibezly-purple to-vibezly-green via-vibezly-cyan mx-auto aspect-square size-[160px] overflow-hidden rounded-full bg-linear-180 p-2 duration-300">
                   <img
                     src={member.image}
                     alt={member.name}

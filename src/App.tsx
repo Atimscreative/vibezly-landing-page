@@ -17,7 +17,7 @@ const About = lazy(() => import("./pages/About"));
 function App() {
   useEffect(() => {
     AOS.init({
-      once: false,
+      once: true,
       duration: 800,
     });
   }, []);

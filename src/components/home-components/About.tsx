@@ -1,4 +1,7 @@
 import { Card, CardContent } from "../ui/card";
+import Pad from "@/assets/PAD.png";
+import AI from "@/assets/AI 3D.png";
+import Blockchain from "@/assets/Blockchain.png";
 
 export default function About() {
   return (
@@ -27,11 +30,22 @@ export default function About() {
             <Card
               data-aos="fade-up"
               data-aos-delay="150"
-              className="from-vibezly-card to-vibezly-dark border-vibezly-border/50 hover:border-vibezly-purple/50 bg-linear-[135deg] from-0% to-100% transition-all duration-300"
+              style={{ transition: "500ms ease" }}
+              className="from-vibezly-card to-vibezly-dark border-vibezly-border/50 hover:border-vibezly-purple/50 bg-linear-[135deg] from-0% to-100% duration-300 ease-in hover:scale-105"
             >
               <CardContent className="p-6 text-center">
                 <div className="drop-shadow-glow/50 from-vibezly-purple via-vibezly-cyan to-vibezly-green mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-linear-[135deg]">
-                  <span className="text-2xl">🤖</span>
+                  <span className="text-2xl">
+                    <img
+                      src={AI}
+                      alt="gamingpad"
+                      style={{
+                        animationDuration: "3s",
+                        animationTimingFunction: "linear",
+                      }}
+                      className="animate-bounce"
+                    />
+                  </span>
                 </div>
                 <h3 className="text-vibezly-purple mb-3 text-xl font-semibold">
                   AI-Driven Insights
@@ -46,11 +60,21 @@ export default function About() {
             <Card
               data-aos="fade-up"
               data-aos-delay="250"
-              className="from-vibezly-card to-vibezly-dark border-vibezly-border/50 hover:border-vibezly-cyan/50 bg-linear-[135deg] from-0% to-100% transition-all duration-300"
+              style={{ transition: "500ms ease" }}
+              className="from-vibezly-card to-vibezly-dark border-vibezly-border/50 hover:border-vibezly-cyan/50 bg-linear-[135deg] from-0% to-100% duration-300 hover:scale-105"
             >
               <CardContent className="p-6 text-center">
                 <div className="drop-shadow-glow-cyan/50 from-vibezly-purple via-vibezly-cyan to-vibezly-green mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-linear-[135deg]">
-                  <span className="text-2xl">🗳️</span>
+                  <img
+                    src={Blockchain}
+                    alt="gamingpad"
+                    style={{
+                      animationDuration: "3s",
+                      animationTimingFunction: "linear",
+                      animationDelay: "0.2s",
+                    }}
+                    className="animate-bounce"
+                  />
                 </div>
                 <h3 className="text-vibezly-cyan mb-3 text-xl font-semibold">
                   Decentralized Governance
@@ -65,11 +89,21 @@ export default function About() {
             <Card
               data-aos="fade-up"
               data-aos-delay="350"
-              className="from-vibezly-card to-vibezly-dark border-vibezly-border/50 hover:border-vibezly-green/50 bg-linear-[135deg] from-0% to-100% transition-all duration-300"
+              style={{ transition: "500ms ease" }}
+              className="from-vibezly-card to-vibezly-dark border-vibezly-border/50 hover:border-vibezly-green/50 bg-linear-[135deg] from-0% to-100% duration-300 hover:scale-105"
             >
               <CardContent className="p-6 text-center">
                 <div className="drop-shadow-glow-green/50 from-vibezly-purple via-vibezly-cyan to-vibezly-green mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-linear-[135deg]">
-                  <span className="text-2xl">🎮</span>
+                  <img
+                    src={Pad}
+                    alt="gamingpad"
+                    style={{
+                      animationDuration: "3s",
+                      animationTimingFunction: "linear",
+                      animationDelay: "0.4s",
+                    }}
+                    className="animate-bounce"
+                  />
                 </div>
                 <h3 className="text-vibezly-green mb-3 text-xl font-semibold">
                   Gamified Rewards
@@ -89,7 +123,7 @@ export default function About() {
 
 // function AboutCard() {
 //   return (
-//     <Card className="from-vibezly-card to-vibezly-dark border-vibezly-border/50 hover:border-vibezly-purple/50 bg-linear-[135deg] from-0% to-100% transition-all duration-300">
+//     <Card className="from-vibezly-card to-vibezly-dark border-vibezly-border/50 hover:border-vibezly-purple/50 bg-linear-[135deg] from-0% to-100%  duration-300">
 //       <CardContent className="p-6 text-center">
 //         <div className="drop-shadow-glow from-vibezly-purple via-vibezly-cyan to-vibezly-green mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-linear-[135deg]">
 //           <span className="text-2xl">🤖</span>

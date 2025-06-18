@@ -1,5 +1,8 @@
 import { cn } from "@/lib/utils";
 import { Card } from "../ui/card";
+import Chat from "@/assets/chat.png";
+import Chart from "@/assets/chart.png";
+import Star from "@/assets/star.png";
 
 export default function Utilities() {
   return (
@@ -24,7 +27,7 @@ export default function Utilities() {
             </p>
           </div>
 
-          <div className="mx-auto grid max-w-4xl items-center gap-6 lg:grid-cols-2">
+          <div className="mx-auto grid max-w-5xl items-center gap-6 lg:grid-cols-2">
             {utilities.map((data, index) => (
               <Utility key={index} data={data} index={index} />
             ))}
@@ -39,6 +42,7 @@ function Utility({ data, index }: any) {
   return (
     <div className="group cursor-pointer lg:last:col-span-2">
       <Card
+        style={{ transition: "300ms ease" }}
         data-aos="fade-up"
         data-aos-delay={(index + 1) * 100}
         className={cn(
@@ -46,9 +50,10 @@ function Utility({ data, index }: any) {
           data.containerClassName,
         )}
       >
-        <div className="flex flex-col items-start space-x-4 sm:flex-row">
-          <div className="bg-vibezly-gradient flex h-12 w-12 items-center justify-center rounded-lg transition-transform duration-300 group-hover:scale-110">
-            <span className="text-xl">{data.icon}</span>
+        <div className="flex flex-col items-start space-x-4">
+          <div className="from-vibezly-purple via-vibezly-cyan to-vibezly-green mb-4 flex items-center justify-center rounded-lg bg-linear-240 transition-transform duration-300 group-hover:scale-110">
+            {/* <span className="text-xl">{data.icon}</span> */}
+            <img src={data.icon} alt={data.title} className="block size-14" />
           </div>
           <div>
             <h3
@@ -69,7 +74,7 @@ function Utility({ data, index }: any) {
 
 const utilities = [
   {
-    icon: "🧠",
+    icon: Chat,
     title: "AI Chat Moderation",
     content:
       "Intelligent spam detection, sentiment analysis, and automated              moderation to keep your community healthy and engaged.",
@@ -77,7 +82,7 @@ const utilities = [
     containerClassName: "hover:border-vibezly-purple",
   },
   {
-    icon: "📊",
+    icon: Chart,
     title: "Member Rankings",
     content:
       "Dynamic leaderboards based on activity, contribution                         quality, and community engagement metrics.",
@@ -85,7 +90,7 @@ const utilities = [
     containerClassName: "hover:border-vibezly-cyan",
   },
   {
-    icon: "🏆",
+    icon: Star,
     title: "Token Rewards",
     content:
       "Earn VBZ tokens for quality contributions, helping                         newcomers, and maintaining positive community vibes.",

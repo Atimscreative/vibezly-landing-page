@@ -47,7 +47,7 @@ export default function Tokenomics() {
             <Card
               data-aos="fade-left"
               data-aos-delay="300"
-              className="from-vibezly-card to-vibezly-dark border-vibezly-border/50 bg-linear-180 p-8"
+              className="from-vibezly-card hover:drop-shadow-glow-cyan/15 to-vibezly-dark border-vibezly-border/50 bg-linear-180 p-8"
             >
               <h3 className="font-orbitron text-accent mb-6 text-2xl font-semibold">
                 Token Utility

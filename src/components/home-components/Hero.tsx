@@ -84,9 +84,9 @@ export default function Hero() {
           </div>
 
           {/* Floating Elements */}
-          {/* <div className="animate-float absolute top-20 left-10">
+          <div className="animate-float absolute top-20 left-10">
             <div className="bg-vibezly-purple/20 glow flex h-16 w-16 items-center justify-center rounded-full">
-              <span className="text-2xl">🚀</span>
+             <img src=""/>
             </div>
           </div>
           <div
@@ -104,7 +104,7 @@ export default function Hero() {
             <div className="bg-vibezly-green/20 glow-green flex h-14 w-14 items-center justify-center rounded-full">
               <span className="text-xl">💎</span>
             </div>
-          </div> */}
+          </div>
         </div>
       </section>
     </>
