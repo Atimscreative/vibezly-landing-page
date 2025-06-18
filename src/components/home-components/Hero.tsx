@@ -1,6 +1,7 @@
 import { Button } from "../ui/button";
 import { Particles } from "../magicui/particles";
 import { TypeAnimation } from "react-type-animation";
+import Coin from "@/assets/Coim.png";
 
 // const phrases = [
 //   { text: "Revolutionizing Crypto Communities" },
@@ -84,9 +85,9 @@ export default function Hero() {
           </div>
 
           {/* Floating Elements */}
-          <div className="animate-float absolute top-20 left-10">
-            <div className="bg-vibezly-purple/20 glow flex h-16 w-16 items-center justify-center rounded-full">
-             <img src=""/>
+          <div className="animate-float absolute top-20 -left-10">
+            <div className="drop-shadow-glow/50 flex h-16 w-16 items-center justify-center rounded-full">
+              <img src={Coin} />
             </div>
           </div>
           <div
