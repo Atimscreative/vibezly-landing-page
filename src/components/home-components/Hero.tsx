@@ -1,16 +1,13 @@
-import { ArrowDown } from "lucide-react";
 import { Button } from "../ui/button";
-import { AnimatedGradientText } from "../magicui/animated-gradient-text";
 import { Particles } from "../magicui/particles";
 import { TypeAnimation } from "react-type-animation";
-import { TypewriterEffectSmooth } from "../magicui/typewriter-effect";
 
-const phrases = [
-  { text: "Revolutionizing Crypto Communities" },
-  { text: "Revolutionizing Crypto Ecosystems" },
-  { text: "Revolutionizing Crypto Networks" },
-  { text: "Revolutionizing Crypto Movements", className: "text-vibezly-cyan" },
-];
+// const phrases = [
+//   { text: "Revolutionizing Crypto Communities" },
+//   { text: "Revolutionizing Crypto Ecosystems" },
+//   { text: "Revolutionizing Crypto Networks" },
+//   { text: "Revolutionizing Crypto Movements", className: "text-vibezly-cyan" },
+// ];
 
 export default function Hero() {
   return (
@@ -36,6 +33,7 @@ export default function Hero() {
             </h1> */}
 
             <TypeAnimation
+              cursor={true}
               wrapper="h1"
               sequence={[
                 // Same substring at the start will only be typed once, initially
@@ -51,7 +49,7 @@ export default function Hero() {
               speed={50}
               repeat={Infinity}
               preRenderFirstString={true}
-              className="font-orbitron mb-6 text-4xl leading-[120%] font-bold text-white md:text-6xl lg:text-7xl"
+              className="font-orbitron mb-6 h-[130px] text-4xl leading-[120%] font-bold text-balance text-white sm:h-auto md:text-6xl lg:text-7xl"
             />
 
             <p
