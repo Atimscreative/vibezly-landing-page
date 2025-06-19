@@ -1,6 +1,6 @@
 import { Particles } from "../magicui/particles";
 import { TypeAnimation } from "react-type-animation";
-import Coin from "@/assets/Coim.png";
+import Coin from "@/assets/coina.png";
 import Rocket from "@/assets/Rocket2.png";
 import Rocket2 from "@/assets/Rocket.png";
 import { Link } from "react-router";
