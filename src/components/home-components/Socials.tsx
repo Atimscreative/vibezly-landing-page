@@ -1,8 +1,11 @@
 import { Card } from "../ui/card";
 import { Button } from "../ui/button";
-import { FaInstagramSquare, FaTelegram } from "react-icons/fa";
+import { FaTelegram } from "react-icons/fa";
 import { Link } from "react-router";
-import { FaDiscord, FaXTwitter } from "react-icons/fa6";
+import { FaXTwitter, FaYoutube } from "react-icons/fa6";
+import Etherscan from "@/assets/etherscan-logo-circle-light.svg";
+import Dexscreener from "@/assets/dex-screener-logo-png_seeklogo-527276.png";
+import Dextools from "@/assets/dextools@3x.png";
 
 export default function Socials() {
   return (
@@ -25,7 +28,7 @@ export default function Socials() {
             revolution
           </p>
 
-          <div className="mb-12 flex justify-evenly gap-4 sm:justify-center sm:gap-8">
+          <div className="grid-cols-3justify-center mx-auto mb-12 grid max-w-sm gap-4 sm:max-w-xl sm:grid-cols-6 sm:justify-center sm:gap-8">
             {socialMediaList.map((data, i) => (
               <Link
                 key={i}
@@ -35,9 +38,18 @@ export default function Socials() {
                 target="_blank"
                 className="group flex flex-col items-center"
               >
-                <div className="from-vibezly-purple via-vibezly-cyan to-vibezly-green drop-shadow-glow/50 hover:drop-shadow-glow-cyan/50 flex size-14 items-center justify-center rounded-full bg-linear-[135deg] from-0% via-85% to-100% transition-all duration-300 group-hover:scale-105 sm:h-16 sm:w-16">
-                  <data.icon className="h-8 w-8 text-white" />
-                </div>
+                {data.type === "icon" && (
+                  <div className="from-vibezly-purple via-vibezly-cyan to-vibezly-green drop-shadow-glow/50 hover:drop-shadow-glow-cyan/50 flex size-14 items-center justify-center rounded-full bg-linear-[135deg] from-0% via-85% to-100% transition-all duration-300 group-hover:scale-105 sm:h-16 sm:w-16">
+                    <data.icon className="h-8 w-8 text-white" />
+                  </div>
+                )}
+
+                {data.type === "image" && (
+                  <img
+                    src={data.icon as string}
+                    className="drop-shadow-glow/50 hover:drop-shadow-glow-cyan/50 size-14 rounded-full sm:h-16 sm:w-16"
+                  />
+                )}
                 <span className="group-hover:text-vibezly-cyan mt-4 block text-sm font-medium transition-colors">
                   {data.label}
                 </span>
@@ -74,20 +86,36 @@ const socialMediaList = [
     icon: FaTelegram,
     label: "Telegram",
     link: "https://t.me/vibezly",
+    type: "icon",
   },
   {
     icon: FaXTwitter,
     label: "Twitter X",
     link: "https://x.com/_vibezly",
+    type: "icon",
   },
   {
-    icon: FaDiscord,
-    label: "Discord",
+    icon: FaYoutube,
+    label: "Youtube",
     link: "#",
+    type: "icon",
   },
   {
-    icon: FaInstagramSquare,
-    label: "Instagram",
+    icon: Dextools,
+    label: "Dextools",
     link: "#",
+    type: "image",
+  },
+  {
+    icon: Dexscreener,
+    label: "Dexscreener",
+    link: "#",
+    type: "image",
+  },
+  {
+    icon: Etherscan,
+    label: "Etherscan",
+    link: "#",
+    type: "image",
   },
 ];

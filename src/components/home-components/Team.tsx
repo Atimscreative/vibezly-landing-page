@@ -2,6 +2,8 @@ import { teamMembers } from "@/utils";
 import { Card, CardContent } from "../ui/card";
 import { Badge } from "../ui/badge";
 import { ShineBorder } from "../magicui/shine-border";
+import { FaTelegram } from "react-icons/fa6";
+import { Link } from "react-router";
 
 export default function Team() {
   return (
@@ -20,7 +22,7 @@ export default function Team() {
               data-aos-delay="50"
               className="mx-auto max-w-3xl text-xl"
             >
-              Experienced builders from top tech companies and crypto projects
+              Experienced builders
             </p>
           </div>
 
@@ -44,7 +46,7 @@ export default function Team() {
                     className="h-full w-full rounded-full object-cover transition-transform duration-300"
                   />
                 </div>
-                <CardContent className="p-6 text-center">
+                <CardContent className="pt-6 text-center">
                   <h3 className="font-orbitron mb-2 text-xl font-semibold text-white">
                     {member.name}
                   </h3>
@@ -54,6 +56,11 @@ export default function Team() {
                   <p className="text-sm transition-colors duration-300 group-hover:text-white">
                     {member.bio}
                   </p>
+                  <div className="mt-3 flex items-center justify-center">
+                    <Link to="https://t.me/" className="group-hover:text-white">
+                      <FaTelegram size={24} />
+                    </Link>
+                  </div>
                 </CardContent>
               </Card>
             ))}

@@ -10,12 +10,11 @@ import {
 import { Badge } from "@/components/ui/badge";
 import {
   Bot,
-  Zap,
-  Award,
-  // TrendingUp,
   Gamepad2,
   Star,
   Settings,
+  TrendingUp,
+  ChartBar,
 } from "lucide-react";
 import UtilitiesHero from "@/components/utilities-components/HeroUtilities";
 import AIDrivenEngagement from "@/components/utilities-components/AIDrivenEngagement";
@@ -384,24 +383,24 @@ const Utilities = () => {
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
               {[
                 {
-                  title: "Wallet Connect",
-                  icon: <Settings className="h-6 w-6" />,
-                  status: "Coming Soon",
-                },
-                {
                   title: "Token-Gated Premium",
                   icon: <Star className="h-6 w-6" />,
                   status: "In Development",
                 },
                 {
-                  title: "Ecosystem Integration",
-                  icon: <Zap className="h-6 w-6" />,
-                  status: "Planned",
+                  title: "Community Contest",
+                  icon: <ChartBar className="h-6 w-6" />,
+                  status: "Coming Soon",
                 },
                 {
-                  title: "Project Token Rewards",
-                  icon: <Award className="h-6 w-6" />,
-                  status: "Research",
+                  title: "Vibezly Trending",
+                  icon: <TrendingUp className="h-6 w-6" />,
+                  status: "Coming Soon",
+                },
+                {
+                  title: "Automated Reward System",
+                  icon: <Settings className="h-6 w-6" />,
+                  status: "Coming Soon",
                 },
               ].map((item, index) => (
                 <Card

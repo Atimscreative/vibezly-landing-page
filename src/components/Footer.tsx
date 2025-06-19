@@ -127,9 +127,7 @@ const footerMenus = [
         label: "Documentation",
         url: "https://vibezly.gitbook.io/vibezly-docs/",
       },
-      { label: "API", url: "/#api" },
       { label: "Support", url: "/#support" },
-      { label: "Blog", url: "/#blog" },
     ],
   },
   {
@@ -137,7 +135,6 @@ const footerMenus = [
     links: [
       { label: "Terms of Service", url: "/#terms" },
       { label: "Privacy Policy", url: "/#privacy" },
-      { label: "Cookie Policy", url: "/#cookies" },
     ],
   },
 ];

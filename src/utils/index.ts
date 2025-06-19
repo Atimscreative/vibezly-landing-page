@@ -13,14 +13,17 @@ import Dick from "@/assets/dick.png";
 import Sam from "@/assets/sam.png";
 import Diamond from "@/assets/diamond.png";
 import Karan from "@/assets/karan.png";
+import Founder from "@/assets/founder.jpg";
+import Aws from "@/assets/aws.png";
+import grok from "@/assets/grok.png";
+import openai from "@/assets/openai.png";
 
 export const teamMembers = [
   {
-    name: "Alex Chen",
+    name: "Killian",
     role: "Founder & CEO",
-    bio: "Former Google AI engineer with 8+ years in blockchain development",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+    bio: "AI engineer with 8+ years in blockchain development.",
+    image: Founder,
   },
   {
     name: "Sarah Kim",
@@ -46,37 +49,32 @@ export const teamMembers = [
 ];
 
 export const partnerships = [
-  { name: "Binance Smart Chain", logo: "BSC" },
-  { name: "Ethereum", logo: "ETH" },
-  { name: "Polygon", logo: "MATIC" },
-  { name: "Chainlink", logo: "LINK" },
-  { name: "The Graph", logo: "GRT" },
+  { name: "Openai", logo: openai },
+  { name: "grok", logo: grok },
+  { name: "aws", logo: Aws },
 ];
 
 export const roadmapItems = [
   {
-    phase: "Q1 2024",
-    title: "MVP Launch",
-    description: "Basic bot functionality, token launch, initial communities",
+    phase: "Phase 1",
+    title: "MVP & Core Tracking System",
+    description:
+      "Building foundational tracking, moderation, and gamification tools.",
     status: "completed",
   },
   {
-    phase: "Q2 2024",
-    title: "AI Enhancement",
-    description: "Advanced AI moderation, sentiment analysis, smart rewards",
+    phase: "Phase 2",
+    title: "Automation & Advanced Analytics",
+    description:
+      "Automate moderation and sentiment analytics, enhance visibility using AI.",
     status: "completed",
   },
   {
-    phase: "Q3 2024",
-    title: "DAO Governance",
-    description: "Decentralized voting, proposal system, community treasury",
+    phase: "Phase 3",
+    title: "AI Moderation & Smart Rewards",
+    description:
+      "Deploy intelligent moderation tools and advanced reward mechanisms.",
     status: "current",
-  },
-  {
-    phase: "Q4 2024",
-    title: "Marketplace Integration",
-    description: "NFT rewards, cross-platform features, mobile app",
-    status: "upcoming",
   },
 ];
 

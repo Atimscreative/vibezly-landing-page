@@ -5,9 +5,9 @@ import { Pie, PieChart } from "recharts";
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
+  // CardDescription,
+  // CardHeader,
+  // CardTitle,
 } from "@/components/ui/card";
 import {
   type ChartConfig,
@@ -56,7 +56,7 @@ const chartConfig = {
 export default function TokenomicsChart() {
   return (
     <Card className="flex flex-col border-0 bg-transparent p-0">
-      <CardHeader
+      {/* <CardHeader
         data-aos="fade"
         data-aos-delay="200"
         className="items-center pb-0"
@@ -67,7 +67,7 @@ export default function TokenomicsChart() {
         <CardDescription className="font-orbitron text-vibezly-cyan text-center text-3xl font-bold">
           100,000 VBZ
         </CardDescription>
-      </CardHeader>
+      </CardHeader> */}
       <CardContent className="flex-1 p-0 pb-0">
         <ChartContainer
           config={chartConfig}

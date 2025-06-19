@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import { Card } from "../ui/card";
 import Chat from "@/assets/chat.png";
 import Chart from "@/assets/chart.png";
-import Star from "@/assets/star.png";
+import Coin from "@/assets/Coin.png";
 
 export default function Utilities() {
   return (
@@ -53,7 +53,11 @@ function Utility({ data, index }: any) {
         <div className="flex flex-col items-start space-x-4">
           <div className="from-vibezly-purple via-vibezly-cyan to-vibezly-green mb-4 flex items-center justify-center rounded-lg bg-linear-240 transition-transform duration-300 group-hover:scale-110">
             {/* <span className="text-xl">{data.icon}</span> */}
-            <img src={data.icon} alt={data.title} className="block size-14" />
+            <img
+              src={data.icon}
+              alt={data.title}
+              className="block size-14 drop-shadow-sm"
+            />
           </div>
           <div>
             <h3
@@ -90,7 +94,7 @@ const utilities = [
     containerClassName: "hover:border-vibezly-cyan",
   },
   {
-    icon: Star,
+    icon: Coin,
     title: "Token Rewards",
     content:
       "Earn VBZ tokens for quality contributions, helping                         newcomers, and maintaining positive community vibes.",

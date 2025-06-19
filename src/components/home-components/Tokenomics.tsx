@@ -37,7 +37,10 @@ export default function Tokenomics() {
               data-aos-delay="100"
               className="mx-auto max-w-3xl text-xl"
             >
-              Our utility token powers the entire Vibezly ecosystem
+              The VBZ token powers the entire Vibezly ecosystem, serving as the
+              core medium for rewards, access, and governance. Designed with a
+              limited supply and strong utility, VBZ aligns platform growth with
+              community participation and long-term sustainability.
             </p>
           </div>
 
@@ -55,9 +58,11 @@ export default function Tokenomics() {
               <div className="space-y-6">
                 <div className="flex items-center space-x-3">
                   <CircleCheck className="text-vibezly-green h-6 w-6" />
-                  <span className="font-orbitron">
-                    Governance Voting Rights
-                  </span>
+                  <span className="font-orbitron">Rewards</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CircleCheck className="text-vibezly-green h-6 w-6" />
+                  <span className="font-orbitron">Governance</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <CircleCheck className="text-vibezly-green h-6 w-6" />
@@ -65,16 +70,12 @@ export default function Tokenomics() {
                 </div>
                 <div className="flex items-center space-x-3">
                   <CircleCheck className="text-vibezly-green h-6 w-6" />
-                  <span className="font-orbitron">Staking Rewards</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <CircleCheck className="text-vibezly-green h-6 w-6" />
-                  <span className="font-orbitron">Community Rewards</span>
+                  <span className="font-orbitron">Revenue Share Access</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <CircleCheck className="text-vibezly-green h-6 w-6" />
                   <span className="font-orbitron">
-                    NFT Marketplace Currency
+                    Special Governance Rights
                   </span>
                 </div>
 
@@ -82,7 +83,7 @@ export default function Tokenomics() {
                   <div className="grid grid-cols-2 gap-4 text-center">
                     <div>
                       <div className="text-vibezly-cyan font-orbitron text-2xl font-bold">
-                        1B
+                        100,000VBZ
                       </div>
                       <span className="font-orbitron text-sm">
                         Total Supply
