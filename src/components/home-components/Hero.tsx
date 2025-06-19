@@ -4,6 +4,7 @@ import Coin from "@/assets/coina.png";
 import Rocket from "@/assets/Rocket2.png";
 import Rocket2 from "@/assets/Rocket.png";
 import { Link } from "react-router";
+import Vibe from "@/assets/vibe.gif";
 
 // const phrases = [
 //   { text: "Revolutionizing Crypto Communities" },
@@ -21,8 +22,7 @@ export default function Hero() {
       >
         <div
           style={{
-            backgroundImage:
-              "linear-gradient(to bottom, #0f131a11 0%,#0f131aee, #0f131a),url(/src/assets/vibe.gif)",
+            backgroundImage: `linear-gradient(to bottom, #0f131a11 0%,#0f131aee, #0f131a),url(${Vibe})`,
           }}
           className="bg-vibezly-dark absolute inset-0 h-screen w-full bg-cover bg-center bg-no-repeat"
         >
