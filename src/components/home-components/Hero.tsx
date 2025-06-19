@@ -19,7 +19,13 @@ export default function Hero() {
         id="hero"
         className="relative flex min-h-screen items-center justify-center overflow-hidden"
       >
-        <div className="bg-vibezly-dark absolute inset-0 h-screen w-full">
+        <div
+          style={{
+            backgroundImage:
+              "linear-gradient(to bottom, #0f131a11 0%,#0f131aee, #0f131a),url(/src/assets/vibe.gif)",
+          }}
+          className="bg-vibezly-dark absolute inset-0 h-screen w-full bg-cover bg-center bg-no-repeat"
+        >
           <Particles className="h-full w-full" />
         </div>
         <div className="relative z-10 mx-auto max-w-4xl px-4 text-center">
