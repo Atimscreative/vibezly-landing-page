@@ -58,7 +58,7 @@ export default function Hero() {
               speed={50}
               repeat={Infinity}
               preRenderFirstString={true}
-              className="font-orbitron mb-6 h-[130px] text-4xl leading-[120%] font-bold text-balance text-white min-[28.79rem]:h-[144px] sm:h-auto md:text-6xl lg:text-7xl"
+              className="font-orbitron min- mb-6 text-[28px] leading-[120%] font-bold text-balance text-white sm:h-auto sm:text-4xl md:text-6xl lg:text-7xl"
             />
 
             <p
@@ -100,7 +100,7 @@ export default function Hero() {
             </div>
           </div>
           <div
-            className="animate-float absolute top-40 -right-20"
+            className="animate-float absolute -top-[60px] right-0 sm:top-40 sm:-right-20"
             style={{ animationDelay: "1s" }}
           >
             <div className="bg-vibezly-cyan/20 glow-cyan flex h-16 w-16 items-center justify-center rounded-full">

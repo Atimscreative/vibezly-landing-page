@@ -21,10 +21,10 @@ import {
 export const description = "A simple pie chart";
 
 const chartData = [
-  { attribute: "development", percentage: 2, fill: "var(--vibezly-border)" },
+  { attribute: "team", percentage: 2, fill: "var(--vibezly-border)" },
   { attribute: "marketing", percentage: 3, fill: "var(--vibezly-cyan)" },
-  { attribute: "reserved", percentage: 30, fill: "var(--vibezly-green)" },
-  { attribute: "liquidity", percentage: 75, fill: "var(--vibezly-purple)" },
+  { attribute: "ecosystem", percentage: 30, fill: "var(--vibezly-green)" },
+  { attribute: "open market", percentage: 75, fill: "var(--vibezly-purple)" },
 ];
 
 const chartConfig = {

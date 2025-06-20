@@ -38,14 +38,43 @@ export default function Tokenomics() {
               className="mx-auto max-w-3xl text-xl"
             >
               The VBZ token powers the entire Vibezly ecosystem, serving as the
-              core medium for rewards, access, and governance. Designed with a
-              limited supply and strong utility, VBZ aligns platform growth with
-              community participation and long-term sustainability.
+              core medium for rewards, access, and governance.
+              <span className="hidden md:block">
+                Designed with a limited supply and strong utility, VBZ aligns
+                platform growth with community participation and long-term
+                sustainability.
+              </span>
             </p>
           </div>
 
-          <div className="grid gap-12 lg:grid-cols-2">
+          <div className="grid items-center gap-12 lg:grid-cols-2">
             <TokenomicsChart />
+            <div className="grid grid-cols-3 gap-4">
+              <div className="border-vibezly-border/50 bg-vibezly-dark hover:bg-vibezly-border/5 border p-6 py-8">
+                <p className="text-vibezly-cyan pb-2">Buy</p>
+                <h3 className="font-orbitron text-2xl font-bold text-white">
+                  5%
+                </h3>
+              </div>
+              <div className="border-vibezly-border/50 bg-vibezly-dark hover:bg-vibezly-border/5 border p-6 py-8">
+                <p className="text-vibezly-cyan pb-2">Sell</p>
+                <h3 className="font-orbitron text-2xl font-bold text-white">
+                  5%
+                </h3>
+              </div>
+              <div className="border-vibezly-border/50 bg-vibezly-dark hover:bg-vibezly-border/5 border p-6 py-8">
+                <p className="text-vibezly-cyan pb-2">Liquidity</p>
+                <h3 className="font-orbitron text-2xl font-bold text-white">
+                  100%
+                </h3>
+              </div>
+              <div className="border-vibezly-border/50 bg-vibezly-dark hover:bg-vibezly-border/5 border p-6 py-8">
+                <p className="text-vibezly-cyan pb-2">Open Market</p>
+                <h3 className="font-orbitron text-2xl font-bold text-white">
+                  100%
+                </h3>
+              </div>
+            </div>
 
             <Card
               data-aos="fade-left"
