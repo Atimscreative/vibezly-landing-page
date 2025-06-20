@@ -274,3 +274,129 @@ export const thePersonas = [
     avatar: Diamond,
   },
 ];
+
+export const roadmapPhases = [
+  {
+    phase: "Phase 1",
+    title: "MVP & Core Tracking System",
+    objective:
+      "Build foundational tracking, moderation, and gamification tools.",
+    status: "completed",
+    features: [
+      {
+        name: "Message Tracking",
+        description:
+          "Tracks all Telegram group messages including stickers, GIFs, and spam.",
+      },
+      {
+        name: "Tweet Logging",
+        description:
+          "Logs all tweets shared in group chats directly to the database.",
+      },
+      {
+        name: "Mini App Leaderboard",
+        description:
+          "Displays real-time group engagement rankings and trending metrics.",
+      },
+      {
+        name: "Dynamic Personas",
+        description: "Includes 4 core personas with unique tones and styles.",
+      },
+      {
+        name: "Flood Protection",
+        description: "Message rate limiter to prevent spam floods.",
+      },
+      {
+        name: "Trending Score",
+        description: "Calculates group score based on engagement minus spam.",
+      },
+      {
+        name: "User Rating System",
+        description:
+          "/report command with auto-mute after 10 reports + DM-based appeal system.",
+      },
+      {
+        name: "User Filters",
+        description:
+          "Tracks per-user message volume, stickers, GIFs, and spam behavior.",
+      },
+      {
+        name: "Sentiment Reports",
+        description:
+          "Weekly/monthly manual reports on overall group sentiment.",
+      },
+      {
+        name: "Contest System",
+        description:
+          "Auto-run contests with leaderboard visibility and direct token payouts.",
+      },
+    ],
+  },
+  {
+    phase: "Phase 2",
+    title: "Automation & Advanced Analytics",
+    objective:
+      "Automate moderation and sentiment analytics, enhance visibility using AI.",
+    status: "current",
+    features: [
+      {
+        name: "Sentiment Automation",
+        description:
+          "Scheduled AI-generated sentiment reports per user and group.",
+      },
+      {
+        name: "User Behavior Tagging",
+        description:
+          "AI labels users as spammy, toxic, influential, etc., for mod visibility.",
+      },
+      {
+        name: "Public Profiles",
+        description:
+          "Generates user profile cards with activity stats for transparency.",
+      },
+      {
+        name: "Persona Switching",
+        description:
+          "Admins can change personas on-the-fly based on community mood or context.",
+      },
+      {
+        name: "Emoji & Reaction Tracking",
+        description: "Tracks usage of reactions to measure passive engagement.",
+      },
+      {
+        name: "API Integration",
+        description:
+          "Live token data and charts via third-party APIs (e.g., DexScreener).",
+      },
+      {
+        name: "Wallet Integration",
+        description:
+          "Connect wallet to unlock premium bot features based on token holdings.",
+      },
+    ],
+  },
+  {
+    phase: "Phase 3",
+    title: "AI Moderation & Smart Rewards",
+    objective:
+      "Deploy intelligent moderation tools and advanced reward mechanisms.",
+    status: "upcoming",
+    features: [
+      {
+        name: "AI Moderation",
+        description:
+          "NLP-based detection of spam, floods, and abusive patterns.",
+      },
+      {
+        name: "AI Persona Responses",
+        description:
+          "Context-aware replies from personas tailored to group conversations.",
+      },
+      {
+        name: "Third-Party Token Integration",
+        description:
+          "Allow other projects to plug in their token for contests and utilities.",
+      },
+    ],
+  },
+];

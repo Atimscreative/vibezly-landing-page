@@ -133,8 +133,14 @@ const footerMenus = [
   {
     title: "Legal",
     links: [
-      { label: "Terms of Service", url: "/#terms" },
-      { label: "Privacy Policy", url: "/#privacy" },
+      {
+        label: "Terms of Service",
+        url: "https://vibezly.gitbook.io/vibezly-docs/ecosystem/terms-of-service",
+      },
+      {
+        label: "Privacy Policy",
+        url: "https://vibezly.gitbook.io/vibezly-docs/ecosystem/privacy-policy",
+      },
     ],
   },
 ];
