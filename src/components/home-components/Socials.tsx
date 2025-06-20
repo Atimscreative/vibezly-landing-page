@@ -4,7 +4,7 @@ import { FaTelegram } from "react-icons/fa";
 import { Link } from "react-router";
 import { FaXTwitter, FaYoutube } from "react-icons/fa6";
 import Etherscan from "@/assets/etherscan-logo-circle-light.svg";
-import Dexscreener from "@/assets/dex-screener-logo-png_seeklogo-527276.png";
+import Dexscreener from "@/assets/dexscreener.png";
 import Dextools from "@/assets/dextools@3x.png";
 
 export default function Socials() {
@@ -28,7 +28,7 @@ export default function Socials() {
             revolution
           </p>
 
-          <div className="grid-cols-3justify-center mx-auto mb-12 grid max-w-sm gap-4 sm:max-w-xl sm:grid-cols-6 sm:justify-center sm:gap-8">
+          <div className="mx-auto mb-12 grid max-w-sm grid-cols-3 justify-center gap-4 sm:max-w-xl sm:grid-cols-6 sm:justify-center sm:gap-8">
             {socialMediaList.map((data, i) => (
               <Link
                 key={i}

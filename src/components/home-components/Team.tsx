@@ -46,16 +46,13 @@ export default function Team() {
                     className="h-full w-full rounded-full object-cover transition-transform duration-300"
                   />
                 </div>
-                <CardContent className="pt-6 text-center">
+                <CardContent className="pt-2 text-center">
                   <h3 className="font-orbitron mb-2 text-xl font-semibold text-white">
                     {member.name}
                   </h3>
                   <Badge className="from-vibezly-purple to-vibezly-cyan mb-3 rounded-full border-0 bg-linear-[135deg] text-white">
                     {member.role}
                   </Badge>
-                  <p className="text-sm transition-colors duration-300 group-hover:text-white">
-                    {member.bio}
-                  </p>
                   <div className="mt-3 flex items-center justify-center">
                     <Link to="https://t.me/" className="group-hover:text-white">
                       <FaTelegram size={24} />

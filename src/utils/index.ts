@@ -14,6 +14,9 @@ import Sam from "@/assets/sam.png";
 import Diamond from "@/assets/diamond.png";
 import Karan from "@/assets/karan.png";
 import Founder from "@/assets/founder.jpg";
+import Ruben from "@/assets/rubes.jpg";
+import Mythic from "@/assets/mytic.jpg";
+import Luke from "@/assets/Luke.jpg";
 import Aws from "@/assets/aws.png";
 import grok from "@/assets/grok.png";
 import openai from "@/assets/openai.png";
@@ -22,29 +25,22 @@ export const teamMembers = [
   {
     name: "Killian",
     role: "Founder & CEO",
-    bio: "AI engineer with 8+ years in blockchain development.",
     image: Founder,
   },
   {
-    name: "Sarah Kim",
-    role: "CTO",
-    bio: "Telegram Bot specialist and full-stack developer",
-    image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
-  },
-  {
-    name: "Marcus Johnson",
-    role: "Head of Community",
-    bio: "Crypto community veteran with 50K+ followers",
-    image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
-  },
-  {
-    name: "Elena Rodriguez",
+    name: "Rube",
     role: "Lead Developer",
-    bio: "DeFi protocol architect and smart contract auditor",
-    image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
+    image: Ruben,
+  },
+  {
+    name: "Mythic",
+    role: "Chief of Community",
+    image: Mythic,
+  },
+  {
+    name: "Luke",
+    role: "Chief of Marketing",
+    image: Luke,
   },
 ];
 

@@ -1,7 +1,7 @@
 import { Particles } from "../magicui/particles";
 import { TypeAnimation } from "react-type-animation";
 import Coin from "@/assets/coina.png";
-import Rocket from "@/assets/Rocket2.png";
+import Rocket from "@/assets/telegram.png";
 import Rocket2 from "@/assets/Rocket.png";
 import { Link } from "react-router";
 import Vibe from "@/assets/vibe.gif";
@@ -103,7 +103,7 @@ export default function Hero() {
             className="animate-float absolute top-40 -right-20"
             style={{ animationDelay: "1s" }}
           >
-            <div className="bg-vibezly-cyan/20 glow-cyan flex h-12 w-12 items-center justify-center rounded-full">
+            <div className="bg-vibezly-cyan/20 glow-cyan flex h-16 w-16 items-center justify-center rounded-full">
               <img src={Rocket} />
             </div>
           </div>
