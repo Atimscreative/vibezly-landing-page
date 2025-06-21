@@ -35,11 +35,11 @@ export default function Tokenomics() {
             <p
               data-aos="fade-up"
               data-aos-delay="100"
-              className="mx-auto max-w-3xl text-xl"
+              className="mx-auto max-w-4xl text-xl"
             >
               The VBZ token powers the entire Vibezly ecosystem, serving as the
               core medium for rewards, access, and governance.
-              <span className="hidden md:block">
+              <span className="hidden md:inline">
                 Designed with a limited supply and strong utility, VBZ aligns
                 platform growth with community participation and long-term
                 sustainability.
@@ -48,34 +48,31 @@ export default function Tokenomics() {
           </div>
 
           <div className="grid items-center gap-12 lg:grid-cols-2">
-            <TokenomicsChart />
-            <div className="grid grid-cols-3 gap-4">
-              <div className="border-vibezly-border/50 bg-vibezly-dark hover:bg-vibezly-border/5 border p-6 py-8">
-                <p className="text-vibezly-cyan pb-2">Buy</p>
-                <h3 className="font-orbitron text-2xl font-bold text-white">
-                  5%
-                </h3>
-              </div>
-              <div className="border-vibezly-border/50 bg-vibezly-dark hover:bg-vibezly-border/5 border p-6 py-8">
-                <p className="text-vibezly-cyan pb-2">Sell</p>
-                <h3 className="font-orbitron text-2xl font-bold text-white">
-                  5%
-                </h3>
-              </div>
-              <div className="border-vibezly-border/50 bg-vibezly-dark hover:bg-vibezly-border/5 border p-6 py-8">
-                <p className="text-vibezly-cyan pb-2">Liquidity</p>
-                <h3 className="font-orbitron text-2xl font-bold text-white">
-                  100%
-                </h3>
-              </div>
-              <div className="border-vibezly-border/50 bg-vibezly-dark hover:bg-vibezly-border/5 border p-6 py-8">
-                <p className="text-vibezly-cyan pb-2">Open Market</p>
-                <h3 className="font-orbitron text-2xl font-bold text-white">
-                  100%
-                </h3>
+            <div className="items-center md:grid md:grid-cols-2 lg:grid-cols-1">
+              <TokenomicsChart />
+              <div className="grid grid-cols-2 gap-4">
+                <div className="border-vibezly-border/50 bg-vibezly-dark hover:bg-vibezly-border/5 rounded-xl border p-6">
+                  <p className="text-vibezly-cyan pb-2">Buy/Sell Tax</p>
+                  <h3 className="font-orbitron text-2xl font-bold text-white">
+                    5% / 5%
+                  </h3>
+                </div>
+
+                <div className="border-vibezly-border/50 bg-vibezly-dark hover:bg-vibezly-border/5 rounded-xl border p-6">
+                  <p className="text-vibezly-cyan pb-2">Liquidity</p>
+                  <h3 className="font-orbitron text-2xl font-bold text-white">
+                    100%
+                  </h3>
+                </div>
+
+                <div className="border-vibezly-border/50 bg-vibezly-dark hover:bg-vibezly-border/5 col-span-2 rounded-xl border p-6">
+                  <p className="text-vibezly-cyan pb-2">Tax Allocation</p>
+                  <h3 className="font-orbitron text-2xl font-bold text-white">
+                    40% Development, 60% Marketing
+                  </h3>
+                </div>
               </div>
             </div>
-
             <Card
               data-aos="fade-left"
               data-aos-delay="300"
@@ -88,10 +85,6 @@ export default function Tokenomics() {
                 <div className="flex items-center space-x-3">
                   <CircleCheck className="text-vibezly-green h-6 w-6" />
                   <span className="font-orbitron">Rewards</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <CircleCheck className="text-vibezly-green h-6 w-6" />
-                  <span className="font-orbitron">Governance</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <CircleCheck className="text-vibezly-green h-6 w-6" />
@@ -120,7 +113,7 @@ export default function Tokenomics() {
                     </div>
                     <div>
                       <div className="text-vibezly-cyan font-orbitron text-2xl font-bold">
-                        650M
+                        100
                       </div>
                       <span className="font-orbitron text-sm">Circulating</span>
                     </div>

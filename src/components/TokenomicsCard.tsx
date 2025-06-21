@@ -21,67 +21,57 @@ import {
 export const description = "A simple pie chart";
 
 const chartData = [
-  { attribute: "team", percentage: 2, fill: "var(--vibezly-border)" },
-  { attribute: "marketing", percentage: 3, fill: "var(--vibezly-cyan)" },
-  { attribute: "ecosystem", percentage: 30, fill: "var(--vibezly-green)" },
-  { attribute: "open market", percentage: 75, fill: "var(--vibezly-purple)" },
+  { attribute: "team", percentage: 10, fill: "var(--vibezly-border)" },
+  { attribute: "marketing", percentage: 15, fill: "var(--vibezly-cyan)" },
+  { attribute: "ecosystem", percentage: 10, fill: "var(--vibezly-green)" },
+  { attribute: "openmarket", percentage: 65, fill: "var(--vibezly-purple)" },
 ];
 
 const chartConfig = {
   percentage: {
     label: "Percentage",
   },
-  development: {
-    label: "Development",
+  team: {
+    label: "Team",
     color: "var(--chart-1)",
   },
   marketing: {
     label: "Marketing",
     color: "var(--chart-2)",
   },
-  reserved: {
-    label: "Reserved",
+  ecosystem: {
+    label: "Ecosystem",
     color: "var(--chart-3)",
   },
-  liquidity: {
-    label: "Liquidity",
+  openmarket: {
+    label: "Open Market",
     color: "var(--chart-4)",
   },
-  // other: {
-  //   label: "Other",
-  //   color: "var(--chart-5)",
-  // },
 } satisfies ChartConfig;
 
 export default function TokenomicsChart() {
   return (
     <Card className="flex flex-col border-0 bg-transparent p-0">
-      {/* <CardHeader
-        data-aos="fade"
-        data-aos-delay="200"
-        className="items-center pb-0"
-      >
-        <CardTitle className="font-orbitron text-center text-white">
-          Total Supply
-        </CardTitle>
-        <CardDescription className="font-orbitron text-vibezly-cyan text-center text-3xl font-bold">
-          100,000 VBZ
-        </CardDescription>
-      </CardHeader> */}
       <CardContent className="flex-1 p-0 pb-0">
         <ChartContainer
           config={chartConfig}
-          className="mx-auto aspect-square max-h-[450px]"
+          className="mx-auto aspect-square max-h-[350px]"
         >
           <PieChart>
             <ChartTooltip
               cursor={false}
-              content={<ChartTooltipContent hideLabel />}
+              content={
+                <ChartTooltipContent
+                  hideLabel
+                  className="border-0"
+                  labelClassName="text-white"
+                />
+              }
             />
             <Pie data={chartData} dataKey="percentage" nameKey="attribute" />
             <ChartLegend
               content={<ChartLegendContent nameKey="attribute" />}
-              className="font-orbitron -translate-y-2 flex-wrap gap-2 text-white *:basis-1/4 *:justify-center"
+              className="font-orbitron -translate-y-2 flex-wrap gap-2 gap-x-3 text-white *:justify-center"
             />
           </PieChart>
         </ChartContainer>
