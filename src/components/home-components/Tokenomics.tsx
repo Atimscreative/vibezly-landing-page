@@ -125,6 +125,13 @@ export default function Tokenomics() {
                   >
                     {copiedContract ? "Copied!" : "Copy Contract Address"}
                   </Button>
+
+                  <p
+                    onClick={copyContractAddress}
+                    className="font-orbitron mx-auto mt-4 w-[290px] cursor-pointer items-center truncate text-center text-sm tracking-wider text-ellipsis text-white uppercase md:w-full"
+                  >
+                    0x029290c564Ef921c56a784AA16C97E930dAF7372
+                  </p>
                 </div>
               </div>
             </Card>
