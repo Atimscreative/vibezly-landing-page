@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router";
 import Logo from "@/assets/logo2.svg";
 import { cn } from "@/lib/utils";
 import { useEffect } from "react";
+import MetaCard from "@/assets/metatag.jpg";
 
 export default function Footer() {
   const location = useLocation();
@@ -61,6 +62,7 @@ export default function Footer() {
       >
         <ArrowDown className="h-6 w-6 rotate-180 transform text-white" />
       </Link>
+      <img src={MetaCard} alt="Meta Card" className="h-0 w-0" />
     </>
   );
 }
