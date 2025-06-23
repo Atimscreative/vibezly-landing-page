@@ -113,7 +113,7 @@ export default function Tokenomics() {
                     </div>
                     <div>
                       <div className="text-vibezly-cyan font-orbitron text-2xl font-bold">
-                        100
+                        100%
                       </div>
                       <span className="font-orbitron text-sm">Circulating</span>
                     </div>

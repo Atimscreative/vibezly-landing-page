@@ -49,7 +49,7 @@ export default function UtilitiesHero() {
               <div className="bg-vibezly-dark absolute top-1/2 left-1/2 h-[90%] w-[97.5%] -translate-1/2 rounded-sm"></div>
               <span className="relative z-10 flex gap-2">
                 <TrendingUp className="mr-2 h-5 w-5" />
-                View Dashboard
+                View App
               </span>
             </Button>
           </div>
