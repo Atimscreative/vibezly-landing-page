@@ -79,7 +79,7 @@ export default function Header() {
                 className="from-vibezly-purple to-vibezly-cyan relative hidden h-auto items-center justify-center rounded-md bg-linear-[135deg] px-6 py-3 transition-opacity hover:opacity-90 lg:flex"
               >
                 <div className="bg-vibezly-dark absolute top-1/2 left-1/2 h-[90%] w-[97.5%] -translate-1/2 rounded-sm"></div>
-                <span className="relative z-10">Try Vibezly Now</span>
+                <span className="relative z-10 text-sm">Try Vibezly Now</span>
               </Link>
 
               {/* <Button className="from-vibezly-purple to-vibezly-cyan hidden bg-gradient-to-r bg-cover text-white transition-opacity hover:opacity-90 lg:inline-block">
@@ -147,11 +147,15 @@ const navMenu = [
     url: "/#tokenomics",
   },
   {
-    label: "Team",
-    url: "/#team",
+    label: "Documentation",
+    url: "https://vibezly.gitbook.io/vibezly-docs/",
   },
-  {
-    label: "Roadmap",
-    url: "/#roadmap",
-  },
+  // {
+  //   label: "Team",
+  //   url: "/#team",
+  // },
+  // {
+  //   label: "Roadmap",
+  //   url: "/#roadmap",
+  // },
 ];
