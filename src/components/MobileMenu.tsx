@@ -63,11 +63,11 @@ const navMenu = [
     url: "/#tokenomics",
   },
   {
-    label: "Team",
-    url: "/#team",
+    label: "Documentation",
+    url: "https://vibezly.gitbook.io/vibezly-docs/",
   },
-  {
-    label: "Roadmap",
-    url: "/#roadmap",
-  },
+  // {
+  //   label: "Roadmap",
+  //   url: "/#roadmap",
+  // },
 ];
