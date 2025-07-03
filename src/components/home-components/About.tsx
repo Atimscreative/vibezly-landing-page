@@ -18,7 +18,7 @@ export default function About() {
             <p
               data-aos="fade-up"
               data-aos-delay="100"
-              className="mx-auto max-w-3xl text-xl"
+              className="mx-auto max-w-3xl text-base lg:text-xl"
             >
               We're building the future of crypto community engagement through
               AI-powered automation, decentralized governance, and gamified

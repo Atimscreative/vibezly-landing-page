@@ -1,17 +1,7 @@
-import { Particles } from "../magicui/particles";
 import { TypeAnimation } from "react-type-animation";
-import Coin from "@/assets/coina.png";
-import Rocket from "@/assets/telegram.png";
-import Rocket2 from "@/assets/Rocket.png";
 import { Link } from "react-router";
-import Vibe from "@/assets/vibe.gif";
-
-// const phrases = [
-//   { text: "Revolutionizing Crypto Communities" },
-//   { text: "Revolutionizing Crypto Ecosystems" },
-//   { text: "Revolutionizing Crypto Networks" },
-//   { text: "Revolutionizing Crypto Movements", className: "text-vibezly-cyan" },
-// ];
+import heroImage from "@/assets/Rocket2.png";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 export default function Hero() {
   return (
@@ -20,27 +10,8 @@ export default function Hero() {
         id="hero"
         className="relative flex min-h-screen items-center justify-center overflow-hidden"
       >
-        <div
-          style={{
-            backgroundImage: `linear-gradient(to bottom, #0f131a11 0%,#0f131aee, #0f131a),url(${Vibe})`,
-          }}
-          className="bg-vibezly-dark absolute inset-0 h-screen w-full bg-cover bg-center bg-no-repeat"
-        >
-          <Particles className="h-full w-full" />
-        </div>
-        <div className="relative z-10 mx-auto max-w-4xl px-4 text-center">
+        <div className="relative z-10 mx-auto flex max-w-7xl flex-col-reverse items-center px-4 lg:grid lg:grid-cols-[1.1fr_1fr]">
           <div>
-            {/* <h1
-              data-aos="fade-down"
-              className="font-orbitron mb-6 text-4xl leading-[120%] font-bold text-white md:text-6xl lg:text-7xl"
-            >
-              Revolutionizing Crypto
-              <br />
-              <AnimatedGradientText colorFrom="#7b00ff" colorTo="#00d1ff">
-                Communities
-              </AnimatedGradientText>
-            </h1> */}
-
             <TypeAnimation
               cursor={true}
               wrapper="h1"
@@ -58,62 +29,46 @@ export default function Hero() {
               speed={50}
               repeat={Infinity}
               preRenderFirstString={true}
-              className="font-orbitron min- mb-6 text-[28px] leading-[120%] font-bold text-balance text-white sm:h-auto sm:text-4xl md:text-6xl lg:text-7xl"
+              className="font-orbitron mb-6 text-center text-[28px] leading-[120%] font-bold text-balance text-white sm:h-auto sm:text-4xl md:text-6xl lg:text-left lg:text-[56px]"
             />
 
             <p
               data-aos="fade-down"
               data-aos-delay="100"
-              className="mx-auto mb-8 max-w-3xl text-xl text-gray-200 md:text-2xl"
+              className="mx-auto mb-8 max-w-3xl text-center text-lg text-gray-200 lg:text-left lg:text-xl"
             >
               AI-powered Telegram bot with decentralized governance, gamified
               rewards, and community-driven insights. Powered by VBZ token.
             </p>
-            <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
+            <div className="flex flex-wrap items-center justify-center gap-4 lg:justify-start">
               <Link
                 to="https://t.me/vibezly_bot"
                 data-aos="fade-up"
                 data-aos-delay="200"
-                className="from-vibezly-purple to-vibezly-cyan h-auto rounded-md bg-gradient-to-r bg-cover px-6 py-3 text-white transition-opacity text-shadow-sm hover:opacity-90"
+                className="from-vibezly-purple to-vibezly-cyan h-auto rounded-md bg-gradient-to-r bg-cover px-6 py-3 text-sm text-white transition-opacity text-shadow-sm hover:opacity-90"
               >
                 Get Started
               </Link>
 
               <Link
-                to="/personas"
+                to="/#demo"
                 data-aos="fade-left"
                 data-aos-delay={100}
                 className="from-vibezly-purple to-vibezly-cyan relative flex h-auto items-center justify-center rounded-md bg-linear-[135deg] px-6 py-3 transition-opacity hover:opacity-90"
               >
                 <div className="bg-vibezly-dark absolute top-1/2 left-1/2 h-[90%] w-[97.5%] -translate-1/2 rounded-sm"></div>
-                <span className="relative z-10 flex items-center gap-2">
-                  Meet AI Personas
+                <span className="relative z-10 flex items-center gap-2 text-sm">
+                  Watch Demo <FaArrowRightLong />
                 </span>
               </Link>
             </div>
           </div>
-
-          {/* Floating Elements */}
-          <div className="animate-float absolute top-20 -left-10">
-            <div className="drop-shadow-glow/50 flex h-16 w-16 items-center justify-center rounded-full">
-              <img src={Coin} />
-            </div>
-          </div>
-          <div
-            className="animate-float absolute -top-[60px] right-0 sm:top-40 sm:-right-20"
-            style={{ animationDelay: "1s" }}
-          >
-            <div className="bg-vibezly-cyan/20 glow-cyan flex h-16 w-16 items-center justify-center rounded-full">
-              <img src={Rocket} />
-            </div>
-          </div>
-          <div
-            className="animate-float absolute -bottom-40 left-20"
-            style={{ animationDelay: "2s" }}
-          >
-            <div className="bg-vibezly-green/20 glow-green flex h-16 w-16 items-center justify-center rounded-full">
-              <img src={Rocket2} className="-rotate-[68deg]" />
-            </div>
+          <div className="flex w-full items-center justify-center">
+            <img
+              src={heroImage}
+              alt="Vibezly"
+              className="h-auto w-[50%] object-cover"
+            />
           </div>
         </div>
       </section>

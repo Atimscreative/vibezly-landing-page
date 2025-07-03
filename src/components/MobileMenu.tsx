@@ -48,11 +48,11 @@ export default function MobileMenu({
 const navMenu = [
   {
     label: "About",
-    url: "/about",
+    url: "/#about",
   },
   {
     label: "Utilities",
-    url: "/utilities",
+    url: "/#utilities",
   },
   {
     label: "AI Personas",

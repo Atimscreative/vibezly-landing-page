@@ -5,6 +5,7 @@ import { Brain, CircleCheck, Shield, Zap } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
+import { ShineBorder } from "../magicui/shine-border";
 
 const AnimatedTabsContent = motion(TabsContent);
 
@@ -48,7 +49,7 @@ export default function Roadmap() {
                 ))}
               </TabsList>
               <>
-                {roadmapPhases.map((phase) => (
+                {roadmapPhases.map((phase, index) => (
                   <AnimatedTabsContent
                     key={phase.phase + " content"}
                     className="relative"
@@ -77,6 +78,11 @@ export default function Roadmap() {
                       key={phase.phase}
                       className="relative rounded-xl bg-white/20 p-2 ring-1 ring-white/20 backdrop-blur-3xl ring-inset"
                     >
+                      <ShineBorder
+                        borderWidth={2}
+                        duration={(index + 1) * 10}
+                        shineColor={["#7b00ff", "#00d1ff", "#50ff54"]}
+                      />
                       <Card className="bg-vibezly-dark rounded-lg p-5 transition-all duration-300 sm:p-8">
                         <div className="mb-6 flex items-center justify-between">
                           <div>

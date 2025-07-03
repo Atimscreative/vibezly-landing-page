@@ -5,7 +5,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 // import { Separator } from "@/components/ui/separator";
 import Bg from "@/assets/particles.gif";
 import { AnimatedGradientText } from "@/components/magicui/animated-gradient-text";
@@ -172,7 +172,7 @@ export default function AIPersonas() {
         </section>
 
         {/* CTA Section */}
-        <section className="relative overflow-hidden py-16">
+        {/* <section className="relative overflow-hidden py-16">
           <div className="absolute top-0 left-1/2 h-[1px] w-1/2 -translate-x-1/2 bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
           <div className="from-vibezly-purple to-vibezly-cyan absolute -top-[202px] left-1/2 size-[279px] -translate-x-1/2 animate-spin rounded-full bg-linear-180 blur-[60px] duration-1000 ease-in"></div>
           <div className="relative z-10 container mx-auto px-4 text-center">
@@ -200,7 +200,7 @@ export default function AIPersonas() {
               </Button>
             </div>
           </div>
-        </section>
+        </section> */}
       </>
     </>
   );

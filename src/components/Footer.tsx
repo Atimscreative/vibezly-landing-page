@@ -116,8 +116,8 @@ const footerMenus = [
   {
     title: "Quick Links",
     links: [
-      { label: "About", url: "/about" },
-      { label: "Utilities", url: "/utilities" },
+      { label: "About", url: "/#about" },
+      { label: "Utilities", url: "/#utilities" },
       { label: "AI Personas", url: "/personas" },
       { label: "Tokenomics", url: "/#tokenomics" },
     ],
