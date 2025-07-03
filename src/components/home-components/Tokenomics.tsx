@@ -52,23 +52,24 @@ export default function Tokenomics() {
               <TokenomicsChart />
               <div className="grid grid-cols-2 gap-4">
                 <div className="border-vibezly-border/50 bg-vibezly-dark hover:bg-vibezly-border/5 rounded-xl border p-6">
-                  <p className="text-vibezly-cyan pb-2">Buy/Sell Tax</p>
-                  <h3 className="font-orbitron text-2xl font-bold text-white">
+                  <p className="text-vibezly-cyan pb-2">Buy/Sell</p>
+                  <h3 className="font-orbitron text-xl font-bold text-white sm:text-2xl">
                     5% / 5%
                   </h3>
                 </div>
 
                 <div className="border-vibezly-border/50 bg-vibezly-dark hover:bg-vibezly-border/5 rounded-xl border p-6">
                   <p className="text-vibezly-cyan pb-2">Liquidity</p>
-                  <h3 className="font-orbitron text-2xl font-bold text-white">
+                  <h3 className="font-orbitron text-xl font-bold text-white sm:text-2xl">
                     100%
                   </h3>
                 </div>
 
                 <div className="border-vibezly-border/50 bg-vibezly-dark hover:bg-vibezly-border/5 col-span-2 rounded-xl border p-6">
                   <p className="text-vibezly-cyan pb-2">Tax Allocation</p>
-                  <h3 className="font-orbitron text-2xl font-bold text-white">
-                    40% Development, 60% Marketing
+                  <h3 className="font-orbitron text-xl font-bold text-white sm:text-2xl">
+                    40% Development,
+                    <br className="sm:hidden" /> 60% Marketing
                   </h3>
                 </div>
               </div>
@@ -102,7 +103,7 @@ export default function Tokenomics() {
                 </div>
 
                 <div className="border-vibezly-border border-t pt-6">
-                  <div className="grid grid-cols-2 gap-4 text-center">
+                  <div className="grid grid-cols-1 gap-4 text-center min-[30rem]:grid-cols-2">
                     <div>
                       <div className="text-vibezly-cyan font-orbitron text-2xl font-bold">
                         100,000VBZ
@@ -128,7 +129,7 @@ export default function Tokenomics() {
 
                   <p
                     onClick={copyContractAddress}
-                    className="font-orbitron mx-auto mt-4 w-[290px] cursor-pointer items-center truncate text-center text-sm tracking-wider text-ellipsis text-white uppercase md:w-full"
+                    className="font-orbitron mx-auto mt-4 w-[250px] cursor-pointer items-center truncate text-center text-sm tracking-wider text-ellipsis text-white uppercase md:w-full"
                   >
                     0x029290c564Ef921c56a784AA16C97E930dAF7372
                   </p>
