@@ -36,7 +36,7 @@ export default function Demo() {
           <iframe
             width="100%"
             height="100%"
-            src="https://www.youtube.com/embed/EnimRpj8tHM?rel=0"
+            src="https://www.youtube.com/embed/Ttv2VxMvYtU?si=jRSr4ZZzGQdTJyCM"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen={false}
