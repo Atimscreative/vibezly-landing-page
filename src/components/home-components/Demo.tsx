@@ -10,13 +10,15 @@ export default function Demo() {
             How to Get Started
           </h2>
           <p className="my-2">
-            Whether you're a Web3 newbie or an OG degen, Kolytics is built to
-            work for you. No complexity, no clutter—just the insights you need,
-            when you need them.
+            Getting started with Vibezly is simple. Just invite the bot to your
+            Telegram group using the official link, then head to the mini app
+            dashboard to set up your preferred persona, configure moderation
+            tools, and activate features like contests, leaderboards, and
+            sentiment tracking.
           </p>
           <p>
             Check out this short product demo and see how easy it is to navigate
-            our DApp!
+            our Bot!
           </p>
           <Link
             to="https://t.me/vibezly_bot"
