@@ -4,7 +4,7 @@ import { Marquee } from "../magicui/marquee";
 export default function Partnership() {
   return (
     <>
-      <section id="partnerships" className="bg-vibezly-border/20 py-20">
+      <section id="partnerships" className="py-20">
         <div className="mx-auto max-w-7xl px-4">
           <div className="mb-16 text-center">
             <h2
@@ -52,8 +52,8 @@ export default function Partnership() {
               </div>
             </Marquee>
 
-            <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-[#121721] via-[#121721]"></div>
-            <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-[#121721] via-[#121721]"></div>
+            <div className="from-vibezly-dark to-vibezly-dark/0 pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r"></div>
+            <div className="from-vibezly-dark to-vibezly-dark/0 pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l"></div>
           </div>
         </div>
       </section>
