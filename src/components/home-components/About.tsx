@@ -25,17 +25,14 @@ export default function About() {
               data-aos-delay="100"
               className="mx-auto max-w-3xl text-base"
             >
-              Vibezly is a Telegram bot that brings structure, fun, and
-              transparency to Web3 communities. Through AI, gamification, and
-              decentralized tools, Vibezly transforms chats into vibrant
-              ecosystems.
+              Vibezly is an AI-Powered Telegram bot linked to a sleek interface
+              that turns any crypto chat into a data-driven arena. It tracks
+              every movement of your community, streams live analytics to
+              dashboards, auto-runs gamified contests with instant crypto
+              payouts, and propels high-energy groups onto a public trending
+              hub.
             </p>
-            <p data-aos="fade-up" data-aos-delay="100" className="mt-2">
-              It empowers communities to self-moderate through tools like
-              /report and an auto-mute system, while Vibezly Trending, its
-              public insights hub, highlights the most active and bullish groups
-              in real time.
-            </p>
+
             <Link
               to="https://t.me/vibezly_bot"
               data-aos="fade-up"

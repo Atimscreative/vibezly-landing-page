@@ -62,8 +62,6 @@
   --drop-shadow-glow: 0 0 20px var(--vibezly-purple);
   --drop-shadow-glow-cyan: 0 0 20px var(--vibezly-cyan);
   --drop-shadow-glow-green: 0 0 20px var(--vibezly-green);
-  --drop-shadow-glow-all:
-    0 0 5px var(--vibezly-purple), 0 0 5px var(--vibezly-cyan);
 
   /* FONTS */
   --font-orbitron: "Orbitron", sans-serif;
