@@ -1,5 +1,5 @@
 /* GOOGLE FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Orbitron:wght@400..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Orbitron:wght@400..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 /* TAILWIND IMPORTS */
 @import "tailwindcss";
@@ -62,6 +62,8 @@
   --drop-shadow-glow: 0 0 20px var(--vibezly-purple);
   --drop-shadow-glow-cyan: 0 0 20px var(--vibezly-cyan);
   --drop-shadow-glow-green: 0 0 20px var(--vibezly-green);
+  --drop-shadow-glow-all:
+    0 0 5px var(--vibezly-purple), 0 0 5px var(--vibezly-cyan);
 
   /* FONTS */
   --font-orbitron: "Orbitron", sans-serif;
@@ -203,7 +205,6 @@
   --color-3: oklch(69.6% 0.165 251);
   --color-4: oklch(80.2% 0.134 225);
   --color-5: oklch(90.7% 0.231 133);
-
 }
 
 .dark {
@@ -243,12 +244,11 @@
   --color-3: oklch(69.6% 0.165 251);
   --color-4: oklch(80.2% 0.134 225);
   --color-5: oklch(90.7% 0.231 133);
-
 }
 
 @layer base {
   * {
-    @apply box-border m-0 p-0;
+    @apply m-0 box-border p-0;
   }
 
   html,
@@ -257,7 +257,7 @@
   }
 
   body {
-    @apply font-spacemono bg-vibezly-dark text-neutral-300 leading-[150%];
+    @apply font-spacemono bg-vibezly-dark leading-[150%] text-neutral-300;
   }
 
   p,
@@ -276,7 +276,6 @@
   h6 {
     @apply font-orbitron text-white;
   }
-
 }
 
 @layer utilities {
@@ -285,11 +284,20 @@
   }
 
   .bg-vibezly-gradient {
-    background: linear-gradient(135deg, oklch(var(--vibezly-purple)) 0%, oklch(var(--vibezly-cyan)) 50%, oklch(var(--vibezly-green)) 100%);
+    background: linear-gradient(
+      135deg,
+      oklch(var(--vibezly-purple)) 0%,
+      oklch(var(--vibezly-cyan)) 50%,
+      oklch(var(--vibezly-green)) 100%
+    );
   }
 
   .bg-vibezly-card {
-    background: linear-gradient(135deg, oklch(var(--vibezly-card)) 0%, oklch(var(--vibezly-dark)) 100%);
+    background: linear-gradient(
+      135deg,
+      oklch(var(--vibezly-card)) 0%,
+      oklch(var(--vibezly-dark)) 100%
+    );
   }
 
   .glow {
@@ -319,7 +327,6 @@
   }
 
   @keyframes float {
-
     0%,
     100% {
       transform: translateY(0px);

@@ -76,7 +76,7 @@ export default function Header() {
                 to="https://t.me/vibezly_bot"
                 data-aos="fade-left"
                 data-aos-delay={100}
-                className="from-vibezly-purple to-vibezly-cyan relative hidden h-auto items-center justify-center rounded-md bg-linear-[135deg] px-6 py-3 transition-opacity hover:opacity-90 lg:flex"
+                className="from-vibezly-purple hover:drop-shadow-glow-cyan/50 to-vibezly-cyan relative hidden h-auto items-center justify-center rounded-md bg-linear-[135deg] px-6 py-3 transition-opacity hover:opacity-90 lg:flex"
               >
                 <div className="bg-vibezly-dark absolute top-1/2 left-1/2 h-[90%] w-[97.5%] -translate-1/2 rounded-sm"></div>
                 <span className="relative z-10 text-sm">Try Vibezly Now</span>

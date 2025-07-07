@@ -45,16 +45,16 @@ export default function Hero() {
                 to="https://t.me/vibezly_bot"
                 data-aos="fade-up"
                 data-aos-delay="200"
-                className="from-vibezly-purple to-vibezly-cyan h-auto rounded-md bg-gradient-to-r bg-cover px-6 py-3 text-sm text-white transition-opacity text-shadow-sm hover:opacity-90"
+                className="from-vibezly-purple hover:drop-shadow-glow-cyan/50 to-vibezly-cyan h-auto rounded-md bg-gradient-to-r bg-cover px-6 py-3 text-sm text-white transition-opacity text-shadow-sm hover:opacity-90"
               >
                 Get Started
               </Link>
 
               <Link
                 to="/#demo"
-                data-aos="fade-left"
+                data-aos="fade-up"
                 data-aos-delay={100}
-                className="from-vibezly-purple to-vibezly-cyan relative flex h-auto items-center justify-center rounded-md bg-linear-[135deg] px-6 py-3 transition-opacity hover:opacity-90"
+                className="from-vibezly-purple hover:drop-shadow-glow-cyan/50 to-vibezly-cyan relative flex h-auto items-center justify-center rounded-md bg-linear-[135deg] px-6 py-3 transition-opacity hover:opacity-90"
               >
                 <div className="bg-vibezly-dark absolute top-1/2 left-1/2 h-[90%] w-[97.5%] -translate-1/2 rounded-sm"></div>
                 <span className="relative z-10 flex items-center gap-2 text-sm">
