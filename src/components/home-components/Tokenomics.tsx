@@ -4,6 +4,7 @@ import { toast } from "sonner";
 import { Card } from "../ui/card";
 import { CircleCheck } from "lucide-react";
 import TokenomicsChart from "../TokenomicsCard";
+import { ShineBorder } from "../magicui/shine-border";
 
 export default function Tokenomics() {
   const [copiedContract, setCopiedContract] = useState(false);
@@ -51,34 +52,42 @@ export default function Tokenomics() {
             <div className="items-center md:grid md:grid-cols-2 lg:grid-cols-1">
               <TokenomicsChart />
               <div className="grid grid-cols-2 gap-4">
-                <div className="border-vibezly-border/50 bg-vibezly-dark hover:bg-vibezly-border/5 rounded-xl border p-6">
+                <div className="border-vibezly-border/50 bg-vibezly-dark hover:bg-vibezly-border/5 relative rounded-xl border p-6 duration-300 hover:scale-105">
                   <p className="text-vibezly-cyan pb-2">Buy/Sell</p>
                   <h3 className="font-orbitron text-xl font-bold text-white sm:text-2xl">
                     5% / 5%
                   </h3>
+                  <ShineBorder duration={15} shineColor={"#00d1ff"} />
                 </div>
 
-                <div className="border-vibezly-border/50 bg-vibezly-dark hover:bg-vibezly-border/5 rounded-xl border p-6">
+                <div className="border-vibezly-border/50 bg-vibezly-dark hover:bg-vibezly-border/5 relative rounded-xl border p-6 duration-300 hover:scale-105">
                   <p className="text-vibezly-cyan pb-2">Liquidity</p>
                   <h3 className="font-orbitron text-xl font-bold text-white sm:text-2xl">
                     100%
                   </h3>
+                  <ShineBorder duration={15} shineColor={"#00d1ff"} />
                 </div>
 
-                <div className="border-vibezly-border/50 bg-vibezly-dark hover:bg-vibezly-border/5 col-span-2 rounded-xl border p-6">
+                <div className="border-vibezly-border/50 bg-vibezly-dark hover:bg-vibezly-border/5 relative col-span-2 rounded-xl border p-6 duration-300 hover:scale-105">
                   <p className="text-vibezly-cyan pb-2">Tax Allocation</p>
                   <h3 className="font-orbitron text-xl font-bold text-white sm:text-2xl">
                     40% Development,
                     <br className="sm:hidden" /> 60% Marketing
                   </h3>
+                  <ShineBorder duration={15} shineColor={"#00d1ff"} />
                 </div>
               </div>
             </div>
             <Card
               data-aos="fade-left"
               data-aos-delay="300"
-              className="from-vibezly-card hover:drop-shadow-glow-cyan/15 to-vibezly-dark border-vibezly-border/50 bg-linear-180 p-8"
+              style={{
+                transition: ".5s",
+              }}
+              className="from-vibezly-card hover:drop-shadow-glow-cyan/15 to-vibezly-dark border-vibezly-border/50 relative bg-linear-180 p-8 duration-300 hover:scale-105"
             >
+              <ShineBorder duration={15} shineColor={"#00d1ff"} />
+
               <h3 className="font-orbitron text-accent mb-6 text-2xl font-semibold">
                 Token Utility
               </h3>
