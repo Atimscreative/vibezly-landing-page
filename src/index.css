@@ -110,9 +110,39 @@
     }
   }
 
+  --animate-phone: phoneHeroIn 2s ease-in-out alternate infinite;
+  @keyframes phoneHeroIn {
+    0% {
+      transform: translateY(50px) scale(0.95) rotate(5deg);
+    }
+    60% {
+      opacity: 1;
+      transform: translateY(-10px) scale(1.02) rotate(0deg);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1) rotate(0deg);
+    }
+  }
   --animate-marquee: marquee var(--duration) infinite linear;
 
   --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+
+  --animate-glowDrop: glowingDropShadow 6s ease-in-out infinite;
+  @keyframes glowingDropShadow {
+    0% {
+      filter: drop-shadow(0 0 10px oklch(0.525 0.2929 292.3));
+    }
+    33% {
+      filter: drop-shadow(0 0 12px oklch(0.7972 0.1465 221.31));
+    }
+    66% {
+      filter: drop-shadow(0 0 10px oklch(0.8791 0.2544 143.32));
+    }
+    100% {
+      filter: drop-shadow(0 0 8px oklch(0.525 0.2929 292.3));
+    }
+  }
 
   @keyframes marquee {
     from {
@@ -274,6 +304,8 @@
   h6 {
     @apply font-orbitron text-white;
   }
+
+
 }
 
 @layer utilities {

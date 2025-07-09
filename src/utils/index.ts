@@ -7,12 +7,14 @@ import {
   Zap,
   MessageSquare,
   Trophy,
+  HeartPulse,
+  Activity,
 } from "lucide-react";
 
-import Dick from "@/assets/dick.png";
-import Sam from "@/assets/sam.png";
-import Diamond from "@/assets/diamond.png";
-import Karan from "@/assets/karan.png";
+import Dick from "@/assets/personas/dick.svg";
+import Sam from "@/assets/personas/sunny.svg";
+import Diamond from "@/assets/personas/diamond.svg";
+import Karan from "@/assets/personas/karan.svg";
 import Founder from "@/assets/founder.jpg";
 import Ruben from "@/assets/rubes.jpg";
 import Mythic from "@/assets/mytic.jpg";
@@ -136,16 +138,16 @@ export const features = [
     icon: MessageSquare,
   },
   {
-    title: "Cross-Platform Twitter Sync",
+    title: "Tweet Drop Detection",
     description:
-      "Track Twitter raids and reward actual contributors—no spreadsheet needed.",
-    icon: Zap,
+      "Anaylse which memebers are dropping tweets to raid in the community",
+    icon: Activity,
   },
   {
-    title: "Anti-FUD & Spam Protection",
+    title: "Community Health Scores",
     description:
-      "AI tools prevent scams and explicit content, even when admins sleep.",
-    icon: Bot,
+      "Vibezly will examine the overall health of your community by detecting spam and sentiment.",
+    icon: HeartPulse,
   },
   {
     title: "Gamified Engagement",

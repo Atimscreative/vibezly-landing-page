@@ -10,16 +10,14 @@ export default function Demo() {
             How to Get Started
           </h2>
           <p className="my-2">
-            Getting started with Vibezly is simple. Just invite the bot to your
-            Telegram group using the official link, then head to the mini app
-            dashboard to set up your preferred persona, configure moderation
-            tools, and activate features like contests, leaderboards, and
-            sentiment tracking.
+            Vibezly runs on a simple loop: you install the bot as an admin in
+            your Telegram group, use a few setup commands to choose a persona
+            and moderation preferences, and from that moment every messages,
+            reaction, and raid tweet is captured. The bot streams this raw data
+            to Vibezly's cloud in real time, where the dApp processes it into a
+            live dashboard.
           </p>
-          <p>
-            Check out this short product demo and see how easy it is to navigate
-            our Bot!
-          </p>
+          <p>Watch this demo to find out more!</p>
           <Link
             to="https://t.me/vibezly_bot"
             data-aos="fade-up"

@@ -160,7 +160,7 @@ function Persona({
           alt={alias}
           width={500}
           height={500}
-          className="size-full rounded-full object-cover object-center"
+          className="size-full rounded-full object-contain object-[center_top]"
         />
       </figure>
       <CardHeader>

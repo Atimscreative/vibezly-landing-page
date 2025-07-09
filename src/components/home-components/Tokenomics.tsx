@@ -98,17 +98,15 @@ export default function Tokenomics() {
                 </div>
                 <div className="flex items-center space-x-3">
                   <CircleCheck className="text-vibezly-green h-6 w-6" />
-                  <span className="font-orbitron">Premium Feature Access</span>
+                  <span className="font-orbitron">Premium Upvoting</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CircleCheck className="text-vibezly-green h-6 w-6" />
+                  <span className="font-orbitron">Vibezly Premium Data</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <CircleCheck className="text-vibezly-green h-6 w-6" />
                   <span className="font-orbitron">Revenue Share Access</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <CircleCheck className="text-vibezly-green h-6 w-6" />
-                  <span className="font-orbitron">
-                    Special Governance Rights
-                  </span>
                 </div>
 
                 <div className="border-vibezly-border border-t pt-6">

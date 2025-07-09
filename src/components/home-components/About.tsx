@@ -1,7 +1,7 @@
 import { Card, CardContent } from "../ui/card";
-import Pad from "@/assets/PAD.png";
-import AI from "@/assets/AI 3D.png";
-import Blockchain from "@/assets/Blockchain.png";
+import Pad from "@/assets/personas/Game.svg";
+import AI from "@/assets/personas/AI-Drivemn.svg";
+import Blockchain from "@/assets/personas/Decentralized.svg";
 import { Link } from "react-router";
 import { ShineBorder } from "../magicui/shine-border";
 
@@ -48,26 +48,27 @@ export default function About() {
               data-aos="fade-up"
               data-aos-delay="150"
               style={{ transition: "500ms ease" }}
-              className="from-vibezly-card to-vibezly-dark border-vibezly-border/50 hover:border-vibezly-purple/50 relative bg-linear-[135deg] from-0% to-100% p-4 duration-300 ease-in hover:scale-105"
+              className="from-vibezly-card to-vibezly-dark border-vibezly-border/50 hover:border-vibezly-purple/50 relative bg-linear-[135deg] from-0% to-100% py-4 duration-300 ease-in hover:scale-105"
             >
               <ShineBorder shineColor="#7b00ff" />
               <CardContent className="grid grid-cols-[64px_1fr] items-center gap-4">
-                <div className="drop-shadow-glow/50 from-vibezly-purple via-vibezly-cyan to-vibezly-green mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-linear-[135deg]">
+                <div className="drop-shadow-glow/50 mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-linear-[135deg]">
                   <span className="text-2xl">
                     <img
-                      src={AI}
+                      src={Pad}
                       alt="gamingpad"
                       style={{
                         animationDuration: "3s",
                         animationTimingFunction: "linear",
                       }}
                       // className="animate-bounce"
+                      width={300}
                     />
                   </span>
                 </div>
                 <div className="">
                   <h3 className="text-vibezly-purple text-xl font-semibold">
-                    AI-Driven Insights
+                    Community Intelligence
                   </h3>
                   {/* <p className="text-neutral-400">
                     Advanced AI analyzes chat patterns and sentiment to enhance
@@ -86,9 +87,9 @@ export default function About() {
               <ShineBorder shineColor="#00d1ff" duration={20} />
 
               <CardContent className="grid grid-cols-[64px_1fr] items-center gap-4">
-                <div className="drop-shadow-glow-cyan/50 from-vibezly-purple via-vibezly-cyan to-vibezly-green mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-linear-[135deg]">
+                <div className="drop-shadow-glow-cyan/50 mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-linear-[135deg]">
                   <img
-                    src={Blockchain}
+                    src={AI}
                     alt="gamingpad"
                     style={{
                       animationDuration: "3s",
@@ -100,7 +101,7 @@ export default function About() {
                 </div>
                 <div className="">
                   <h3 className="text-vibezly-cyan text-xl font-semibold">
-                    Decentralized Governance
+                    Algorithmic Spotlight Booster
                   </h3>
                   {/* <p className="">
                     Community-driven decision making through transparent voting
@@ -119,9 +120,9 @@ export default function About() {
               <ShineBorder shineColor="#50ff54" duration={14} />
 
               <CardContent className="grid grid-cols-[64px_1fr] items-center gap-4">
-                <div className="drop-shadow-glow-green/50 from-vibezly-purple via-vibezly-cyan to-vibezly-green mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-linear-[135deg]">
+                <div className="drop-shadow-glow-green/50 mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-linear-[135deg]">
                   <img
-                    src={Pad}
+                    src={Blockchain}
                     alt="gamingpad"
                     style={{
                       animationDuration: "3s",
@@ -133,7 +134,7 @@ export default function About() {
                 </div>
                 <div className="">
                   <h3 className="text-vibezly-green text-xl font-semibold">
-                    Gamified Rewards
+                    Automated Reward Engine
                   </h3>
                   {/* <p className="">
                     Earn XP, climb leaderboards, and receive VBZ tokens for
