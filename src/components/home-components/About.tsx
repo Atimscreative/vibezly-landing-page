@@ -1,7 +1,7 @@
 import { Card, CardContent } from "../ui/card";
-import Pad from "@/assets/personas/Game.svg";
-import AI from "@/assets/personas/AI-Drivemn.svg";
-import Blockchain from "@/assets/personas/Decentralized.svg";
+import Pad from "@/assets/SVG/community.svg";
+import AI from "@/assets/SVG/Boost.svg";
+import Blockchain from "@/assets/SVG/Automated-reward.svg";
 import { Link } from "react-router";
 import { ShineBorder } from "../magicui/shine-border";
 
