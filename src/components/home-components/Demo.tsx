@@ -28,7 +28,7 @@ export default function Demo() {
           </Link>
         </div>
 
-        <div className="relative w-full rounded-xl bg-white/20 p-2 ring-1 ring-white/20 backdrop-blur-3xl ring-inset md:max-w-xl lg:h-[350px] lg:max-w-full">
+        <div className="relative h-[300px] w-full rounded-xl bg-white/20 p-2 ring-1 ring-white/20 backdrop-blur-3xl ring-inset md:max-w-xl lg:h-[350px] lg:max-w-full">
           <ShineBorder
             borderWidth={2}
             shineColor={["#7b00ff", "#00d1ff", "#50ff54"]}
@@ -36,7 +36,7 @@ export default function Demo() {
           <iframe
             width="100%"
             height="100%"
-            src="https://www.youtube.com/embed/Ttv2VxMvYtU?si=jRSr4ZZzGQdTJyCM"
+            // src="https://www.youtube.com/embed/Ttv2VxMvYtU?si=jRSr4ZZzGQdTJyCM"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen={false}

@@ -13,24 +13,23 @@ export default function Hero() {
     <>
       <section
         id="hero"
-        style={{
-          backgroundImage: `linear-gradient(90deg, var(--vibezly-dark), #0f131a88))`,
-          backgroundSize: "cover",
-        }}
         className="relative flex min-h-screen items-center justify-center overflow-hidden"
       >
-        <video
-          width="640"
-          height="360"
-          autoPlay
-          muted
-          loop
-          playsInline
-          controls={false}
-          preload="auto"
-          src="https://res.cloudinary.com/dtsyjk43t/video/upload/v1/BG_iun5mu.mp4"
-          className="absolute top-0 left-0 h-full w-full object-cover object-top"
-        />
+        <div className="absolute top-0 left-0 h-full w-full">
+          <div className="from-vibezly-dark/70 to-vibezly-dark absolute top-0 left-0 h-full w-full bg-gradient-to-t"></div>
+          <video
+            width="640"
+            height="360"
+            autoPlay
+            muted
+            loop
+            playsInline
+            controls={false}
+            preload="auto"
+            src="https://res.cloudinary.com/dtsyjk43t/video/upload/v1/BG_iun5mu.mp4"
+            className="h-full w-full object-cover object-top"
+          />
+        </div>
         <div className="relative z-10 mx-auto flex max-w-7xl flex-col-reverse items-center px-4 lg:grid lg:grid-cols-[1.1fr_1fr]">
           <div className="mt-12 lg:mt-0">
             <TypeAnimation
