@@ -26,10 +26,9 @@ export default function Partnership() {
             <Marquee>
               <div className="flex w-max items-center">
                 {partnerships.map((partner, index) => (
-                  <>
+                  <div key={index}>
                     <img
                       src={partner.logo}
-                      key={index}
                       alt={partner.name}
                       className="ml-10 h-auto w-[100px] max-w-full opacity-80 duration-300 ease-in hover:opacity-100"
                     />
@@ -47,7 +46,7 @@ export default function Partnership() {
                         {partner.name}
                       </span>
                     </div> */}
-                  </>
+                  </div>
                 ))}
               </div>
             </Marquee>

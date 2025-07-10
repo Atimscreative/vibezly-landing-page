@@ -6,6 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
 import { ShineBorder } from "../magicui/shine-border";
+import { ImHourGlass } from "react-icons/im";
 
 const AnimatedTabsContent = motion(TabsContent);
 
@@ -150,22 +151,35 @@ export default function Roadmap() {
                               >
                                 <Card className="from-vibezly-card to-vibezly-dark border-vibezly-border/50 h-full bg-linear-[135deg] p-4 transition-all duration-300">
                                   <div className="flex items-start space-x-3">
-                                    <CircleCheck
-                                      className={cn(
-                                        "mt-1 h-5 w-5 flex-shrink-0",
-                                        phase.status === "completed"
-                                          ? "text-vibezly-green"
-                                          : phase.status === "current"
-                                            ? "text-vibezly-cyan"
-                                            : "text-vibezly-purple",
-                                      )}
-                                    />
+                                    {feature.status === "complete" ? (
+                                      <CircleCheck
+                                        className={cn(
+                                          "mt-1 h-5 w-5 flex-shrink-0",
+                                          phase.status === "completed"
+                                            ? "text-vibezly-green"
+                                            : phase.status === "current"
+                                              ? "text-vibezly-cyan"
+                                              : "text-vibezly-purple",
+                                        )}
+                                      />
+                                    ) : (
+                                      <ImHourGlass
+                                        className={cn(
+                                          "mt-1 h-5 w-5 flex-shrink-0",
+                                          phase.status === "completed"
+                                            ? "text-vibezly-green"
+                                            : phase.status === "current"
+                                              ? "text-vibezly-cyan"
+                                              : "text-vibezly-purple",
+                                        )}
+                                      />
+                                    )}
                                     <div>
                                       <h4 className="mb-2 text-sm font-semibold">
                                         {feature.name}
                                       </h4>
                                       <p className="text-xs transition-colors group-hover:opacity-80">
-                                        {feature.description}
+                                        {feature.message}
                                       </p>
                                     </div>
                                   </div>

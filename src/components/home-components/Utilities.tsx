@@ -1,3 +1,4 @@
+import { ShineBorder } from "../magicui/shine-border";
 import { Card, CardContent } from "../ui/card";
 import { features } from "@/utils";
 
@@ -36,9 +37,10 @@ export default function Utilities() {
                 data-aos={index % 2 === 0 ? "fade-down" : "fade-up"}
                 data-aos-delay={(index + 1) * 100}
                 key={index}
-                className="sm:odd:from-vibezly-card from-vibezly-card to-vibezly-dark/0 sm:odd:to-vibezly-dark/0 group animate-scale-in sm:even:from-vibezly-dark/0 sm:even:to-vibezly-card border-0 bg-transparent bg-linear-180 from-0% to-50% shadow-none transition-all duration-300"
+                className="sm:odd:from-vibezly-card border-vibezly-border/50 from-vibezly-card to-vibezly-dark/0 sm:odd:to-vibezly-dark/0 group animate-scale-in sm:even:from-vibezly-dark/0 sm:even:to-vibezly-card relative bg-transparent bg-linear-180 from-0% to-50% shadow-none transition-all duration-300"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
+                <ShineBorder shineColor="#00d1ff" />
                 <CardContent className="p-6 text-center">
                   <div className="from-vibezly-purple drop-shadow-glow-cyan/30 via-vibezly-cyan to-vibezly-green mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-linear-210 transition-transform duration-300 group-hover:scale-110">
                     <feature.icon className="h-8 w-8 text-white" />

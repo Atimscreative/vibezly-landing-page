@@ -71,7 +71,7 @@ export default function Tokenomics() {
                 <div className="border-vibezly-border/50 bg-vibezly-dark hover:bg-vibezly-border/5 relative col-span-2 rounded-xl border p-6 duration-300 hover:scale-105">
                   <p className="text-vibezly-cyan pb-2">Tax Allocation</p>
                   <h3 className="font-orbitron text-xl font-bold text-white sm:text-2xl">
-                    40% Development,
+                    40% Development |
                     <br className="sm:hidden" /> 60% Marketing
                   </h3>
                   <ShineBorder duration={15} shineColor={"#00d1ff"} />

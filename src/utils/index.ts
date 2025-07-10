@@ -10,6 +10,7 @@ import {
   HeartPulse,
   Activity,
 } from "lucide-react";
+import { TbPresentationAnalytics } from "react-icons/tb";
 
 import Dick from "@/assets/personas/dick.svg";
 import Sam from "@/assets/personas/sunny.svg";
@@ -120,10 +121,10 @@ export const features = [
     icon: Trophy,
   },
   {
-    title: "Community Moderation",
+    title: "Data Analysis",
     description:
-      "/report toxic users. After 10 reports, auto-mute kicks in—with DM appeals.",
-    icon: Shield,
+      "Vibezly monitors your Telegram community, analyzes chat behavior, and gathers data for research purposes.",
+    icon: TbPresentationAnalytics,
   },
   {
     title: "Sentiment Analytics",
@@ -132,7 +133,7 @@ export const features = [
     icon: TrendingUp,
   },
   {
-    title: "Mini App Dashboard",
+    title: "Sleek Dapp",
     description:
       "Track group activity, leaderboard stats, and raid participation in one place.",
     icon: MessageSquare,
@@ -280,53 +281,128 @@ export const roadmapPhases = [
     objective:
       "Build foundational tracking, moderation, and gamification tools.",
     status: "completed",
+    // features: [
+    //   {
+    //     name: "Message Tracking",
+    //     description:
+    //       "Tracks all Telegram group messages including stickers, GIFs, and spam.",
+    //   },
+    //   {
+    //     name: "Tweet Logging",
+    //     description:
+    //       "Logs all tweets shared in group chats directly to the database.",
+    //   },
+    //   {
+    //     name: "Mini App Leaderboard",
+    //     description:
+    //       "Displays real-time group engagement rankings and trending metrics.",
+    //   },
+    //   {
+    //     name: "Dynamic Personas",
+    //     description: "Includes 4 core personas with unique tones and styles.",
+    //   },
+    //   {
+    //     name: "Flood Protection",
+    //     description: "Message rate limiter to prevent spam floods.",
+    //   },
+    //   {
+    //     name: "Trending Score",
+    //     description: "Calculates group score based on engagement minus spam.",
+    //   },
+    //   {
+    //     name: "User Rating System",
+    //     description:
+    //       "/report command with auto-mute after 10 reports + DM-based appeal system.",
+    //   },
+    //   {
+    //     name: "User Filters",
+    //     description:
+    //       "Tracks per-user message volume, stickers, GIFs, and spam behavior.",
+    //   },
+    //   {
+    //     name: "Sentiment Reports",
+    //     description:
+    //       "Weekly/monthly manual reports on overall group sentiment.",
+    //   },
+    //   {
+    //     name: "Contest System",
+    //     description:
+    //       "Auto-run contests with leaderboard visibility and direct token payouts.",
+    //   },
+    // ],
+
     features: [
       {
-        name: "Message Tracking",
-        description:
-          "Tracks all Telegram group messages including stickers, GIFs, and spam.",
+        name: "Message & Tweet Tracking",
+        message:
+          "Tracks all Telegram group messages and logs shared tweets to the database.",
+        status: "complete",
       },
       {
-        name: "Tweet Logging",
-        description:
-          "Logs all tweets shared in group chats directly to the database.",
+        name: "Dynamic AI Personas",
+        message: "Includes 4 core personas with unique tones and styles.",
+        status: "complete",
       },
       {
-        name: "Mini App Leaderboard",
-        description:
-          "Displays real-time group engagement rankings and trending metrics.",
+        name: "Persona Switching",
+        message:
+          "Admins can change personas on-the-fly based on community mood or context.",
+        status: "complete",
       },
       {
-        name: "Dynamic Personas",
-        description: "Includes 4 core personas with unique tones and styles.",
+        name: "Vibezly Community Trending",
+        message: "Track trending topics within the Vibezly community",
+        status: "complete",
       },
       {
-        name: "Flood Protection",
-        description: "Message rate limiter to prevent spam floods.",
+        name: "Community Public Profiles",
+        message: "Public profile pages for communities",
+        status: "complete",
+      },
+      {
+        name: "Mini-App Dashboard",
+        message: "Dashboard for mini-app management",
+        status: "complete",
+      },
+      {
+        name: "Gamified Engagement & Contests",
+        message: "Gamification features and contest creation tools",
+        status: "complete",
+      },
+      {
+        name: "Sentiment Analysis & Reporting",
+        message: "Weekly/monthly manual reports on overall group sentiment.",
+        status: "complete",
+      },
+      {
+        name: "Tweet Drop Detection",
+        message: "Detect high-impact tweet activity in communities",
+        status: "complete",
+      },
+      {
+        name: "Community Health Scores",
+        message: "Score communities based on engagement and behavior",
+        status: "complete",
       },
       {
         name: "Trending Score",
-        description: "Calculates group score based on engagement minus spam.",
+        message: "Calculates group score based on engagement minus spam",
+        status: "complete",
       },
       {
-        name: "User Rating System",
-        description:
-          "/report command with auto-mute after 10 reports + DM-based appeal system.",
+        name: "User report and notification to admins",
+        message: "Enable users to report content to admins with alerts",
+        status: "pending",
       },
       {
-        name: "User Filters",
-        description:
-          "Tracks per-user message volume, stickers, GIFs, and spam behavior.",
+        name: "Anti-Spam (Flood Protection) & Moderation Tools",
+        message: "Message rate limiter to prevent spam floods.",
+        status: "pending",
       },
       {
-        name: "Sentiment Reports",
-        description:
-          "Weekly/monthly manual reports on overall group sentiment.",
-      },
-      {
-        name: "Contest System",
-        description:
-          "Auto-run contests with leaderboard visibility and direct token payouts.",
+        name: "X Integration",
+        message: "Integrate features directly with X (formerly Twitter)",
+        status: "pending",
       },
     ],
   },
@@ -336,40 +412,102 @@ export const roadmapPhases = [
     objective:
       "Automate moderation and sentiment analytics, enhance visibility using AI.",
     status: "current",
+    // features: [
+    //   {
+    //     name: "Sentiment Automation",
+    //     description:
+    //       "Scheduled AI-generated sentiment reports per user and group.",
+    //   },
+    //   {
+    //     name: "User Behavior Tagging",
+    //     description:
+    //       "AI labels users as spammy, toxic, influential, etc., for mod visibility.",
+    //   },
+    //   {
+    //     name: "Public Profiles",
+    //     description:
+    //       "Generates user profile cards with activity stats for transparency.",
+    //   },
+    //   {
+    //     name: "Persona Switching",
+    //     description:
+    //       "Admins can change personas on-the-fly based on community mood or context.",
+    //   },
+    //   {
+    //     name: "Emoji & Reaction Tracking",
+    //     description: "Tracks usage of reactions to measure passive engagement.",
+    //   },
+    //   {
+    //     name: "API Integration",
+    //     description:
+    //       "Live token data and charts via third-party APIs (e.g., DexScreener).",
+    //   },
+    //   {
+    //     name: "Wallet Integration",
+    //     description:
+    //       "Connect wallet to unlock premium bot features based on token holdings.",
+    //   },
+    // ],
+
     features: [
       {
-        name: "Sentiment Automation",
-        description:
-          "Scheduled AI-generated sentiment reports per user and group.",
+        name: "DApp dashboard page and advanced search",
+        message:
+          "Full-featured DApp dashboard with advanced search capabilities",
+        status: "pending",
       },
       {
-        name: "User Behavior Tagging",
-        description:
-          "AI labels users as spammy, toxic, influential, etc., for mod visibility.",
+        name: "Premium Upvoting",
+        message: "Premium users can upvote content with greater impact",
+        status: "pending",
       },
       {
-        name: "Public Profiles",
-        description:
+        name: "Vibezly Premium Data",
+        message: "Exclusive data insights for premium users",
+        status: "pending",
+      },
+      {
+        name: "Chart & Price Tracking Integration",
+        message: "Track token prices and market charts",
+        status: "pending",
+      },
+      {
+        name: "Wallet Connect / Token-Gated Tools",
+        message:
+          "Connect wallet to unlock premium bot features based on token holdings.",
+        status: "pending",
+      },
+      {
+        name: "Third-Party Token Integration",
+        message:
+          "Live token data and charts via third-party APIs (e.g., DexScreener).",
+        status: "pending",
+      },
+      {
+        name: "User Public Profiles",
+        message:
           "Generates user profile cards with activity stats for transparency.",
+        status: "pending",
       },
       {
-        name: "Persona Switching",
-        description:
-          "Admins can change personas on-the-fly based on community mood or context.",
+        name: "Telegram Trending Channel",
+        message: "Highlight trending content via Telegram bot",
+        status: "pending",
       },
       {
         name: "Emoji & Reaction Tracking",
-        description: "Tracks usage of reactions to measure passive engagement.",
+        message: "Tracks usage of reactions to measure passive engagement.",
+        status: "pending",
       },
       {
-        name: "API Integration",
-        description:
-          "Live token data and charts via third-party APIs (e.g., DexScreener).",
+        name: "Community Admin Verification Tool",
+        message: "Verify and manage official community admin roles",
+        status: "pending",
       },
       {
-        name: "Wallet Integration",
-        description:
-          "Connect wallet to unlock premium bot features based on token holdings.",
+        name: "Scaling DApp And Bot",
+        message: "Scale the DApp and bot architecture for broader usage",
+        status: "pending",
       },
     ],
   },
@@ -379,21 +517,50 @@ export const roadmapPhases = [
     objective:
       "Deploy intelligent moderation tools and advanced reward mechanisms.",
     status: "upcoming",
+    // features: [
+    //   {
+    //     name: "AI Moderation",
+    //     description:
+    //       "NLP-based detection of spam, floods, and abusive patterns.",
+    //   },
+    //   {
+    //     name: "AI Persona Responses",
+    //     description:
+    //       "Context-aware replies from personas tailored to group conversations.",
+    //   },
+    //   {
+    //     name: "Third-Party Token Integration",
+    //     description:
+    //       "Allow other projects to plug in their token for contests and utilities.",
+    //   },
+    // ],
+
     features: [
       {
-        name: "AI Moderation",
-        description:
-          "NLP-based detection of spam, floods, and abusive patterns.",
+        name: "AI Moderation & Smart Rewards",
+        message: "NLP-based detection of spam, floods, and abusive patterns.",
+        status: "pending",
       },
       {
-        name: "AI Persona Responses",
-        description:
+        name: "AI Automated Persona Responses",
+        message:
           "Context-aware replies from personas tailored to group conversations.",
+        status: "pending",
       },
       {
-        name: "Third-Party Token Integration",
-        description:
-          "Allow other projects to plug in their token for contests and utilities.",
+        name: "Vibezly Marketing Platform",
+        message: "Marketing tools and platform for community growth",
+        status: "pending",
+      },
+      {
+        name: "Vibezly Data Hub",
+        message: "Centralized hub for all Vibezly analytics and insights",
+        status: "pending",
+      },
+      {
+        name: "Public API Release for Vibezly Integrations",
+        message: "Release of public APIs to enable third-party integrations",
+        status: "pending",
       },
     ],
   },

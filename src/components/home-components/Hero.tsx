@@ -47,7 +47,7 @@ export default function Hero() {
               className="mx-auto mb-8 max-w-3xl text-center text-lg text-gray-200 lg:text-left lg:text-xl"
             >
               Track, gamify, and amplify your crypto community with AI-driven
-              data and sleek user interface.
+              data and a sleek user interface.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4 lg:justify-start">
               <Link
