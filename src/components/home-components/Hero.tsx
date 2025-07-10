@@ -5,10 +5,21 @@ import { FaArrowRightLong } from "react-icons/fa6";
 // import Bg from "@/assets/bg.gif";
 import phone from "@/assets/personas/Phone.gif";
 import { motion } from "motion/react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Hero() {
   const [isHovered, setIsHovered] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      video.muted = true;
+      video.play().catch((err: any) => {
+        console.error("Autoplay failed:", err);
+      });
+    }
+  }, []);
   return (
     <>
       <section
@@ -18,6 +29,7 @@ export default function Hero() {
         <div className="absolute top-0 left-0 h-full w-full">
           <div className="from-vibezly-dark/70 to-vibezly-dark absolute top-0 left-0 h-full w-full bg-gradient-to-t"></div>
           <video
+            ref={videoRef}
             width="640"
             height="360"
             autoPlay
