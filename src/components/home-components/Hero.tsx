@@ -15,6 +15,9 @@ export default function Hero() {
     const video = videoRef.current;
     if (video) {
       video.muted = true;
+      video.playsInline = true;
+      video.autoplay = true;
+
       video.play().catch((err: any) => {
         console.error("Autoplay failed:", err);
       });
