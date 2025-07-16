@@ -3,7 +3,7 @@ import { Link } from "react-router";
 // import heroImage from "@/assets/Rocket2.png";
 import { FaArrowRightLong } from "react-icons/fa6";
 // import Bg from "@/assets/bg.gif";
-import phone from "@/assets/personas/Phone.gif";
+import phone from "@/assets/personas/Phone.png";
 import { motion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 
